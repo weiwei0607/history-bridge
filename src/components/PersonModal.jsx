@@ -1,0 +1,109 @@
+import { useEffect } from 'react';
+import { FIGURES } from '../data/figures';
+import { CONNECTIONS } from '../data/connections';
+
+function yearStr(y) {
+  if (y == null) return '?';
+  return y < 0 ? `西元前 ${Math.abs(y)}` : `西元 ${y}`;
+}
+
+export default function PersonModal({ figureId, onClose, onNavigate }) {
+  const figure = figureId ? FIGURES[figureId] : null;
+
+  // Find all connections involving this figure
+  const relatedConns = figureId
+    ? CONNECTIONS.filter(c => c.from === figureId || c.to === figureId)
+    : [];
+
+  useEffect(() => {
+    if (!figure) return;
+    function handleKey(e) { if (e.key === 'Escape') onClose(); }
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [figure, onClose]);
+
+  if (!figure) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-amber-950/30 backdrop-blur-sm" />
+
+      {/* Modal */}
+      <div
+        className="relative w-full max-w-lg max-h-[85vh] overflow-y-auto bg-[#fdf8f0] rounded-2xl shadow-2xl border border-amber-200 animate-fade-up no-scrollbar"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="sticky top-0 bg-[#fdf8f0]/95 backdrop-blur-sm border-b border-amber-100 px-6 pt-6 pb-4 z-10">
+          <button
+            onClick={onClose}
+            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-100 text-amber-500 transition-colors text-lg"
+          >
+            ✕
+          </button>
+          <h2 className="text-3xl font-bold text-amber-900">{figure.name_zh}</h2>
+          <p className="text-sm text-amber-600/80 font-sans mt-1 italic">{figure.name_en}</p>
+
+          {/* Meta pills */}
+          <div className="flex flex-wrap gap-2 mt-3">
+            <span className="px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full text-xs font-sans border border-amber-200">
+              {figure.era}
+            </span>
+            <span className="px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full text-xs font-sans border border-amber-200">
+              {yearStr(figure.born)} — {yearStr(figure.died)}
+            </span>
+            {figure.tags?.map(tag => (
+              <span key={tag} className="px-2.5 py-0.5 bg-stone-100 text-stone-600 rounded-full text-xs font-sans border border-stone-200">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Body */}
+        <div className="px-6 py-5">
+          {/* Bio */}
+          <p className="text-base text-amber-900/90 leading-relaxed whitespace-pre-line">
+            {figure.bio_zh}
+          </p>
+
+          {/* Connections */}
+          {relatedConns.length > 0 && (
+            <div className="mt-6">
+              <h3 className="text-sm font-sans tracking-widest text-amber-600/70 uppercase mb-3">
+                史載交集
+              </h3>
+              <ul className="space-y-3">
+                {relatedConns.map(conn => {
+                  const otherId = conn.from === figureId ? conn.to : conn.from;
+                  const other = FIGURES[otherId];
+                  return (
+                    <li key={conn.id} className="bg-white/60 rounded-xl p-3 border border-amber-100">
+                      <div className="flex items-center gap-2 mb-1">
+                        <button
+                          className="text-sm font-semibold text-amber-800 hover:text-amber-600 transition-colors hover:underline"
+                          onClick={() => onNavigate(otherId)}
+                        >
+                          {other?.name_zh ?? otherId}
+                        </button>
+                        <span className="text-xs text-amber-400 font-sans">
+                          {conn.year < 0 ? `前${Math.abs(conn.year)}年` : `${conn.year}年`}
+                        </span>
+                      </div>
+                      <p className="text-xs text-amber-700/80 leading-relaxed">{conn.desc_zh}</p>
+                      <p className="text-xs text-amber-500/70 mt-1 font-sans">📖 {conn.source_zh}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
