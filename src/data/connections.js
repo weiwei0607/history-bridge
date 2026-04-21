@@ -3271,12 +3271,6 @@ export const CONNECTIONS = [
     source_zh: '《宋史·張載傳》', source_en: 'History of Song (Song Shi), Biography of Zhang Zai' },
 
 
-  { id: 'c_auto_hat', from: 'hatshepsut', to: 'cleopatra', year: -30, type: 'political',
-    desc_zh: '克麗奧佩脫拉七世在統治期間，極度崇拜這位古代的偉大女法老哈謝普蘇，將她視為自己統治的典範與精神導師。',
-    source_zh: '《埃及法老史》', source_en: 'History of the Pharaohs' },
-  { id: 'c_auto_qu', from: 'qu_yuan', to: 'sima_qian', year: -90, type: 'political',
-    desc_zh: '司馬遷在《史記》中特地為屈原立傳（《屈原賈生列傳》），對其忠君愛國的悲劇精神給予極高的歷史評價，這是跨越時空的精神連結。',
-    source_zh: '《史記》', source_en: 'Records of the Grand Historian' },
   { id: 'c_auto_davinci', from: 'person_696', to: 'machiavelli', year: 1502, type: 'friendship',
     desc_zh: '達文西曾擔任切薩雷·波吉亞的軍事工程師，在此期間結識了同在波吉亞麾下擔任外交官的馬基維利，兩人不僅成為好友，還曾共同規劃改變阿諾河河道的工程。',
     source_zh: '《達文西傳》', source_en: 'Leonardo da Vinci Biography' },
@@ -3285,9 +3279,5 @@ export const CONNECTIONS = [
     source_zh: '《賈伯斯傳》', source_en: 'Steve Jobs Biography' },
   { id: 'c_auto_wangwei', from: 'person_600', to: 'li_bai', year: 730, type: 'friendship',
     desc_zh: '王維與李白同為盛唐詩人，兩人不僅同年同月出生，還曾同時在長安、洛陽等地交遊，與孟浩然等人共同構成了唐代詩壇的黃金世代。',
-    source_zh: '《新唐書》', source_en: 'New Book of Tang' },
-
-  { id: 'c_auto_vangogh_clone', from: 'person_746', to: 'vincent_van_gogh', year: 1889, type: 'friendship',
-    desc_zh: '由於史料記載的混亂與時空縫隙，歷史橋樑系統中出現了兩個梵谷。這兩位星夜下的靈魂在普羅旺斯的向日葵花田裡進行了一場超越時空的對話。',
-    source_zh: '《時空管理局加密檔案》', source_en: 'Time Variance Authority Archives' }
+    source_zh: '《新唐書》', source_en: 'New Book of Tang' }
 ];
