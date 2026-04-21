@@ -431,12 +431,6 @@ export const CONNECTIONS = [
     source_zh: '史實', source_en: 'History'
   },
   {
-    id: 'c_core_fix_8', from: 'liubang', to: 'han_wudi',
-    year: -196, type: 'political',
-    desc_zh: '漢初傳位。',
-    source_zh: '史實', source_en: 'History'
-  },
-  {
     id: 'c_core_fix_9', from: 'han_wudi', to: 'zhang_qian',
     year: -138, type: 'diplomatic',
     desc_zh: '漢武帝派張騫出使西域。',
@@ -452,12 +446,6 @@ export const CONNECTIONS = [
     id: 'c_core_fix_11', from: 'yuezhi_king', to: 'antiochus_iii',
     year: -130, type: 'diplomatic',
     desc_zh: '連通希臘化國家。',
-    source_zh: '史實', source_en: 'History'
-  },
-  {
-    id: 'c_core_fix_12', from: 'antiochus_iii', to: 'seleucus_i',
-    year: -223, type: 'political',
-    desc_zh: '塞琉古家族傳承。',
     source_zh: '史實', source_en: 'History'
   },
   {

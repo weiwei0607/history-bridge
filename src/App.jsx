@@ -3,6 +3,7 @@ import SearchBox from './components/SearchBox';
 import PathTimeline from './components/PathTimeline';
 import PersonModal from './components/PersonModal';
 import GameMode from './components/GameMode';
+import GuessWhoMode from './components/GuessWhoMode';
 import { findShortestPath } from './utils/bfs';
 import { FIGURES } from './data/figures';
 
@@ -25,6 +26,7 @@ export default function App() {
   const [result, setResult]   = useState(null); // { path, connections } | 'none' | null
   const [modalId, setModalId] = useState(null);
   const [showGame, setShowGame] = useState(false);
+  const [showGuessWho, setShowGuessWho] = useState(false);
 
   function handleSearch() {
     if (!figureA || !figureB) return;
@@ -42,12 +44,18 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
       {/* Header */}
       <header className="text-center pt-12 pb-8 px-4 relative">
-        <div className="absolute top-4 right-4">
+        <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
           <button
             onClick={() => setShowGame(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform animate-bounce-slow"
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform"
           >
-            🕹️ 挑戰模式 (知識王)
+            🕹️ 知識王挑戰
+          </button>
+          <button
+            onClick={() => setShowGuessWho(true)}
+            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform animate-pulse"
+          >
+            🕵️‍♂️ 猜猜我是誰
           </button>
         </div>
         <h1 className="text-4xl font-bold text-amber-900 tracking-tight">歷史橋梁</h1>
@@ -144,6 +152,11 @@ export default function App() {
       {/* Game Mode Overlay */}
       {showGame && (
         <GameMode onClose={() => setShowGame(false)} />
+      )}
+
+      {/* Guess Who Mode Overlay */}
+      {showGuessWho && (
+        <GuessWhoMode onClose={() => setShowGuessWho(false)} />
       )}
     </div>
   );
