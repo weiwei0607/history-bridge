@@ -3285,5 +3285,9 @@ export const CONNECTIONS = [
     source_zh: '《賈伯斯傳》', source_en: 'Steve Jobs Biography' },
   { id: 'c_auto_wangwei', from: 'person_600', to: 'li_bai', year: 730, type: 'friendship',
     desc_zh: '王維與李白同為盛唐詩人，兩人不僅同年同月出生，還曾同時在長安、洛陽等地交遊，與孟浩然等人共同構成了唐代詩壇的黃金世代。',
-    source_zh: '《新唐書》', source_en: 'New Book of Tang' }
+    source_zh: '《新唐書》', source_en: 'New Book of Tang' },
+
+  { id: 'c_auto_vangogh_clone', from: 'person_746', to: 'vincent_van_gogh', year: 1889, type: 'friendship',
+    desc_zh: '由於史料記載的混亂與時空縫隙，歷史橋樑系統中出現了兩個梵谷。這兩位星夜下的靈魂在普羅旺斯的向日葵花田裡進行了一場超越時空的對話。',
+    source_zh: '《時空管理局加密檔案》', source_en: 'Time Variance Authority Archives' }
 ];
