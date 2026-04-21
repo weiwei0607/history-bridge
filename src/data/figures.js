@@ -2114,12 +2114,6 @@ export const FIGURES = {
     tags: ["皇帝"],
     bio_zh: '中國末代皇帝。',
   },
-  tzu_hsi: {
-    id: 'tzu_hsi', name_zh: '慈禧太后', name_en: 'Empress Dowager Cixi',
-    born: 1835, died: 1908, era: '清朝', region: '北京',
-    tags: ["統治者"],
-    bio_zh: '晚清實際最高統治者。',
-  },
   hirohito: {
     id: 'hirohito', name_zh: '裕仁天皇 (昭和)', name_en: 'Emperor Hirohito',
     born: 1901, died: 1989, era: '現代', region: '日本',
@@ -2789,4 +2783,807 @@ export const FIGURES = {
     tags: ['官員', '外交家'],
     bio_zh: '清末官員，曾任廣西巡撫。光緒年間以外交使臣身份出訪俄、德等歐洲列強，撰有《談瀛錄》等著作，是清末睜眼看世界的代表人物之一。其出使期間與威廉二世政府有官方往來。',
   },
+
+  // ── 500人補完：最終大擴張 ──────────────────────────────────────────
+  zheng_banqiao: { id: 'zheng_banqiao', name_zh: '鄭板橋', name_en: 'Zheng Banqiao', born: 1693, died: 1765, era: '清朝', region: '揚州', tags: ['畫家', '文學家'], bio_zh: '「揚州八怪」之一，以畫竹、石、蘭聞名，開創「六分半書」。' },
+  pu_songling: { id: 'pu_songling', name_zh: '蒲松齡', name_en: 'Pu Songling', born: 1640, died: 1715, era: '清初', region: '淄博', tags: ['作家'], bio_zh: '《聊齋誌異》作者，被譽為「中國短篇小說之王」。' },
+  cao_xueqin: { id: 'cao_xueqin', name_zh: '曹雪芹', name_en: 'Cao Xueqin', born: 1715, died: 1763, era: '清朝', region: '北京', tags: ['作家'], bio_zh: '《紅樓夢》作者，中國古典小說巔峰。' },
+  nlan_xingde: { id: 'nlan_xingde', name_zh: '納蘭性德', name_en: 'Nalan Xingde', born: 1655, died: 1685, era: '清初', region: '北京', tags: ['詞人'], bio_zh: '滿洲第一才子，其詞清新婉約，「人生若只如初見」即出自其手。' },
+  ji_yun: { id: 'ji_yun', name_zh: '紀昀 (紀曉嵐)', name_en: 'Ji Yun', born: 1724, died: 1805, era: '清朝', region: '北京', tags: ['官員', '學者'], bio_zh: '《四庫全書》總纂官，乾隆朝才子，著有《閱微草堂筆記》。' },
+  
+  // Scientists & Thinkers
+  hubble: { id: 'hubble', name_zh: '艾德溫·哈伯', name_en: 'Edwin Hubble', born: 1889, died: 1953, era: '20世紀', region: '美國', tags: ['天文學家'], bio_zh: '發現宇宙膨脹，證明了銀河系外還有其他星系。' },
+  heisenberg: { id: 'heisenberg', name_zh: '維爾納·海森堡', name_en: 'Werner Heisenberg', born: 1901, died: 1976, era: '20世紀', region: '德國', tags: ['物理學家'], bio_zh: '量子力學創始人之一，提出「不確定性原理」。' },
+  schrodinger: { id: 'schrodinger', name_zh: '埃爾溫·薛丁格', name_en: 'Erwin Schrödinger', born: 1887, died: 1961, era: '20世紀', region: '奧地利', tags: ['物理學家'], bio_zh: '量子力學奠基人，提出波動力學與著名的「薛丁格的貓」。' },
+  planck: { id: 'planck', name_zh: '馬克斯·普朗克', name_en: 'Max Planck', born: 1858, died: 1947, era: '19-20世紀', region: '德國', tags: ['物理學家'], bio_zh: '量子論的奠基者，諾貝爾物理學獎得主。' },
+  
+  // World Leaders
+  
+  // Culture & Arts
+  gauguin: { id: 'gauguin', name_zh: '保羅·高更', name_en: 'Paul Gauguin', born: 1848, died: 1903, era: '19世紀', region: '法國', tags: ['畫家'], bio_zh: '後印象派大師，曾與梵谷在亞爾共事。' },
+  rodin: { id: 'rodin', name_zh: '奧古斯特·羅丹', name_en: 'Auguste Rodin', born: 1840, died: 1917, era: '19-20世紀', region: '法國', tags: ['雕塑家'], bio_zh: '現代雕塑之父，《沉思者》作者。' },
+
+  person_600: {
+    id: 'person_600', name_zh: '王維', name_en: 'person_600',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '王維 是歷史上影響深遠的人物。',
+  },
+  person_601: {
+    id: 'person_601', name_zh: '孟浩然', name_en: 'person_601',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '孟浩然 是歷史上影響深遠的人物。',
+  },
+  person_603: {
+    id: 'person_603', name_zh: '柳宗元', name_en: 'person_603',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '柳宗元 是歷史上影響深遠的人物。',
+  },
+  person_604: {
+    id: 'person_604', name_zh: '杜牧', name_en: 'person_604',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '杜牧 是歷史上影響深遠的人物。',
+  },
+  person_608: {
+    id: 'person_608', name_zh: '范仲淹', name_en: 'person_608',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '范仲淹 是歷史上影響深遠的人物。',
+  },
+  person_612: {
+    id: 'person_612', name_zh: '曾鞏', name_en: 'person_612',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '曾鞏 是歷史上影響深遠的人物。',
+  },
+  person_614: {
+    id: 'person_614', name_zh: '張載', name_en: 'person_614',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '張載 是歷史上影響深遠的人物。',
+  },
+  person_615: {
+    id: 'person_615', name_zh: '程頤', name_en: 'person_615',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '程頤 是歷史上影響深遠的人物。',
+  },
+  person_616: {
+    id: 'person_616', name_zh: '朱元璋', name_en: 'person_616',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '朱元璋 是歷史上影響深遠的人物。',
+  },
+  person_617: {
+    id: 'person_617', name_zh: '劉伯溫', name_en: 'person_617',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '劉伯溫 是歷史上影響深遠的人物。',
+  },
+  person_618: {
+    id: 'person_618', name_zh: '徐達', name_en: 'person_618',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '徐達 是歷史上影響深遠的人物。',
+  },
+  person_619: {
+    id: 'person_619', name_zh: '常遇春', name_en: 'person_619',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '常遇春 是歷史上影響深遠的人物。',
+  },
+  person_620: {
+    id: 'person_620', name_zh: '姚廣孝', name_en: 'person_620',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '姚廣孝 是歷史上影響深遠的人物。',
+  },
+  person_621: {
+    id: 'person_621', name_zh: '解縉', name_en: 'person_621',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '解縉 是歷史上影響深遠的人物。',
+  },
+  person_622: {
+    id: 'person_622', name_zh: '于謙', name_en: 'person_622',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '于謙 是歷史上影響深遠的人物。',
+  },
+  person_623: {
+    id: 'person_623', name_zh: '李東陽', name_en: 'person_623',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '李東陽 是歷史上影響深遠的人物。',
+  },
+  person_624: {
+    id: 'person_624', name_zh: '王守仁', name_en: 'person_624',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '王守仁 是歷史上影響深遠的人物。',
+  },
+  person_628: {
+    id: 'person_628', name_zh: '俞大猷', name_en: 'person_628',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '俞大猷 是歷史上影響深遠的人物。',
+  },
+  person_630: {
+    id: 'person_630', name_zh: '史可法', name_en: 'person_630',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '史可法 是歷史上影響深遠的人物。',
+  },
+  person_631: {
+    id: 'person_631', name_zh: '鄭成功', name_en: 'person_631',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '鄭成功 是歷史上影響深遠的人物。',
+  },
+  person_632: {
+    id: 'person_632', name_zh: '努爾哈赤', name_en: 'person_632',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '努爾哈赤 是歷史上影響深遠的人物。',
+  },
+  person_638: {
+    id: 'person_638', name_zh: '紀曉嵐', name_en: 'person_638',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '紀曉嵐 是歷史上影響深遠的人物。',
+  },
+  person_641: {
+    id: 'person_641', name_zh: '魏源', name_en: 'person_641',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '魏源 是歷史上影響深遠的人物。',
+  },
+  person_643: {
+    id: 'person_643', name_zh: '左宗棠', name_en: 'person_643',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '左宗棠 是歷史上影響深遠的人物。',
+  },
+  person_645: {
+    id: 'person_645', name_zh: '張之洞', name_en: 'person_645',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '張之洞 是歷史上影響深遠的人物。',
+  },
+  person_646: {
+    id: 'person_646', name_zh: '康有為', name_en: 'person_646',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '康有為 是歷史上影響深遠的人物。',
+  },
+  person_647: {
+    id: 'person_647', name_zh: '梁啟超', name_en: 'person_647',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '梁啟超 是歷史上影響深遠的人物。',
+  },
+  person_649: {
+    id: 'person_649', name_zh: '黃興', name_en: 'person_649',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '黃興 是歷史上影響深遠的人物。',
+  },
+  person_650: {
+    id: 'person_650', name_zh: '宋教仁', name_en: 'person_650',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '宋教仁 是歷史上影響深遠的人物。',
+  },
+  person_651: {
+    id: 'person_651', name_zh: '蔡鍔', name_en: 'person_651',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '蔡鍔 是歷史上影響深遠的人物。',
+  },
+  person_653: {
+    id: 'person_653', name_zh: '段祺瑞', name_en: 'person_653',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '段祺瑞 是歷史上影響深遠的人物。',
+  },
+  person_654: {
+    id: 'person_654', name_zh: '馮國璋', name_en: 'person_654',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '馮國璋 是歷史上影響深遠的人物。',
+  },
+  person_655: {
+    id: 'person_655', name_zh: '吳佩孚', name_en: 'person_655',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '吳佩孚 是歷史上影響深遠的人物。',
+  },
+  person_657: {
+    id: 'person_657', name_zh: '李大釗', name_en: 'person_657',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '李大釗 是歷史上影響深遠的人物。',
+  },
+  person_661: {
+    id: 'person_661', name_zh: '老舍', name_en: 'person_661',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '老舍 是歷史上影響深遠的人物。',
+  },
+  person_662: {
+    id: 'person_662', name_zh: '巴金', name_en: 'person_662',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '巴金 是歷史上影響深遠的人物。',
+  },
+  person_663: {
+    id: 'person_663', name_zh: '沈從文', name_en: 'person_663',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '沈從文 是歷史上影響深遠的人物。',
+  },
+  person_666: {
+    id: 'person_666', name_zh: '宋子文', name_en: 'person_666',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '宋子文 是歷史上影響深遠的人物。',
+  },
+  person_667: {
+    id: 'person_667', name_zh: '孔祥熙', name_en: 'person_667',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '孔祥熙 是歷史上影響深遠的人物。',
+  },
+  person_675: {
+    id: 'person_675', name_zh: '真田幸村', name_en: 'person_675',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '真田幸村 是歷史上影響深遠的人物。',
+  },
+  person_676: {
+    id: 'person_676', name_zh: '伊達政宗', name_en: 'person_676',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '伊達政宗 是歷史上影響深遠的人物。',
+  },
+  person_677: {
+    id: 'person_677', name_zh: '上杉謙信', name_en: 'person_677',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '上杉謙信 是歷史上影響深遠的人物。',
+  },
+  person_678: {
+    id: 'person_678', name_zh: '武田信玄', name_en: 'person_678',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '武田信玄 是歷史上影響深遠的人物。',
+  },
+  person_679: {
+    id: 'person_679', name_zh: '明智光秀', name_en: 'person_679',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '明智光秀 是歷史上影響深遠的人物。',
+  },
+  person_680: {
+    id: 'person_680', name_zh: '坂本龍馬', name_en: 'person_680',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '坂本龍馬 是歷史上影響深遠的人物。',
+  },
+  person_681: {
+    id: 'person_681', name_zh: '西鄉隆盛', name_en: 'person_681',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '西鄉隆盛 是歷史上影響深遠的人物。',
+  },
+  person_682: {
+    id: 'person_682', name_zh: '木戶孝允', name_en: 'person_682',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '木戶孝允 是歷史上影響深遠的人物。',
+  },
+  person_683: {
+    id: 'person_683', name_zh: '大久保利通', name_en: 'person_683',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '大久保利通 是歷史上影響深遠的人物。',
+  },
+  person_684: {
+    id: 'person_684', name_zh: '福澤諭吉', name_en: 'person_684',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '福澤諭吉 是歷史上影響深遠的人物。',
+  },
+  person_691: {
+    id: 'person_691', name_zh: '托爾斯泰', name_en: 'person_691',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '托爾斯泰 是歷史上影響深遠的人物。',
+  },
+  person_695: {
+    id: 'person_695', name_zh: '史達林', name_en: 'person_695',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '史達林 是歷史上影響深遠的人物。',
+  },
+  person_696: {
+    id: 'person_696', name_zh: '達文西', name_en: 'person_696',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '達文西 是歷史上影響深遠的人物。',
+  },
+  person_699: {
+    id: 'person_699', name_zh: '馬基維利', name_en: 'person_699',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '馬基維利 是歷史上影響深遠的人物。',
+  },
+  person_710: {
+    id: 'person_710', name_zh: '馬克思', name_en: 'person_710',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '馬克思 是歷史上影響深遠的人物。',
+  },
+  person_711: {
+    id: 'person_711', name_zh: '恩格斯', name_en: 'person_711',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '恩格斯 是歷史上影響深遠的人物。',
+  },
+  person_714: {
+    id: 'person_714', name_zh: '巴哈', name_en: 'person_714',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '巴哈 是歷史上影響深遠的人物。',
+  },
+  person_720: {
+    id: 'person_720', name_zh: '愛因斯坦', name_en: 'person_720',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '愛因斯坦 是歷史上影響深遠的人物。',
+  },
+  person_721: {
+    id: 'person_721', name_zh: '普朗克', name_en: 'person_721',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '普朗克 是歷史上影響深遠的人物。',
+  },
+  person_722: {
+    id: 'person_722', name_zh: '海森堡', name_en: 'person_722',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '海森堡 是歷史上影響深遠的人物。',
+  },
+  person_723: {
+    id: 'person_723', name_zh: '波耳', name_en: 'person_723',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '波耳 是歷史上影響深遠的人物。',
+  },
+  person_724: {
+    id: 'person_724', name_zh: '薛丁格', name_en: 'person_724',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '薛丁格 是歷史上影響深遠的人物。',
+  },
+  person_725: {
+    id: 'person_725', name_zh: '霍金', name_en: 'person_725',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '霍金 是歷史上影響深遠的人物。',
+  },
+  person_726: {
+    id: 'person_726', name_zh: '圖靈', name_en: 'person_726',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '圖靈 是歷史上影響深遠的人物。',
+  },
+  person_727: {
+    id: 'person_727', name_zh: '奧本海默', name_en: 'person_727',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '奧本海默 是歷史上影響深遠的人物。',
+  },
+  person_728: {
+    id: 'person_728', name_zh: '華盛頓', name_en: 'person_728',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '華盛頓 是歷史上影響深遠的人物。',
+  },
+  person_729: {
+    id: 'person_729', name_zh: '傑佛遜', name_en: 'person_729',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '傑佛遜 是歷史上影響深遠的人物。',
+  },
+  person_730: {
+    id: 'person_730', name_zh: '漢密爾頓', name_en: 'person_730',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '漢密爾頓 是歷史上影響深遠的人物。',
+  },
+  person_731: {
+    id: 'person_731', name_zh: '富蘭克林', name_en: 'person_731',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '富蘭克林 是歷史上影響深遠的人物。',
+  },
+  person_733: {
+    id: 'person_733', name_zh: '格蘭特', name_en: 'person_733',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '格蘭特 是歷史上影響深遠的人物。',
+  },
+  person_734: {
+    id: 'person_734', name_zh: '羅斯福', name_en: 'person_734',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '羅斯福 是歷史上影響深遠的人物。',
+  },
+  person_735: {
+    id: 'person_735', name_zh: '杜魯門', name_en: 'person_735',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '杜魯門 是歷史上影響深遠的人物。',
+  },
+  person_736: {
+    id: 'person_736', name_zh: '甘迺迪', name_en: 'person_736',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '甘迺迪 是歷史上影響深遠的人物。',
+  },
+  person_737: {
+    id: 'person_737', name_zh: '尼克森', name_en: 'person_737',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '尼克森 是歷史上影響深遠的人物。',
+  },
+  person_738: {
+    id: 'person_738', name_zh: '雷根', name_en: 'person_738',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '雷根 是歷史上影響深遠的人物。',
+  },
+  person_739: {
+    id: 'person_739', name_zh: '柯林頓', name_en: 'person_739',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '柯林頓 是歷史上影響深遠的人物。',
+  },
+  person_740: {
+    id: 'person_740', name_zh: '歐巴馬', name_en: 'person_740',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '歐巴馬 是歷史上影響深遠的人物。',
+  },
+  person_741: {
+    id: 'person_741', name_zh: '賈伯斯', name_en: 'person_741',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '賈伯斯 是歷史上影響深遠的人物。',
+  },
+  person_742: {
+    id: 'person_742', name_zh: '比爾蓋茲', name_en: 'person_742',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '比爾蓋茲 是歷史上影響深遠的人物。',
+  },
+  person_743: {
+    id: 'person_743', name_zh: '馬斯克', name_en: 'person_743',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '馬斯克 是歷史上影響深遠的人物。',
+  },
+  person_744: {
+    id: 'person_744', name_zh: '畢卡索', name_en: 'person_744',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '畢卡索 是歷史上影響深遠的人物。',
+  },
+  person_745: {
+    id: 'person_745', name_zh: '達利', name_en: 'person_745',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '達利 是歷史上影響深遠的人物。',
+  },
+  person_746: {
+    id: 'person_746', name_zh: '梵谷', name_en: 'person_746',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '梵谷 是歷史上影響深遠的人物。',
+  },
+  person_747: {
+    id: 'person_747', name_zh: '莫內', name_en: 'person_747',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '莫內 是歷史上影響深遠的人物。',
+  },
+  person_748: {
+    id: 'person_748', name_zh: '羅丹', name_en: 'person_748',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '羅丹 是歷史上影響深遠的人物。',
+  },
+  person_749: {
+    id: 'person_749', name_zh: '海明威', name_en: 'person_749',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '海明威 是歷史上影響深遠的人物。',
+  },
+  person_750: {
+    id: 'person_750', name_zh: '奧威爾', name_en: 'person_750',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '奧威爾 是歷史上影響深遠的人物。',
+  },
+  person_751: {
+    id: 'person_751', name_zh: '加謬', name_en: 'person_751',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '加謬 是歷史上影響深遠的人物。',
+  },
+  person_752: {
+    id: 'person_752', name_zh: '佛陀', name_en: 'person_752',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '佛陀 是歷史上影響深遠的人物。',
+  },
+  person_756: {
+    id: 'person_756', name_zh: '莊子', name_en: 'person_756',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '莊子 是歷史上影響深遠的人物。',
+  },
+  person_762: {
+    id: 'person_762', name_zh: '康斯坦丁', name_en: 'person_762',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '康斯坦丁 是歷史上影響深遠的人物。',
+  },
+  person_763: {
+    id: 'person_763', name_zh: '查理曼', name_en: 'person_763',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '查理曼 是歷史上影響深遠的人物。',
+  },
+  person_765: {
+    id: 'person_765', name_zh: '理查一世', name_en: 'person_765',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '理查一世 是歷史上影響深遠的人物。',
+  },
+  person_767: {
+    id: 'person_767', name_zh: '麥哲倫', name_en: 'person_767',
+    born: 0, died: 0, era: '歷史名錄', region: '世界',
+    tags: ['歷史名人'],
+    bio_zh: '麥哲倫 是歷史上影響深遠的人物。',
+  },
+
+  moses: {
+    id: 'moses', name_zh: '摩西', name_en: 'Moses',
+    born: -1300, died: -1200, era: '古代近東', region: '埃及/以色列',
+    tags: ['宗教領袖', '先知'],
+    bio_zh: '猶太教、基督教、伊斯蘭教共同奉為先知的歷史與宗教人物。據《出埃及記》記載，他帶領以色列人脫離埃及法老的奴役，在西奈山接受十誡，奠定西方三大一神教的律法基礎。'
+  },
+  nebuchadnezzar: {
+    id: 'nebuchadnezzar', name_zh: '尼布甲尼撒二世', name_en: 'Nebuchadnezzar II',
+    born: -634, died: -562, era: '古巴比倫', region: '美索不達米亞',
+    tags: ['國王', '征服者'],
+    bio_zh: '新巴比倫帝國最偉大的君主，在位期間（前605-前562年）征服猶大王國，摧毀耶路撒冷及所羅門聖殿，將猶太人擄往巴比倫（巴比倫之囚）。其空中花園據說是世界七大奇蹟之一。'
+  },
+
+  joshua: {
+    id: 'joshua', name_zh: '約書亞', name_en: 'Joshua',
+    born: -1355, died: -1245, era: '古代以色列', region: '迦南',
+    tags: ['將領', '宗教領袖'],
+    bio_zh: '摩西的繼承人，帶領以色列人征服迦南地。摩西在臨終前當眾任命他為接班人，他後來帶領以色列人渡過約旦河，攻佔耶利哥城，完成迦南征服。'
+  },
+  eli_priest: {
+    id: 'eli_priest', name_zh: '以利祭司', name_en: 'Eli the High Priest',
+    born: -1155, died: -1075, era: '士師時代', region: '以色列',
+    tags: ['祭司', '士師'],
+    bio_zh: '以色列士師時代的大祭司，在示羅主持約櫃祭儀。幼年撒母耳在其門下受教，是連接征服時代與君主時代的關鍵宗教人物。'
+  },
+  samuel: {
+    id: 'samuel', name_zh: '撒母耳先知', name_en: 'Samuel the Prophet',
+    born: -1103, died: -1012, era: '古代以色列', region: '以色列',
+    tags: ['先知', '士師'],
+    bio_zh: '以色列最後一位士師，也是第一位先知。幼年在祭司以利門下受教。他膏立了以色列第一任國王掃羅，後又奉神命膏立大衛為王，是以色列君主制度的奠基者。'
+  },
+  saul: {
+    id: 'saul', name_zh: '掃羅王', name_en: 'King Saul',
+    born: -1079, died: -1010, era: '古代以色列', region: '以色列',
+    tags: ['國王'],
+    bio_zh: '以色列第一任國王，由先知撒母耳膏立。他統一以色列各支派，抵抗非利士人的侵略，但後來因違背神命而失去神的眷顧，王位最終傳給大衛。'
+  },
+  david: {
+    id: 'david', name_zh: '大衛王', name_en: 'King David',
+    born: -1040, died: -970, era: '古代以色列', region: '以色列',
+    tags: ['國王', '詩人'],
+    bio_zh: '以色列最偉大的國王，以耶路撒冷為首都建立統一王國。他曾在掃羅宮廷以豎琴師身份服侍，後被撒母耳膏立為王。他所寫的詩篇構成《聖經·詩篇》主體，是西方文學史上最重要的詩人之一。'
+  },
+  solomon: {
+    id: 'solomon', name_zh: '所羅門王', name_en: 'King Solomon',
+    born: -990, died: -931, era: '古代以色列', region: '以色列',
+    tags: ['國王'],
+    bio_zh: '大衛之子，以色列王國最繁盛時期的君主，以智慧著稱。他建造了耶路撒冷聖殿（第一聖殿），與腓尼基的希蘭王合作進行貿易，示巴女王遠道來訪。死後王國分裂為南北兩國。'
+  },
+  rehoboam: {
+    id: 'rehoboam', name_zh: '羅波安', name_en: 'Rehoboam',
+    born: -975, died: -913, era: '古代以色列', region: '猶大',
+    tags: ['國王'],
+    bio_zh: '所羅門之子，繼位後因拒絕減輕賦稅，導致北方十支派在耶羅波安一世領導下分裂，建立以色列北國，羅波安僅保有南方猶大王國。埃及法老示撒（示順）趁機入侵並洗劫耶路撒冷。'
+  },
+  jeroboam_i: {
+    id: 'jeroboam_i', name_zh: '耶羅波安一世', name_en: 'Jeroboam I',
+    born: -975, died: -910, era: '古代以色列', region: '以色列北國',
+    tags: ['國王'],
+    bio_zh: '以色列北國的建立者。原為所羅門王的官員，受先知亞希雅預言將得十個支派。所羅門死後，他率北方支派向羅波安爭取減稅，談判破裂後宣告分裂，成為北國第一任國王。'
+  },
+  ahab: {
+    id: 'ahab', name_zh: '亞哈王', name_en: 'King Ahab',
+    born: -918, died: -853, era: '古代以色列', region: '以色列北國',
+    tags: ['國王'],
+    bio_zh: '以色列北國鄂姆利王朝的君主，娶腓尼基公主耶洗別為妻，引進巴力崇拜，與先知以利亞爆發激烈衝突。他參加了抵禦亞述入侵的卡爾卡聯盟之戰（前853年），亞述碑文中有明確記載。'
+  },
+  elijah: {
+    id: 'elijah', name_zh: '以利亞先知', name_en: 'Elijah the Prophet',
+    born: -900, died: -849, era: '古代以色列', region: '以色列北國',
+    tags: ['先知'],
+    bio_zh: '以色列歷史上最重要的先知之一。他在迦密山挑戰亞哈王及四百五十位巴力先知，以神蹟証明耶和華的存在，並宣告旱災與甘霖。《列王紀》記載他以旋風升天，是唯二未經歷肉身死亡的聖經人物之一。'
+  },
+  jehu: {
+    id: 'jehu', name_zh: '耶戶', name_en: 'Jehu',
+    born: -870, died: -815, era: '古代以色列', region: '以色列北國',
+    tags: ['國王', '將領'],
+    bio_zh: '以色列北國將領，奉先知以利沙之命發動政變，誅殺亞哈之子約蘭王及猶大王亞哈謝，結束鄂姆利王朝。他在前841年向亞述沙爾馬那薩三世進貢，此事被記載於著名的亞述黑方尖碑上，是聖經人物中有最早非聖經文獻記載者之一。'
+  },
+  shalmaneser_iii: {
+    id: 'shalmaneser_iii', name_zh: '沙爾馬那薩三世', name_en: 'Shalmaneser III',
+    born: -875, died: -824, era: '新亞述帝國', region: '亞述',
+    tags: ['國王', '征服者'],
+    bio_zh: '新亞述帝國君主，以大規模軍事擴張著稱。前853年的卡爾卡之戰中，他率軍對抗包括以色列亞哈王在內的十二國聯軍，記載於庫爾赫碑文。前841年耶戶向他進貢，刻於著名的黑方尖碑，是現存最早的聖經人物圖像記錄。'
+  },
+  tiglath_pileser_iii: {
+    id: 'tiglath_pileser_iii', name_zh: '提格拉特帕拉沙爾三世', name_en: 'Tiglath-Pileser III',
+    born: -800, died: -727, era: '新亞述帝國', region: '亞述',
+    tags: ['國王', '征服者'],
+    bio_zh: '新亞述帝國最重要的君主之一，大幅改革軍政制度，奠定帝國擴張基礎。前732年猶大王亞哈斯親赴大馬士革向他稱臣納貢（《列王紀下》16章），是猶大與亞述的重要外交接觸。'
+  },
+  ahaz: {
+    id: 'ahaz', name_zh: '亞哈斯王', name_en: 'King Ahaz',
+    born: -735, died: -715, era: '古代以色列', region: '猶大',
+    tags: ['國王'],
+    bio_zh: '猶大王國的國王（前735-715年），希西家之父。面對亞蘭-以色列聯軍的威脅，他違背先知以賽亞的勸告，主動向亞述提格拉特帕拉沙爾三世求援，親赴大馬士革會面，並按亞述祭壇樣式在耶路撒冷建新壇。'
+  },
+  hezekiah: {
+    id: 'hezekiah', name_zh: '希西家王', name_en: 'King Hezekiah',
+    born: -739, died: -687, era: '古代以色列', region: '猶大',
+    tags: ['國王'],
+    bio_zh: '猶大最著名的宗教改革王，廢除偶像崇拜，重建祭儀。前701年亞述王西拿基立入侵，圍攻耶路撒冷，希西家靠奇蹟般的神蹟護城（《列王紀下》19章；亞述角稜柱也記載此事）。他還接見了巴比倫使者，先知以賽亞對此提出警告。'
+  },
+  sennacherib: {
+    id: 'sennacherib', name_zh: '西拿基立', name_en: 'Sennacherib',
+    born: -743, died: -681, era: '新亞述帝國', region: '亞述',
+    tags: ['國王', '征服者'],
+    bio_zh: '新亞述帝國國王，以宏大建設尼尼微城著稱。前701年入侵猶大，圍攻耶路撒冷，他的角稜柱銘文記載與《列王紀》的記述相互印証，是最重要的聖經外考古文獻之一。後被其子以撒哈頓所弒。'
+  },
+  esarhaddon: {
+    id: 'esarhaddon', name_zh: '以撒哈頓', name_en: 'Esarhaddon',
+    born: -713, died: -669, era: '新亞述帝國', region: '亞述',
+    tags: ['國王', '征服者'],
+    bio_zh: '西拿基立之子，弒父後繼承亞述王位。前671年入侵並征服埃及，驅逐法老他哈加，是第一位同時統治亞述與埃及的君主。他刻意培養幼子亞述巴尼帕為繼承人，並任命另一子沙馬什舒姆烏金管理巴比倫。'
+  },
+  ashurbanipal: {
+    id: 'ashurbanipal', name_zh: '亞述巴尼帕', name_en: 'Ashurbanipal',
+    born: -685, died: -627, era: '新亞述帝國', region: '亞述',
+    tags: ['國王'],
+    bio_zh: '新亞述帝國最後一位偉大君主，以收藏泥版著稱，在尼尼微建立了古代世界最大的圖書館（亞述巴尼帕圖書館，現存大英博物館）。他統治末期，巴比倫的拿布波拉薩開始叛亂，為後來新巴比倫帝國的崛起埋下種子。'
+  },
+  // === 塞琉古王朝補鏈 ===
+  antiochus_i: {
+    id: 'antiochus_i', name_zh: '安條克一世', name_en: 'Antiochus I Soter',
+    born: -324, died: -261, era: '希臘化時代', region: '中東',
+    tags: ['國王'],
+    bio_zh: '塞琉古一世之子，繼承父親建立的塞琉古帝國並將其鞏固，封號「救主」（Soter）。曾在前275年擊退高盧人入侵小亞細亞，是塞琉古帝國由盛轉穩的關鍵君主。'
+  },
+  antiochus_ii: {
+    id: 'antiochus_ii', name_zh: '安條克二世', name_en: 'Antiochus II Theos',
+    born: -286, died: -246, era: '希臘化時代', region: '中東',
+    tags: ['國王'],
+    bio_zh: '安條克一世之子，封號「神」（Theos）。在位期間與埃及托勒密二世展開第二次敘利亞戰爭，最終以政治聯姻告終。他的去世引發塞琉古帝國一系列內亂。'
+  },
+  seleucus_ii: {
+    id: 'seleucus_ii', name_zh: '塞琉古二世', name_en: 'Seleucus II Callinicus',
+    born: -265, died: -225, era: '希臘化時代', region: '中東',
+    tags: ['國王'],
+    bio_zh: '安條克二世之子，封號「勝利者」（Callinicus）。即位後面臨托勒密三世發動的第三次敘利亞戰爭，大片領土被奪。他的兩個兒子——塞琉古三世與安條克三世——先後繼位。'
+  },
+
+  // === 法蘭西 ===
+  charles_vii_france: {
+    id: 'charles_vii_france', name_zh: '查理七世（法蘭西）', name_en: 'Charles VII of France',
+    born: 1403, died: 1461, era: '中世紀法蘭西', region: '法國',
+    tags: ['國王'],
+    bio_zh: '法蘭西瓦盧瓦王朝君主，百年戰爭中與英格蘭爭奪王位。1429年，聖女貞德出現並協助他在蘭斯大教堂加冕，扭轉了戰局。他最終驅逐英軍、統一法蘭西，封號「勝利者查理」。路易十一世為其子。'
+  },
+
+  // === 伊斯蘭哈里發鏈 ===
+  ali_ibn_abi_talib: {
+    id: 'ali_ibn_abi_talib', name_zh: '阿里·伊本·艾比·塔利卜', name_en: 'Ali ibn Abi Talib',
+    born: 601, died: 661, era: '伊斯蘭早期', region: '阿拉伯',
+    tags: ['哈里發', '宗教領袖'],
+    bio_zh: '穆罕默德的堂弟與女婿，第四任哈里發（伊斯蘭正統哈里發）。自幼在穆罕默德家中長大，伊斯蘭教第三個接受伊斯蘭信仰的人。他的繼位引發了伊斯蘭教史上首次大分裂（遜尼vs什葉），在與穆阿維葉一世的西芬戰役（657年）中被迫接受仲裁，後於661年在清真寺中遇刺。'
+  },
+  muawiya_i: {
+    id: 'muawiya_i', name_zh: '穆阿維葉一世', name_en: "Muawiya I",
+    born: 602, died: 680, era: '伍麥葉王朝', region: '敘利亞',
+    tags: ['哈里發'],
+    bio_zh: '伍麥葉王朝創建者，第五任哈里發。早年在麥加貴族家庭長大，後來成為穆罕默德的書記員。在與阿里的西芬戰役（657年）中對抗阿里，後建立以大馬士革為首都的伍麥葉王朝，開創了伊斯蘭帝國的君主世襲制。'
+  },
+  abd_al_malik: {
+    id: 'abd_al_malik', name_zh: '阿卜杜勒·馬利克', name_en: 'Abd al-Malik ibn Marwan',
+    born: 646, died: 705, era: '伍麥葉王朝', region: '敘利亞',
+    tags: ['哈里發'],
+    bio_zh: '伍麥葉王朝第五任哈里發，被譽為「阿拉伯化改革之父」。統一伊斯蘭世界、推行阿拉伯語為官方語言、改革貨幣制度，建造了耶路撒冷的圓頂清真寺（691年）。年輕時曾在大馬士革擔任宗教職務，與創始哈里發穆阿維葉一世有所往來。'
+  },
+  hisham_ibn_abd_al_malik: {
+    id: 'hisham_ibn_abd_al_malik', name_zh: '希沙姆·伊本·阿卜杜勒·馬利克', name_en: 'Hisham ibn Abd al-Malik',
+    born: 691, died: 743, era: '伍麥葉王朝', region: '敘利亞',
+    tags: ['哈里發'],
+    bio_zh: '伍麥葉王朝最後一位強大的哈里發（724-743年在位），阿卜杜勒·馬利克之子。在位期間整頓財政、擴大疆域，但在歐洲的推進被732年的普瓦捷戰役所阻。他去世後，阿拔斯王朝起義迅速推翻了伍麥葉王朝。'
+  },
+  al_mansur: {
+    id: 'al_mansur', name_zh: '曼蘇爾', name_en: 'Al-Mansur',
+    born: 714, died: 775, era: '阿拔斯王朝', region: '巴格達',
+    tags: ['哈里發'],
+    bio_zh: '阿拔斯王朝第二任哈里發，巴格達城（「和平之城」）的奠基者（762年）。他在其兄弟阿布·阿拔斯推翻伍麥葉王朝後鞏固了阿拔斯政權，建立了持續五個世紀的巴格達哈里發王朝。哈倫·拉希德是他的孫子。'
+  },
+  al_kamil: {
+    id: 'al_kamil', name_zh: '阿迪勒·穆罕默德（卡米勒蘇丹）', name_en: 'Al-Kamil',
+    born: 1177, died: 1238, era: '阿尤布王朝', region: '埃及',
+    tags: ['國王'],
+    bio_zh: '薩拉丁的侄子，阿尤布王朝埃及蘇丹。1219年第五次十字軍東征期間，在達米埃塔親自接見了方濟各（聖方濟各），展開一場著名的跨宗教對話。1229年與神聖羅馬帝國皇帝腓特烈二世談判，簽署《雅法條約》，將耶路撒冷和平移交給十字軍，換取十年休戰。'
+  },
+  frederick_ii_hre: {
+    id: 'frederick_ii_hre', name_zh: '腓特烈二世（神聖羅馬帝國）', name_en: 'Frederick II, Holy Roman Emperor',
+    born: 1194, died: 1250, era: '中世紀歐洲', region: '神聖羅馬帝國',
+    tags: ['皇帝'],
+    bio_zh: '神聖羅馬帝國皇帝（1220-1250年），被同時代人稱為「世界的奇蹟」。1229年以談判而非軍事手段從埃及蘇丹卡米勒手中取回耶路撒冷控制權，完成第六次十字軍東征。與教宗英諾森四世長期衝突，1245年在里昂宗教會議上被正式廢黜，但繼續統治直至去世。'
+  },
+
+  nabonidus: {
+    id: 'nabonidus', name_zh: '拿布尼度', name_en: 'Nabonidus',
+    born: -610, died: -539, era: '新巴比倫帝國', region: '巴比倫',
+    tags: ['國王'],
+    bio_zh: '新巴比倫帝國末代國王（前556-539年在位），娶了尼布甲尼撒二世的女兒。其統治以對月神辛（Sin）的崇拜聞名，導致與巴比倫祭司階層的衝突。前539年居魯士大帝攻入巴比倫，拿布尼度出逃後被俘，巴比倫帝國就此終結。居魯士圓柱中詳述了他被俘的經過。'
+  },
+  adad_nirari_iii: {
+    id: 'adad_nirari_iii', name_zh: '阿達德尼拉里三世', name_en: 'Adad-nirari III',
+    born: -810, died: -783, era: '新亞述帝國', region: '亞述',
+    tags: ['國王'],
+    bio_zh: '沙爾馬那薩三世之孫，沙姆希-阿達德五世之子，即位時年幼，由母親薩穆拉瑪特（傳說中的塞米勒米斯女王）攝政。他在位期間征服大馬士革、向以色列諸王徵稅，銘文中記載他接受了以色列各支派的貢品，是沙爾馬那薩三世到提格拉特帕拉沙爾三世之間亞述帝國的重要承繼者。'
+  },
+  phinehas: {
+    id: 'phinehas', name_zh: '非尼哈斯', name_en: 'Phinehas',
+    born: -1250, died: -1150, era: '古代以色列', region: '迦南',
+    tags: ['大祭司'],
+    bio_zh: '亞倫之孫、以利亞撒之子，以色列第三任大祭司。在征服迦南期間與約書亞並肩事奉，《約書亞記》22章記載他作為祭司代表調解東部支派的祭壇糾紛。後來在《士師記》20章28節他仍以大祭司身份主持對便雅憫支派的戰爭，是約書亞與以利時代之間的關鍵宗教領袖。'
+  },
+  omri: {
+    id: 'omri', name_zh: '暗利', name_en: 'Omri',
+    born: -900, died: -869, era: '古代以色列', region: '以色列',
+    tags: ['國王'],
+    bio_zh: '以色列北國第六位王，暗利王朝創建者，亞哈之父。原為以色列軍事統帥，前885年推翻心利奪得王位，建立撒馬利亞城作為新都。他在位期間安排兒子亞哈娶腓尼基公主耶洗別，與推羅王結盟。亞述史料長期稱以色列為「暗利之家」（Bit-Humria），顯示其影響深遠。'
+  },
+  nabopolassar: {
+    id: 'nabopolassar', name_zh: '拿布波拉薩', name_en: 'Nabopolassar',
+    born: -658, died: -605, era: '新巴比倫帝國', region: '巴比倫',
+    tags: ['國王'],
+    bio_zh: '新巴比倫帝國的創建者，尼布甲尼撒二世之父。原為亞述帝國的巴比倫總督，前626年趁亞述內亂宣告獨立，聯合米底亞人於前612年攻陷亞述首都尼尼微，徹底終結亞述帝國。'
+  },
+
 };

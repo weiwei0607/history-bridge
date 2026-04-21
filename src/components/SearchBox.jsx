@@ -23,7 +23,9 @@ export default function SearchBox({ label, value, onChange, exclude }) {
 
   const selected = value ? FIGURES[value] : null;
 
-  // Optimized filtering
+  // Derive the display value rather than syncing it with an effect
+  const displayValue = open ? query : (selected ? selected.name_zh : '');
+
   const filtered = useMemo(() => {
     if (!open) return [];
     const q = query.toLowerCase().trim();
@@ -46,25 +48,17 @@ export default function SearchBox({ label, value, onChange, exclude }) {
     function handleClick(e) {
       if (ref.current && !ref.current.contains(e.target)) {
         setOpen(false);
-        // If closed without selection, reset query to selected name
-        if (selected) setQuery(selected.name_zh);
       }
     }
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
-  }, [selected]);
+  }, []);
 
   function selectFigure(f) {
     onChange(f.id);
-    setQuery(f.name_zh);
     setOpen(false);
+    setQuery(''); // Clear query for next time
   }
-
-  // Handle focus
-  const handleFocus = () => {
-    setOpen(true);
-    if (selected) setQuery(''); // Clear on focus to make typing easy
-  };
 
   return (
     <div ref={ref} className="relative w-full">
@@ -78,8 +72,8 @@ export default function SearchBox({ label, value, onChange, exclude }) {
               : 'border-amber-700/20 focus:border-amber-600 focus:ring-4 focus:ring-amber-100 placeholder-amber-800/30'
             }`}
           placeholder="搜尋人物..."
-          value={open ? query : (selected ? selected.name_zh : query)}
-          onFocus={handleFocus}
+          value={displayValue}
+          onFocus={() => { setOpen(true); }}
           onChange={e => { setQuery(e.target.value); setOpen(true); }}
         />
         
@@ -92,7 +86,7 @@ export default function SearchBox({ label, value, onChange, exclude }) {
               onClick={(e) => { 
                 e.stopPropagation(); 
                 onChange(null); 
-                setQuery(''); 
+                setQuery('');
                 setOpen(true);
               }}
               className="pointer-events-auto p-1.5 hover:bg-amber-200/50 rounded-full text-amber-400 hover:text-amber-700 transition-colors"
@@ -106,9 +100,7 @@ export default function SearchBox({ label, value, onChange, exclude }) {
       {open && (
         <ul className="absolute z-50 mt-2 w-full max-h-80 overflow-y-auto bg-white rounded-2xl shadow-2xl border border-amber-100 py-2 animate-fade-in no-scrollbar">
           {filtered.length === 0 ? (
-            <li className="px-6 py-8 text-center text-amber-800/40 font-sans">
-              找不到符合的人物
-            </li>
+            <li className="px-6 py-8 text-center text-amber-800/40 font-sans">找不到符合的人物</li>
           ) : (
             filtered.map(f => (
               <li key={f.id}>
@@ -117,7 +109,7 @@ export default function SearchBox({ label, value, onChange, exclude }) {
                   onMouseDown={(e) => { e.preventDefault(); selectFigure(f); }}
                 >
                   <div className="w-10 h-10 flex items-center justify-center bg-amber-100 rounded-full text-xl shadow-inner shrink-0">
-                    {f.tags.includes('皇帝') || f.tags.includes('國王') ? '👑' : f.tags.includes('將領') ? '⚔️' : '👤'}
+                    {(f.tags && (f.tags.includes('皇帝') || f.tags.includes('國王'))) ? '👑' : '👤'}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
