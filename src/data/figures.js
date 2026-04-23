@@ -2840,302 +2840,302 @@ export const FIGURES = {
     tags: ['歷史名人'],
     bio_zh: '王維 是歷史上影響深遠的人物。',
   },
-  person_601: {
-    id: 'person_601', name_zh: '孟浩然', name_en: 'person_601',
+  meng_haoran: {
+    id: 'meng_haoran', name_zh: '孟浩然', name_en: 'meng haoran',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '孟浩然 是歷史上影響深遠的人物。',
   },
-  person_603: {
-    id: 'person_603', name_zh: '柳宗元', name_en: 'person_603',
+  liu_zongyuan: {
+    id: 'liu_zongyuan', name_zh: '柳宗元', name_en: 'liu zongyuan',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '柳宗元 是歷史上影響深遠的人物。',
   },
-  person_604: {
-    id: 'person_604', name_zh: '杜牧', name_en: 'person_604',
+  du_mu: {
+    id: 'du_mu', name_zh: '杜牧', name_en: 'du mu',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '杜牧 是歷史上影響深遠的人物。',
   },
-  person_608: {
-    id: 'person_608', name_zh: '范仲淹', name_en: 'person_608',
+  fan_zhongyan: {
+    id: 'fan_zhongyan', name_zh: '范仲淹', name_en: 'fan zhongyan',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '范仲淹 是歷史上影響深遠的人物。',
   },
-  person_612: {
-    id: 'person_612', name_zh: '曾鞏', name_en: 'person_612',
+  zeng_gong: {
+    id: 'zeng_gong', name_zh: '曾鞏', name_en: 'zeng gong',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '曾鞏 是歷史上影響深遠的人物。',
   },
-  person_614: {
-    id: 'person_614', name_zh: '張載', name_en: 'person_614',
+  zhang_zai: {
+    id: 'zhang_zai', name_zh: '張載', name_en: 'zhang zai',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '張載 是歷史上影響深遠的人物。',
   },
-  person_615: {
-    id: 'person_615', name_zh: '程頤', name_en: 'person_615',
+  cheng_yi: {
+    id: 'cheng_yi', name_zh: '程頤', name_en: 'cheng yi',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '程頤 是歷史上影響深遠的人物。',
   },
-  person_616: {
-    id: 'person_616', name_zh: '朱元璋', name_en: 'person_616',
+  zhu_yuanzhang: {
+    id: 'zhu_yuanzhang', name_zh: '朱元璋', name_en: 'zhu yuanzhang',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '朱元璋 是歷史上影響深遠的人物。',
   },
-  person_617: {
-    id: 'person_617', name_zh: '劉伯溫', name_en: 'person_617',
+  liu_bowen: {
+    id: 'liu_bowen', name_zh: '劉伯溫', name_en: 'liu bowen',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '劉伯溫 是歷史上影響深遠的人物。',
   },
-  person_618: {
-    id: 'person_618', name_zh: '徐達', name_en: 'person_618',
+  xu_da: {
+    id: 'xu_da', name_zh: '徐達', name_en: 'xu da',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '徐達 是歷史上影響深遠的人物。',
   },
-  person_619: {
-    id: 'person_619', name_zh: '常遇春', name_en: 'person_619',
+  chang_yuchun: {
+    id: 'chang_yuchun', name_zh: '常遇春', name_en: 'chang yuchun',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '常遇春 是歷史上影響深遠的人物。',
   },
-  person_620: {
-    id: 'person_620', name_zh: '姚廣孝', name_en: 'person_620',
+  yao_guangxiao: {
+    id: 'yao_guangxiao', name_zh: '姚廣孝', name_en: 'yao guangxiao',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '姚廣孝 是歷史上影響深遠的人物。',
   },
-  person_621: {
-    id: 'person_621', name_zh: '解縉', name_en: 'person_621',
+  xie_jin: {
+    id: 'xie_jin', name_zh: '解縉', name_en: 'xie jin',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '解縉 是歷史上影響深遠的人物。',
   },
-  person_622: {
-    id: 'person_622', name_zh: '于謙', name_en: 'person_622',
+  yu_qian: {
+    id: 'yu_qian', name_zh: '于謙', name_en: 'yu qian',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '于謙 是歷史上影響深遠的人物。',
   },
-  person_623: {
-    id: 'person_623', name_zh: '李東陽', name_en: 'person_623',
+  li_dongyang: {
+    id: 'li_dongyang', name_zh: '李東陽', name_en: 'li dongyang',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '李東陽 是歷史上影響深遠的人物。',
   },
-  person_624: {
-    id: 'person_624', name_zh: '王守仁', name_en: 'person_624',
+  wang_shouren: {
+    id: 'wang_shouren', name_zh: '王守仁', name_en: 'wang shouren',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '王守仁 是歷史上影響深遠的人物。',
   },
-  person_628: {
-    id: 'person_628', name_zh: '俞大猷', name_en: 'person_628',
+  yu_dayou: {
+    id: 'yu_dayou', name_zh: '俞大猷', name_en: 'yu dayou',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '俞大猷 是歷史上影響深遠的人物。',
   },
-  person_630: {
-    id: 'person_630', name_zh: '史可法', name_en: 'person_630',
+  shi_kefa: {
+    id: 'shi_kefa', name_zh: '史可法', name_en: 'shi kefa',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '史可法 是歷史上影響深遠的人物。',
   },
-  person_631: {
-    id: 'person_631', name_zh: '鄭成功', name_en: 'person_631',
+  zheng_chenggong: {
+    id: 'zheng_chenggong', name_zh: '鄭成功', name_en: 'zheng chenggong',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '鄭成功 是歷史上影響深遠的人物。',
   },
-  person_632: {
-    id: 'person_632', name_zh: '努爾哈赤', name_en: 'person_632',
+  nurhaci: {
+    id: 'nurhaci', name_zh: '努爾哈赤', name_en: 'nurhaci',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '努爾哈赤 是歷史上影響深遠的人物。',
   },
-  person_638: {
-    id: 'person_638', name_zh: '紀曉嵐', name_en: 'person_638',
+  ji_xiaolan: {
+    id: 'ji_xiaolan', name_zh: '紀曉嵐', name_en: 'ji xiaolan',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '紀曉嵐 是歷史上影響深遠的人物。',
   },
-  person_641: {
-    id: 'person_641', name_zh: '魏源', name_en: 'person_641',
+  wei_yuan: {
+    id: 'wei_yuan', name_zh: '魏源', name_en: 'wei yuan',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '魏源 是歷史上影響深遠的人物。',
   },
-  person_643: {
-    id: 'person_643', name_zh: '左宗棠', name_en: 'person_643',
+  zuo_zongtang: {
+    id: 'zuo_zongtang', name_zh: '左宗棠', name_en: 'zuo zongtang',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '左宗棠 是歷史上影響深遠的人物。',
   },
-  person_645: {
-    id: 'person_645', name_zh: '張之洞', name_en: 'person_645',
+  zhang_zhidong: {
+    id: 'zhang_zhidong', name_zh: '張之洞', name_en: 'zhang zhidong',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '張之洞 是歷史上影響深遠的人物。',
   },
-  person_646: {
-    id: 'person_646', name_zh: '康有為', name_en: 'person_646',
+  kang_youwei: {
+    id: 'kang_youwei', name_zh: '康有為', name_en: 'kang youwei',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '康有為 是歷史上影響深遠的人物。',
   },
-  person_647: {
-    id: 'person_647', name_zh: '梁啟超', name_en: 'person_647',
+  liang_qichao: {
+    id: 'liang_qichao', name_zh: '梁啟超', name_en: 'liang qichao',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '梁啟超 是歷史上影響深遠的人物。',
   },
-  person_649: {
-    id: 'person_649', name_zh: '黃興', name_en: 'person_649',
+  huang_xing: {
+    id: 'huang_xing', name_zh: '黃興', name_en: 'huang xing',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '黃興 是歷史上影響深遠的人物。',
   },
-  person_650: {
-    id: 'person_650', name_zh: '宋教仁', name_en: 'person_650',
+  song_jiaoren: {
+    id: 'song_jiaoren', name_zh: '宋教仁', name_en: 'song jiaoren',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '宋教仁 是歷史上影響深遠的人物。',
   },
-  person_651: {
-    id: 'person_651', name_zh: '蔡鍔', name_en: 'person_651',
+  cai_e: {
+    id: 'cai_e', name_zh: '蔡鍔', name_en: 'cai e',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '蔡鍔 是歷史上影響深遠的人物。',
   },
-  person_653: {
-    id: 'person_653', name_zh: '段祺瑞', name_en: 'person_653',
+  duan_qirui: {
+    id: 'duan_qirui', name_zh: '段祺瑞', name_en: 'duan qirui',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '段祺瑞 是歷史上影響深遠的人物。',
   },
-  person_654: {
-    id: 'person_654', name_zh: '馮國璋', name_en: 'person_654',
+  feng_guozhang: {
+    id: 'feng_guozhang', name_zh: '馮國璋', name_en: 'feng guozhang',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '馮國璋 是歷史上影響深遠的人物。',
   },
-  person_655: {
-    id: 'person_655', name_zh: '吳佩孚', name_en: 'person_655',
+  wu_peifu: {
+    id: 'wu_peifu', name_zh: '吳佩孚', name_en: 'wu peifu',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '吳佩孚 是歷史上影響深遠的人物。',
   },
-  person_657: {
-    id: 'person_657', name_zh: '李大釗', name_en: 'person_657',
+  li_dazhao: {
+    id: 'li_dazhao', name_zh: '李大釗', name_en: 'li dazhao',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '李大釗 是歷史上影響深遠的人物。',
   },
-  person_661: {
-    id: 'person_661', name_zh: '老舍', name_en: 'person_661',
+  lao_she: {
+    id: 'lao_she', name_zh: '老舍', name_en: 'lao she',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '老舍 是歷史上影響深遠的人物。',
   },
-  person_662: {
-    id: 'person_662', name_zh: '巴金', name_en: 'person_662',
+  ba_jin: {
+    id: 'ba_jin', name_zh: '巴金', name_en: 'ba jin',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '巴金 是歷史上影響深遠的人物。',
   },
-  person_663: {
-    id: 'person_663', name_zh: '沈從文', name_en: 'person_663',
+  shen_congwen: {
+    id: 'shen_congwen', name_zh: '沈從文', name_en: 'shen congwen',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '沈從文 是歷史上影響深遠的人物。',
   },
-  person_666: {
-    id: 'person_666', name_zh: '宋子文', name_en: 'person_666',
+  song_ziwen: {
+    id: 'song_ziwen', name_zh: '宋子文', name_en: 'song ziwen',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '宋子文 是歷史上影響深遠的人物。',
   },
-  person_667: {
-    id: 'person_667', name_zh: '孔祥熙', name_en: 'person_667',
+  kong_xiangxi: {
+    id: 'kong_xiangxi', name_zh: '孔祥熙', name_en: 'kong xiangxi',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '孔祥熙 是歷史上影響深遠的人物。',
   },
-  person_675: {
-    id: 'person_675', name_zh: '真田幸村', name_en: 'person_675',
+  sanada_yukimura: {
+    id: 'sanada_yukimura', name_zh: '真田幸村', name_en: 'sanada yukimura',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '真田幸村 是歷史上影響深遠的人物。',
   },
-  person_676: {
-    id: 'person_676', name_zh: '伊達政宗', name_en: 'person_676',
+  date_masamune: {
+    id: 'date_masamune', name_zh: '伊達政宗', name_en: 'date masamune',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '伊達政宗 是歷史上影響深遠的人物。',
   },
-  person_677: {
-    id: 'person_677', name_zh: '上杉謙信', name_en: 'person_677',
+  uesugi_kenshin: {
+    id: 'uesugi_kenshin', name_zh: '上杉謙信', name_en: 'uesugi kenshin',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '上杉謙信 是歷史上影響深遠的人物。',
   },
-  person_678: {
-    id: 'person_678', name_zh: '武田信玄', name_en: 'person_678',
+  takeda_shingen: {
+    id: 'takeda_shingen', name_zh: '武田信玄', name_en: 'takeda shingen',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '武田信玄 是歷史上影響深遠的人物。',
   },
-  person_679: {
-    id: 'person_679', name_zh: '明智光秀', name_en: 'person_679',
+  akechi_mitsuhide: {
+    id: 'akechi_mitsuhide', name_zh: '明智光秀', name_en: 'akechi mitsuhide',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '明智光秀 是歷史上影響深遠的人物。',
   },
-  person_680: {
-    id: 'person_680', name_zh: '坂本龍馬', name_en: 'person_680',
+  sakamoto_ryoma: {
+    id: 'sakamoto_ryoma', name_zh: '坂本龍馬', name_en: 'sakamoto ryoma',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '坂本龍馬 是歷史上影響深遠的人物。',
   },
-  person_681: {
-    id: 'person_681', name_zh: '西鄉隆盛', name_en: 'person_681',
+  saigo_takamori: {
+    id: 'saigo_takamori', name_zh: '西鄉隆盛', name_en: 'saigo takamori',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '西鄉隆盛 是歷史上影響深遠的人物。',
   },
-  person_682: {
-    id: 'person_682', name_zh: '木戶孝允', name_en: 'person_682',
+  kido_takayoshi: {
+    id: 'kido_takayoshi', name_zh: '木戶孝允', name_en: 'kido takayoshi',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '木戶孝允 是歷史上影響深遠的人物。',
   },
-  person_683: {
-    id: 'person_683', name_zh: '大久保利通', name_en: 'person_683',
+  okubo_toshimichi: {
+    id: 'okubo_toshimichi', name_zh: '大久保利通', name_en: 'okubo toshimichi',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '大久保利通 是歷史上影響深遠的人物。',
   },
-  person_684: {
-    id: 'person_684', name_zh: '福澤諭吉', name_en: 'person_684',
+  fukuzawa_yukichi: {
+    id: 'fukuzawa_yukichi', name_zh: '福澤諭吉', name_en: 'fukuzawa yukichi',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '福澤諭吉 是歷史上影響深遠的人物。',
   },
-  person_691: {
-    id: 'person_691', name_zh: '托爾斯泰', name_en: 'person_691',
+  leo_tolstoy: {
+    id: 'leo_tolstoy', name_zh: '托爾斯泰', name_en: 'leo tolstoy',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '托爾斯泰 是歷史上影響深遠的人物。',
   },
-  person_695: {
-    id: 'person_695', name_zh: '史達林', name_en: 'person_695',
+  joseph_stalin: {
+    id: 'joseph_stalin', name_zh: '史達林', name_en: 'joseph stalin',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '史達林 是歷史上影響深遠的人物。',
@@ -3146,146 +3146,146 @@ export const FIGURES = {
     tags: ['歷史名人'],
     bio_zh: '達文西 是歷史上影響深遠的人物。',
   },
-  person_699: {
-    id: 'person_699', name_zh: '馬基維利', name_en: 'person_699',
+  niccolo_machiavelli: {
+    id: 'niccolo_machiavelli', name_zh: '馬基維利', name_en: 'niccolo machiavelli',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '馬基維利 是歷史上影響深遠的人物。',
   },
-  person_710: {
-    id: 'person_710', name_zh: '馬克思', name_en: 'person_710',
+  karl_marx: {
+    id: 'karl_marx', name_zh: '馬克思', name_en: 'karl marx',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '馬克思 是歷史上影響深遠的人物。',
   },
-  person_711: {
-    id: 'person_711', name_zh: '恩格斯', name_en: 'person_711',
+  friedrich_engels: {
+    id: 'friedrich_engels', name_zh: '恩格斯', name_en: 'friedrich engels',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '恩格斯 是歷史上影響深遠的人物。',
   },
-  person_714: {
-    id: 'person_714', name_zh: '巴哈', name_en: 'person_714',
+  johann_sebastian_bach: {
+    id: 'johann_sebastian_bach', name_zh: '巴哈', name_en: 'johann sebastian bach',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '巴哈 是歷史上影響深遠的人物。',
   },
-  person_720: {
-    id: 'person_720', name_zh: '愛因斯坦', name_en: 'person_720',
+  albert_einstein: {
+    id: 'albert_einstein', name_zh: '愛因斯坦', name_en: 'albert einstein',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '愛因斯坦 是歷史上影響深遠的人物。',
   },
-  person_721: {
-    id: 'person_721', name_zh: '普朗克', name_en: 'person_721',
+  max_planck: {
+    id: 'max_planck', name_zh: '普朗克', name_en: 'max planck',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '普朗克 是歷史上影響深遠的人物。',
   },
-  person_722: {
-    id: 'person_722', name_zh: '海森堡', name_en: 'person_722',
+  werner_heisenberg: {
+    id: 'werner_heisenberg', name_zh: '海森堡', name_en: 'werner heisenberg',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '海森堡 是歷史上影響深遠的人物。',
   },
-  person_723: {
-    id: 'person_723', name_zh: '波耳', name_en: 'person_723',
+  niels_bohr: {
+    id: 'niels_bohr', name_zh: '波耳', name_en: 'niels bohr',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '波耳 是歷史上影響深遠的人物。',
   },
-  person_724: {
-    id: 'person_724', name_zh: '薛丁格', name_en: 'person_724',
+  erwin_schrodinger: {
+    id: 'erwin_schrodinger', name_zh: '薛丁格', name_en: 'erwin schrodinger',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '薛丁格 是歷史上影響深遠的人物。',
   },
-  person_725: {
-    id: 'person_725', name_zh: '霍金', name_en: 'person_725',
+  stephen_hawking: {
+    id: 'stephen_hawking', name_zh: '霍金', name_en: 'stephen hawking',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '霍金 是歷史上影響深遠的人物。',
   },
-  person_726: {
-    id: 'person_726', name_zh: '圖靈', name_en: 'person_726',
+  alan_turing: {
+    id: 'alan_turing', name_zh: '圖靈', name_en: 'alan turing',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '圖靈 是歷史上影響深遠的人物。',
   },
-  person_727: {
-    id: 'person_727', name_zh: '奧本海默', name_en: 'person_727',
+  j_robert_oppenheimer: {
+    id: 'j_robert_oppenheimer', name_zh: '奧本海默', name_en: 'j robert oppenheimer',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '奧本海默 是歷史上影響深遠的人物。',
   },
-  person_728: {
-    id: 'person_728', name_zh: '華盛頓', name_en: 'person_728',
+  george_washington: {
+    id: 'george_washington', name_zh: '華盛頓', name_en: 'george washington',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '華盛頓 是歷史上影響深遠的人物。',
   },
-  person_729: {
-    id: 'person_729', name_zh: '傑佛遜', name_en: 'person_729',
+  thomas_jefferson: {
+    id: 'thomas_jefferson', name_zh: '傑佛遜', name_en: 'thomas jefferson',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '傑佛遜 是歷史上影響深遠的人物。',
   },
-  person_730: {
-    id: 'person_730', name_zh: '漢密爾頓', name_en: 'person_730',
+  alexander_hamilton: {
+    id: 'alexander_hamilton', name_zh: '漢密爾頓', name_en: 'alexander hamilton',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '漢密爾頓 是歷史上影響深遠的人物。',
   },
-  person_731: {
-    id: 'person_731', name_zh: '富蘭克林', name_en: 'person_731',
+  benjamin_franklin: {
+    id: 'benjamin_franklin', name_zh: '富蘭克林', name_en: 'benjamin franklin',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '富蘭克林 是歷史上影響深遠的人物。',
   },
-  person_733: {
-    id: 'person_733', name_zh: '格蘭特', name_en: 'person_733',
+  ulysses_s_grant: {
+    id: 'ulysses_s_grant', name_zh: '格蘭特', name_en: 'ulysses s grant',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '格蘭特 是歷史上影響深遠的人物。',
   },
-  person_734: {
-    id: 'person_734', name_zh: '羅斯福', name_en: 'person_734',
+  franklin_d_roosevelt: {
+    id: 'franklin_d_roosevelt', name_zh: '羅斯福', name_en: 'franklin d roosevelt',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '羅斯福 是歷史上影響深遠的人物。',
   },
-  person_735: {
-    id: 'person_735', name_zh: '杜魯門', name_en: 'person_735',
+  harry_s_truman: {
+    id: 'harry_s_truman', name_zh: '杜魯門', name_en: 'harry s truman',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '杜魯門 是歷史上影響深遠的人物。',
   },
-  person_736: {
-    id: 'person_736', name_zh: '甘迺迪', name_en: 'person_736',
+  john_f_kennedy: {
+    id: 'john_f_kennedy', name_zh: '甘迺迪', name_en: 'john f kennedy',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '甘迺迪 是歷史上影響深遠的人物。',
   },
-  person_737: {
-    id: 'person_737', name_zh: '尼克森', name_en: 'person_737',
+  richard_nixon: {
+    id: 'richard_nixon', name_zh: '尼克森', name_en: 'richard nixon',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '尼克森 是歷史上影響深遠的人物。',
   },
-  person_738: {
-    id: 'person_738', name_zh: '雷根', name_en: 'person_738',
+  ronald_reagan: {
+    id: 'ronald_reagan', name_zh: '雷根', name_en: 'ronald reagan',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '雷根 是歷史上影響深遠的人物。',
   },
-  person_739: {
-    id: 'person_739', name_zh: '柯林頓', name_en: 'person_739',
+  bill_clinton: {
+    id: 'bill_clinton', name_zh: '柯林頓', name_en: 'bill clinton',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '柯林頓 是歷史上影響深遠的人物。',
   },
-  person_740: {
-    id: 'person_740', name_zh: '歐巴馬', name_en: 'person_740',
+  barack_obama: {
+    id: 'barack_obama', name_zh: '歐巴馬', name_en: 'barack obama',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '歐巴馬 是歷史上影響深遠的人物。',
@@ -3302,92 +3302,92 @@ export const FIGURES = {
     tags: ['歷史名人'],
     bio_zh: '比爾蓋茲 是歷史上影響深遠的人物。',
   },
-  person_743: {
-    id: 'person_743', name_zh: '馬斯克', name_en: 'person_743',
+  elon_musk: {
+    id: 'elon_musk', name_zh: '馬斯克', name_en: 'elon musk',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '馬斯克 是歷史上影響深遠的人物。',
   },
-  person_744: {
-    id: 'person_744', name_zh: '畢卡索', name_en: 'person_744',
+  pablo_picasso: {
+    id: 'pablo_picasso', name_zh: '畢卡索', name_en: 'pablo picasso',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '畢卡索 是歷史上影響深遠的人物。',
   },
-  person_745: {
-    id: 'person_745', name_zh: '達利', name_en: 'person_745',
+  salvador_dali: {
+    id: 'salvador_dali', name_zh: '達利', name_en: 'salvador dali',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '達利 是歷史上影響深遠的人物。',
   },
-  person_746: {
-    id: 'person_746', name_zh: '梵谷', name_en: 'person_746',
+  vincent_van_gogh_clone: {
+    id: 'vincent_van_gogh_clone', name_zh: '梵谷', name_en: 'vincent van gogh clone',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '梵谷 是歷史上影響深遠的人物。',
   },
-  person_747: {
-    id: 'person_747', name_zh: '莫內', name_en: 'person_747',
+  claude_monet: {
+    id: 'claude_monet', name_zh: '莫內', name_en: 'claude monet',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '莫內 是歷史上影響深遠的人物。',
   },
-  person_748: {
-    id: 'person_748', name_zh: '羅丹', name_en: 'person_748',
+  auguste_rodin: {
+    id: 'auguste_rodin', name_zh: '羅丹', name_en: 'auguste rodin',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '羅丹 是歷史上影響深遠的人物。',
   },
-  person_749: {
-    id: 'person_749', name_zh: '海明威', name_en: 'person_749',
+  ernest_hemingway: {
+    id: 'ernest_hemingway', name_zh: '海明威', name_en: 'ernest hemingway',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '海明威 是歷史上影響深遠的人物。',
   },
-  person_750: {
-    id: 'person_750', name_zh: '奧威爾', name_en: 'person_750',
+  george_orwell: {
+    id: 'george_orwell', name_zh: '奧威爾', name_en: 'george orwell',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '奧威爾 是歷史上影響深遠的人物。',
   },
-  person_751: {
-    id: 'person_751', name_zh: '加謬', name_en: 'person_751',
+  albert_camus: {
+    id: 'albert_camus', name_zh: '加謬', name_en: 'albert camus',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '加謬 是歷史上影響深遠的人物。',
   },
-  person_752: {
-    id: 'person_752', name_zh: '佛陀', name_en: 'person_752',
+  gautama_buddha: {
+    id: 'gautama_buddha', name_zh: '佛陀', name_en: 'gautama buddha',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '佛陀 是歷史上影響深遠的人物。',
   },
-  person_756: {
-    id: 'person_756', name_zh: '莊子', name_en: 'person_756',
+  zhuangzi: {
+    id: 'zhuangzi', name_zh: '莊子', name_en: 'zhuangzi',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '莊子 是歷史上影響深遠的人物。',
   },
-  person_762: {
-    id: 'person_762', name_zh: '康斯坦丁', name_en: 'person_762',
+  constantine_the_great: {
+    id: 'constantine_the_great', name_zh: '康斯坦丁', name_en: 'constantine the great',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '康斯坦丁 是歷史上影響深遠的人物。',
   },
-  person_763: {
-    id: 'person_763', name_zh: '查理曼', name_en: 'person_763',
+  charlemagne: {
+    id: 'charlemagne', name_zh: '查理曼', name_en: 'charlemagne',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '查理曼 是歷史上影響深遠的人物。',
   },
-  person_765: {
-    id: 'person_765', name_zh: '理查一世', name_en: 'person_765',
+  richard_i: {
+    id: 'richard_i', name_zh: '理查一世', name_en: 'richard i',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '理查一世 是歷史上影響深遠的人物。',
   },
-  person_767: {
-    id: 'person_767', name_zh: '麥哲倫', name_en: 'person_767',
+  ferdinand_magellan: {
+    id: 'ferdinand_magellan', name_zh: '麥哲倫', name_en: 'ferdinand magellan',
     born: 0, died: 0, era: '歷史名錄', region: '世界',
     tags: ['歷史名人'],
     bio_zh: '麥哲倫 是歷史上影響深遠的人物。',
@@ -3617,4 +3617,17 @@ export const FIGURES = {
     bio_zh: '新巴比倫帝國的創建者，尼布甲尼撒二世之父。原為亞述帝國的巴比倫總督，前626年趁亞述內亂宣告獨立，聯合米底亞人於前612年攻陷亞述首都尼尼微，徹底終結亞述帝國。'
   },
 
+
+  king_huai_of_chu: {
+    id: 'king_huai_of_chu', name_zh: '楚懷王', name_en: 'King Huai of Chu',
+    born: -355, died: -296, era: '戰國', region: '楚國',
+    tags: ['君主'],
+    bio_zh: '戰國時期楚國君主，曾重用屈原，後誤信張儀而被秦國所欺，死於秦國。'
+  },
+  zhang_yi: {
+    id: 'zhang_yi', name_zh: '張儀', name_en: 'Zhang Yi',
+    born: -373, died: -309, era: '戰國', region: '秦國',
+    tags: ['政治家', '縱橫家'],
+    bio_zh: '戰國時期著名的縱橫家，提倡連橫策略，曾多次出使楚國欺騙楚懷王。'
+  },
 };

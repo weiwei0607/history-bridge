@@ -7,5 +7,17 @@ export const CONNECTIONS_EXTRA = [
     source_zh: '《賈伯斯傳》', source_en: 'Steve Jobs Biography' },
   { id: 'c_auto_wangwei', from: 'person_600', to: 'li_bai', year: 730, type: 'friendship',
     desc_zh: '王維與李白同為盛唐詩人，兩人不僅同年同月出生，還曾同時在長安、洛陽等地交遊，與孟浩然等人共同構成了唐代詩壇的黃金世代。',
-    source_zh: '《新唐書》', source_en: 'New Book of Tang' }
+    source_zh: '《新唐書》', source_en: 'New Book of Tang' },
+  { id: 'c_man_zhu_liu', from: 'zhu_yuanzhang', to: 'liu_bowen', year: 1360, type: 'political', desc_zh: '朱元璋徵召劉伯溫出山，兩人共圖天下。', source_zh: '《明史》', source_en: 'History of Ming' },
+  { id: 'c_man_zhu_xu', from: 'zhu_yuanzhang', to: 'xu_da', year: 1353, type: 'military', desc_zh: '徐達參加朱元璋的起義軍，成為明朝開國第一功臣。', source_zh: '《明史》', source_en: 'History of Ming' },
+  { id: 'c_man_takeda_uesugi', from: 'takeda_shingen', to: 'uesugi_kenshin', year: 1553, type: 'military', desc_zh: '武田信玄與上杉謙信爆發了五次著名的川中島之戰，曾於陣前持刀相交。', source_zh: '《甲陽軍鑑》', source_en: 'Kōyō Gunkan' },
+  { id: 'c_man_ryoma_saigo', from: 'sakamoto_ryoma', to: 'saigo_takamori', year: 1866, type: 'political', desc_zh: '坂本龍馬斡旋了薩摩藩的西鄉隆盛與長州藩的桂小五郎，促成薩長同盟。', source_zh: '《日本幕末史》', source_en: 'Bakumatsu History' },
+  { id: 'c_man_einstein_bohr', from: 'albert_einstein', to: 'niels_bohr', year: 1927, type: 'colleague', desc_zh: '愛因斯坦與波耳在第五次索爾維會議上見面並進行了著名的量子力學辯論。', source_zh: '《物理學史》', source_en: 'History of Physics' },
+  { id: 'c_man_marx_engels', from: 'karl_marx', to: 'friedrich_engels', year: 1844, type: 'friendship', desc_zh: '馬克思與恩格斯在巴黎著名的Café de la Régence會面，開始了一生偉大的友誼。', source_zh: '《共產黨宣言》', source_en: 'The Communist Manifesto' },
+  { id: 'c_man_stalin_roosevelt', from: 'joseph_stalin', to: 'franklin_d_roosevelt', year: 1945, type: 'diplomatic', desc_zh: '史達林、羅斯福與邱吉爾三巨頭共同出席了雅爾達會議。', source_zh: '雅爾達會議紀錄', source_en: 'Yalta Conference Records' },
+  { id: 'c_man_qu_huai', from: 'qu_yuan', to: 'king_huai_of_chu', year: -314, type: 'political', desc_zh: '楚懷王曾重用屈原為左徒，後因聽信讒言將其流放。', source_zh: '《史記·屈原賈生列傳》', source_en: 'Records of the Grand Historian' },
+  { id: 'c_man_huai_zhang', from: 'king_huai_of_chu', to: 'zhang_yi', year: -313, type: 'diplomatic', desc_zh: '張儀出使楚國面見楚懷王，以六百里商於之地欺騙楚懷王與齊國斷交。', source_zh: '《史記·張儀列傳》', source_en: 'Records of the Grand Historian' },
+  { id: 'c_man_qu_huai', from: 'qu_yuan', to: 'king_huai_of_chu', year: -314, type: 'political', desc_zh: '楚懷王曾擔任屈原的君主，一度重用他。', source_zh: '《史記》', source_en: 'Records of the Grand Historian' },
+  { id: 'c_man_huai_zhang', from: 'king_huai_of_chu', to: 'zhang_yi', year: -313, type: 'diplomatic', desc_zh: '張儀出使楚國欺騙楚懷王與齊國斷交。', source_zh: '《史記》', source_en: 'Records of the Grand Historian' },
+  { id: 'c_man_zhang_hui', from: 'zhang_yi', to: 'liang_hui_wang', year: -322, type: 'political', desc_zh: '張儀曾短暫擔任魏國宰相，面見並輔佐魏惠王（梁惠王）以推行其連橫政策。', source_zh: '《史記·張儀列傳》', source_en: 'Records of the Grand Historian' },
 ];
