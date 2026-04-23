@@ -1,6 +1,9 @@
 import { CONNECTIONS } from '../data/connections';
 
+let _cachedGraph = null;
+
 function buildGraph() {
+  if (_cachedGraph) return _cachedGraph;
   const graph = {};
   for (const conn of CONNECTIONS) {
     if (!graph[conn.from]) graph[conn.from] = [];
@@ -8,6 +11,7 @@ function buildGraph() {
     graph[conn.from].push({ neighbor: conn.to,   connection: conn });
     graph[conn.to].push(  { neighbor: conn.from, connection: conn });
   }
+  _cachedGraph = graph;
   return graph;
 }
 

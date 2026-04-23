@@ -902,12 +902,6 @@ export const CONNECTIONS_ANCIENT = [
     source_zh: `賈斯廷《腓利史》卷四十一`, source_en: `Justin Epitome XLI`
   },
   {
-    id: 'c033', from: 'han_wudi', to: 'liubei',
-    year: 175, type: 'political',
-    desc_zh: `漢武帝死於前87年，劉備生於161年，兩人未曾相遇。劉備自稱漢室宗親。此為代理連接。`,
-    source_zh: `三國志`, source_en: `Records of the Three Kingdoms`
-  },
-  {
     id: 'c_new_10', from: 'ashoka', to: 'antiochus_ii',
     year: -260, type: 'diplomatic',
     desc_zh: `阿育王的第十三號岩石詔令明確提及曾派遣達摩使節至安條克二世（Antiochus II Theos）的王國弘揚佛法。這是古代東西方文明之間有史料可查的最早正式外交接觸之一。`,

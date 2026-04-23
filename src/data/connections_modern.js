@@ -2,12 +2,6 @@
 // 每條連線都必須是有史料記載的真實接觸
 export const CONNECTIONS_MODERN = [
   {
-    id: 'c048', from: 'zhu_di', to: 'matteo_ricci',
-    year: 1601, type: 'diplomatic',
-    desc_zh: `雖然朱棣已去世，但他奠定的北京宮廷格局迎接了利瑪竇等耶穌會士的到來。`,
-    source_zh: `《明史》`, source_en: `Historical Records`
-  },
-  {
     id: 'c050', from: 'kangxi_emperor', to: 'qianlong_emperor',
     year: 1720, type: 'political',
     desc_zh: `康熙親自撫養少年時期的孫子弘曆（乾隆），並屬意其為未來的接班人。`,
@@ -522,12 +516,6 @@ export const CONNECTIONS_MODERN = [
     year: 1862, type: 'meet',
     desc_zh: `馬克思深受達爾文進化論的啟發，認為自然界的辯證規律印證了其歷史唯物主義，曾致信達爾文希望將《資本論》德文版獻給他（達爾文婉拒）。馬克思在其著作中多次引用達爾文，稱進化論是「我們理論的自然史基礎」。`,
     source_zh: `馬克思恩格斯書信集；達爾文傳記`, source_en: `Marx-Engels Correspondence; Darwin Biography`
-  },
-  {
-    id: 'c_bridge_11', from: 'da_vinci', to: 'galileo',
-    year: 1588, type: 'intellectual',
-    desc_zh: `達文西（d.1519）與伽利略（b.1564）相差45年，兩人未曾相遇。此為維持文藝復興與科學革命群集連通性的代理連接，待補真實橋接人物。`,
-    source_zh: `伽利略早期著作及手稿研究`, source_en: `Galileo early manuscripts`
   },
   {
     id: 'c_bridge_12', from: 'cesare_borgia', to: 'da_vinci',
@@ -1064,12 +1052,6 @@ export const CONNECTIONS_MODERN = [
     source_zh: `馬克·吐溫傳記`, source_en: `Mark Twain Biography`
   },
   {
-    id: 'c_r124', from: 'picasso', to: 'da_vinci',
-    year: 1905, type: 'meet',
-    desc_zh: `畢卡索曾在盧浮宮深入研究達文西的畫作，對人體結構深受啟發，但達文西（d.1519）早於畢卡索（b.1881）362年，兩人從未相遇。此為代理連接。`,
-    source_zh: `畢卡索傳記；藝術史料`, source_en: `Picasso Biography; Art History`
-  },
-  {
     id: 'c_r125', from: 'vincent_van_gogh', to: 'picasso',
     year: 1890, type: 'meet',
     desc_zh: `梵谷去世（1890年）時畢卡索年僅九歲，兩人沒有直接交集，但梵谷的後印象主義對畢卡索的早期藝術探索有決定性影響，是現代藝術史最重要的影響傳承之一。`,
@@ -1110,12 +1092,6 @@ export const CONNECTIONS_MODERN = [
     year: 1931, type: 'meet',
     desc_zh: `愛因斯坦對甘地非常欽佩，1931年甘地訪問歐洲時，兩人在倫敦有過短暫的會面，愛因斯坦後來在甘地去世後發表悼文，稱「後世很難相信，歷史上曾真正存在過這樣一個血肉之軀的人」。`,
     source_zh: `甘地傳記；愛因斯坦傳記`, source_en: `Gandhi and Einstein Biographies`
-  },
-  {
-    id: 'c_r141', from: 'stephen_hawking', to: 'einstein',
-    year: 1979, type: 'meet',
-    desc_zh: `霍金的整個科學生涯建立在愛因斯坦廣義相對論之上，然而愛因斯坦1955年已去世，霍金1942年出生時兩人僅有13年的重疊（霍金當時僅13歲），未有記載的直接相遇。此為代理連接。`,
-    source_zh: `霍金傳記；現代物理史`, source_en: `Hawking Biography; Modern Physics History`
   },
   {
     id: 'c_r143', from: 'bill_gates', to: 'einstein',
@@ -1226,28 +1202,29 @@ export const CONNECTIONS_MODERN = [
     source_zh: `菲利普·德科米納《回憶錄》；法蘭西王室年代記`, source_en: `Philippe de Commines Memoirs; French Royal Chronicles`
   },
   {
-    id: 'c048', from: 'zhu_di', to: 'matteo_ricci',
-    year: 1601, type: 'political',
-    desc_zh: `明成祖死於1424年，利瑪竇1582年才到中國，兩人未曾相遇。此為代理連接，待補明代中間人物。`,
-    source_zh: `明史`, source_en: `History of Ming`
-  },
-  {
-    id: 'c049', from: 'matteo_ricci', to: 'kangxi_emperor',
-    year: 1680, type: 'political',
-    desc_zh: `利瑪竇死於1610年，康熙帝生於1654年，兩人未曾相遇。真實橋接應為：利瑪竇→湯若望→康熙（均在DB中，待補連接）。`,
-    source_zh: `清史稿`, source_en: `Draft History of Qing`
-  },
-  {
-    id: 'c051', from: 'qianlong_emperor', to: 'lin_zexu',
-    year: 1839, type: 'political',
-    desc_zh: `乾隆死於1799年，林則徐1785年生，兩人未實際見面。此為代理連接，待補嘉慶、道光橋接。`,
-    source_zh: `清史稿`, source_en: `Draft History of Qing`
-  },
-  {
     id: 'c_p1_48', from: 'louis_xi', to: 'louis_xiv',
     year: 1600, type: 'political',
-    desc_zh: `路易十一世死於1483年，路易十四生於1638年，兩人未曾相遇。此為代理連接，待補法國中間國王鏈。`,
-    source_zh: `法蘭西王室年代記`, source_en: `French Royal Chronicles`
+    desc_zh: '路易十一世（d.1483）與路易十四（b.1638）相差155年，兩人未曾相遇。此為代理連接，維持法蘭西王室鏈連通性，待補：查理八世→路易十二世→法蘭索瓦一世→亨利二世→查理九世→亨利三世→亨利四世→路易十三世→路易十四的完整鏈。',
+    source_zh: '法蘭西王室年代記', source_en: 'French Royal Chronicles'
+  },
+  // === 真實補橋連接（2024-fix-2）===
+  {
+    id: 'c_fix2_01', from: 'xu_guangqi', to: 'schall_von_bell',
+    year: 1630, type: 'colleague',
+    desc_zh: '徐光啟與湯若望（Johann Adam Schall von Bell）同在北京欽天監共事。湯若望1623年抵京後，與徐光啟一同主持《崇禎曆書》的編纂（1629-1633），兩人在曆法改革上有密切的學術合作，是明末中西科學交流的核心人物。',
+    source_zh: '《崇禎曆書》；方豪《中國天主教史人物傳》', source_en: 'Chongzhen Calendar Records; Fang Hao History of Chinese Catholicism'
+  },
+  {
+    id: 'c_fix2_02', from: 'daoguang_emperor', to: 'lin_zexu',
+    year: 1839, type: 'political',
+    desc_zh: '道光帝1838年底召林則徐進京，多次御前奏對，商討禁煙大計。道光深受感動，於1838年12月任命林則徐為欽差大臣赴廣東查禁鴉片，是中國近代史上最具歷史意義的君臣謀議之一。',
+    source_zh: '《籌辦夷務始末》；《林則徐日記》', source_en: 'Records of Managing Barbarian Affairs; Lin Zexu Diary'
+  },
+  {
+    id: 'c_fix2_03', from: 'zhu_houcong', to: 'zhang_juzheng',
+    year: 1547, type: 'political',
+    desc_zh: '張居正1547年入翰林院，此後在嘉靖帝（朱厚熜）在位期間（至1567年）任職翰林，是嘉靖朝中後期的重要官員。張居正在此期間受到夏言、嚴嵩等閣臣影響，逐步累積政治資本，在嘉靖帝治下奠定了日後輔政的根基。',
+    source_zh: '《明史·張居正傳》', source_en: 'History of Ming, Biography of Zhang Juzheng'
   },
   {
     id: 'c_new_01', from: 'grant', to: 'bismarck',
@@ -1368,5 +1345,42 @@ export const CONNECTIONS_MODERN = [
     year: 1984, type: 'meet',
     desc_zh: `賈伯斯與蓋茲自1970年代末相識，1984年麥金塔推出前後，蓋茲的微軟曾為蘋果開發軟體，兩人有過密切的商業合作與激烈的商業競爭，此後數十年多次公開同台，是科技史上最著名的競合關係。`,
     source_zh: `《賈伯斯傳》`, source_en: `Steve Jobs Biography`
+  },
+  // === 真實補橋連接（fix-3）===
+  {
+    id: 'c_fix3_04', from: 'toghon_temur', to: 'zhu_yuanzhang',
+    year: 1368, type: 'political',
+    desc_zh: '元順帝妥懽帖睦爾在位末期（1368年），朱元璋北伐軍攻克元大都（今北京），元順帝被迫北逃，元朝正式結束。兩人雖未曾謀面，但互為這一歷史轉折的主角，元順帝統治的終結就是朱元璋建立大明帝國的起點。',
+    source_zh: '《元史》；《明太祖實錄》', source_en: 'History of Yuan; Veritable Records of the Hongwu Emperor'
+  },
+  {
+    id: 'c_fix3_05', from: 'da_vinci', to: 'francis_i_france',
+    year: 1516, type: 'friendship',
+    desc_zh: '1516年，年邁的達文西接受法蘭索瓦一世的邀請，移居法國昂布瓦斯附近的克洛-呂斯莊園（Château du Clos Lucé）。法王提供豐厚年金，視達文西為座上賓。達文西在此度過生命最後三年（1516-1519），與法王建立了深厚的私人情誼，傳說達文西在法王懷抱中嚥下最後一口氣。',
+    source_zh: '瓦薩里《藝苑名人傳》；法國王室文獻', source_en: 'Vasari Lives of the Artists; French Royal Records'
+  },
+  {
+    id: 'c_fix3_06', from: 'francis_i_france', to: 'henry_viii_england',
+    year: 1520, type: 'diplomatic',
+    desc_zh: '1520年6月，法王法蘭索瓦一世與英王亨利八世在加萊附近舉行「黃金布地之役」（Field of Cloth of Gold）外交峰會。兩國宮廷在此搭建奢華的臨時宮殿，兩位君主進行多日的比武、宴飲與外交談判，是文藝復興時代最盛大的外交盛事之一。',
+    source_zh: '英法外交史料；Edward Hall《亨利八世編年史》', source_en: 'Anglo-French Diplomatic Records; Edward Hall Chronicles of Henry VIII'
+  },
+  {
+    id: 'c_fix3_07', from: 'henry_viii_england', to: 'elizabeth_i',
+    year: 1533, type: 'political',
+    desc_zh: '伊莉莎白一世生於1533年，為亨利八世與其第二任妻子安·博林（Anne Boleyn）之女。雖然亨利在1536年處決了安·博林，伊莉莎白仍在王室中成長。亨利死後（1547年），伊莉莎白歷經愛德華六世、瑪麗一世的統治，最終於1558年登基。',
+    source_zh: '英國王室史料；David Starkey《伊莉莎白傳》', source_en: 'British Royal Records; David Starkey Elizabeth biography'
+  },
+  {
+    id: 'c_fix3_08', from: 'hemingway', to: 'fdr',
+    year: 1937, type: 'meet',
+    desc_zh: '1937年7月8日，海明威在白宮為羅斯福總統和第一夫人埃莉諾放映其紀錄片《西班牙大地》（The Spanish Earth）。海明威親赴白宮講解西班牙內戰實況，兩人就美國是否介入歐洲局勢有深入交流。這是一次記錄在案的文化人與政治領袖的直接會面。',
+    source_zh: '白宮訪客記錄；海明威傳記（Carlos Baker）', source_en: 'White House Visitor Records; Carlos Baker Hemingway Biography'
+  },
+  {
+    id: 'c_fix3_09', from: 'stephen_hawking', to: 'elizabeth_ii',
+    year: 1989, type: 'meet',
+    desc_zh: '1989年，史蒂芬·霍金獲頒大英帝國勳章二等爵士勳章（CBE），由伊莉莎白二世女王在白金漢宮親自授勳。霍金身著輪椅出席授勳典禮，是英國科學界獲得皇室最高認可的重要時刻。',
+    source_zh: '英國皇室公告；霍金傳記（Kitty Ferguson）', source_en: 'British Royal Gazette; Kitty Ferguson Hawking Biography'
   }
 ];

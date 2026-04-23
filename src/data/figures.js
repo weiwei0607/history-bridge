@@ -849,6 +849,12 @@ export const FIGURES = {
     tags: ['皇帝'],
     bio_zh: '南宋中期皇帝，統治時期理學受到打擊（慶元黨禁），但也曾支持開禧北伐。',
   },
+  song_lizong: {
+    id: 'song_lizong', name_zh: '宋理宗', name_en: 'Emperor Lizong of Song',
+    born: 1205, died: 1264, era: '南宋', region: '臨安',
+    tags: ['皇帝'],
+    bio_zh: '南宋第五位皇帝，在位長達40年（1224-1264）。他以理學（程朱理學）為官方正統，尊崇朱熹。1256年文天祥在他主持的科舉中奪得狀元。晚年國勢衰微，蒙古軍隊大規模南侵。死後頭骨被元朝僧人製成飲器，成為歷史中最受屈辱的皇帝之一。',
+  },
   tolui: {
     id: 'tolui', name_zh: '拖雷', name_en: 'Tolui Khan',
     born: 1191, died: 1232, era: '蒙古帝國', region: '蒙古',
@@ -872,6 +878,12 @@ export const FIGURES = {
     born: 1314, died: 1356, era: '元朝', region: '大都',
     tags: ['政治家', '史學家'],
     bio_zh: '元末名臣，主編《宋史》、《遼史》、《金史》。曾率軍鎮壓農民起義，後因朝廷內鬥被貶毒殺。',
+  },
+  toghon_temur: {
+    id: 'toghon_temur', name_zh: '元順帝（妥懽帖睦爾）', name_en: 'Toghon Temür',
+    born: 1320, died: 1370, era: '元朝', region: '大都 (北京)',
+    tags: ['皇帝'],
+    bio_zh: '元朝末代皇帝（在位1333-1370），廟號惠宗。在位期間爆發紅巾軍起義，朱元璋趁勢崛起。1368年明軍攻克大都，元順帝北逃至上都，結束元朝對中原的統治。他的逃亡不僅是元朝的終結，更是蒙古帝國在中原統治的歷史終點。他是忽必烈之後與朱元璋同時代的最關鍵人物。',
   },
   zhu_di: {
     id: 'zhu_di', name_zh: '明成祖 (永樂帝)', name_en: 'Yongle Emperor',
@@ -1224,6 +1236,18 @@ export const FIGURES = {
     born: 1533, died: 1603, era: '都鐸王朝', region: '英格蘭',
     tags: ['女王'],
     bio_zh: '「童貞女王」，統治期間是英國歷史上的黃金時代。她擊敗了西班牙無敵艦隊，並大力贊助戲劇發展，是莎士比亞戲劇的重要支持者。她死後將王位傳給了詹姆斯一世。',
+  },
+  henry_viii_england: {
+    id: 'henry_viii_england', name_zh: '亨利八世', name_en: 'Henry VIII',
+    born: 1491, died: 1547, era: '都鐸王朝', region: '英格蘭',
+    tags: ['國王'],
+    bio_zh: '英格蘭都鐸王朝第二位君主，以六段婚姻和推動英格蘭宗教改革（脫離羅馬教廷，建立英格蘭教會）著稱。他與法王法蘭索瓦一世於1520年在「黃金布地之役」舉行盛大外交峰會。伊莉莎白一世為其與安·博林所生之女。',
+  },
+  francis_i_france: {
+    id: 'francis_i_france', name_zh: '法蘭索瓦一世', name_en: 'Francis I of France',
+    born: 1494, died: 1547, era: '文藝復興法國', region: '法蘭西',
+    tags: ['國王'],
+    bio_zh: '法蘭西瓦盧瓦王朝國王，熱愛義大利文藝復興藝術，1516年親自邀請年邁的達文西移居法國，提供昂布瓦斯城堡旁的克洛-呂斯莊園作為住所，並提供豐厚年金。達文西在此度過生命中最後三年，法蘭索瓦一世視達文西為摯友，傳說達文西在其懷中嚥下最後一口氣。',
   },
 
 

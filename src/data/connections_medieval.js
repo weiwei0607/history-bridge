@@ -793,29 +793,14 @@ export const CONNECTIONS_MEDIEVAL = [
     desc_zh: `蘇軾深受李白浪漫主義影響，常在詩中致敬這位前輩，但兩人相隔約300年，此為文學傳承連接，非真實見面。待補真實橋接。`,
     source_zh: `《蘇軾詩集》`, source_en: `Su Shi Poetry Collection`
   },
-  {
-    id: 'c043', from: 'su_shi', to: 'song_gaozong',
-    year: 1107, type: 'political',
-    desc_zh: `蘇軾死於1101年，宋高宗生於1107年，兩人未曾相遇。此為代理連接，待補趙明誠等中介人物。`,
-    source_zh: `宋史`, source_en: `History of Song`
-  },
-  {
-    id: 'c044', from: 'song_gaozong', to: 'wen_tianxiang',
-    year: 1270, type: 'political',
-    desc_zh: `宋高宗死於1187年，文天祥生於1236年，兩人未曾相遇。此為代理連接，待補宋孝宗、宋寧宗等鏈。`,
-    source_zh: `宋史`, source_en: `History of Song`
-  },
-  {
-    id: 'c046', from: 'kublai_khan', to: 'zhu_yuanzhang',
-    year: 1368, type: 'political',
-    desc_zh: `忽必烈死於1294年，朱元璋生於1328年，兩人未曾相遇。此為代理連接，待補元代中間皇帝。`,
-    source_zh: `元史`, source_en: `History of Yuan`
-  },
+  // c043 已由 li_qingzhao → song_gaozong 真實連接取代（見下方）
+  // c044 (song_gaozong→wen_tianxiang proxy) 已由下方真實鏈取代
+  // c046 (kublai_khan→zhu_yuanzhang proxy) 已由下方 toghon_temur 鏈取代
   {
     id: 'c_p1_47', from: 'pope_innocent_iv', to: 'louis_xi',
     year: 1248, type: 'political',
-    desc_zh: `英諾森四世1254年去世，路易十一世1423年生，兩人未曾相遇。此為代理連接，待補完整法國王室鏈。`,
-    source_zh: `中世紀法蘭西史`, source_en: `Medieval French History`
+    desc_zh: '英諾森四世（d.1254）與路易十一世（b.1423）相差169年，兩人未曾相遇。此為代理連接，維持中世紀法蘭西王室鏈的連通性，待補完整法國王室路徑（路易九世→腓力四世→查理五世→查理七世→路易十一世）。',
+    source_zh: '中世紀法蘭西史', source_en: 'Medieval French History'
   },
   {
     id: 'c_new_16', from: 'li_shangyin', to: 'bai_juyi',
@@ -834,5 +819,31 @@ export const CONNECTIONS_MEDIEVAL = [
     year: 1162, type: 'political',
     desc_zh: `辛棄疾22歲時率眾起義歸宋，被宋高宗接見，並奉命撰寫《美芹十論》上呈朝廷，就收復中原提出詳盡的軍事策略。這是辛棄疾初入南宋政壇的重要時刻。`,
     source_zh: `《宋史·辛棄疾傳》`, source_en: `History of Song, Xin Qiji Biography`
+  },
+  // === 真實補橋連接（2024-fix-2）===
+  {
+    id: 'c_fix2_04', from: 'li_qingzhao', to: 'song_gaozong',
+    year: 1134, type: 'political',
+    desc_zh: '靖康之難後，李清照隨南渡人潮輾轉流亡至臨安（今杭州）。她將亡夫趙明誠多年收藏的金石拓本及部分藏品獻呈宮廷，與宋高宗紹興年間的南宋朝廷有直接往來。李清照在《金石錄後序》中詳述了這段經歷，留下了南宋初期宮廷文化交流的珍貴史料。',
+    source_zh: '李清照《金石錄後序》；《宋史》', source_en: 'Li Qingzhao Postscript to Record of Bronze and Stone; History of Song'
+  },
+  // === 真實補橋連接（2024-fix-3）===
+  {
+    id: 'c_fix3_01', from: 'song_ningzong', to: 'song_lizong',
+    year: 1224, type: 'political',
+    desc_zh: '宋寧宗趙擴於1224年病逝，因無子嗣，由宗室子弟趙昀繼位，是為宋理宗。寧宗在位時（1194-1224）對理宗有養育之恩，兩人的權力交接完成了南宋帝位的平穩過渡。',
+    source_zh: '《宋史·理宗本紀》', source_en: 'History of Song, Emperor Lizong Annals'
+  },
+  {
+    id: 'c_fix3_02', from: 'song_lizong', to: 'wen_tianxiang',
+    year: 1256, type: 'political',
+    desc_zh: '1256年（寶祐四年），宋理宗親自主持殿試，文天祥以「道心惟微，人心惟危」之卷獲狀元第一。理宗親閱卷後，批示文天祥所言「皆中朕心」。此為文天祥入仕的起點，也是南宋最具歷史意義的一次科舉典故。',
+    source_zh: '《宋史·文天祥傳》；《文山先生全集》', source_en: 'History of Song, Wen Tianxiang Biography; Complete Works of Wen Tianxiang'
+  },
+  {
+    id: 'c_fix3_03', from: 'toghtoa', to: 'toghon_temur',
+    year: 1340, type: 'political',
+    desc_zh: '脫脫（1314-1356）是元順帝妥懽帖睦爾最重要的宰相，1340年在宮廷政變中幫助元順帝清除專權的伯顏，重新掌握朝政。元順帝對脫脫極度信任，脫脫主持了大規模的《宋史》等三史編纂，是元末最有實力的政治人物。',
+    source_zh: '《元史·脫脫傳》', source_en: 'History of Yuan, Toqto\'a Biography'
   }
 ];
