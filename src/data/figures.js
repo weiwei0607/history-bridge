@@ -3630,4 +3630,66 @@ export const FIGURES = {
     tags: ['政治家', '縱橫家'],
     bio_zh: '戰國時期著名的縱橫家，提倡連橫策略，曾多次出使楚國欺騙楚懷王。'
   },
+
+  abraham_lincoln: {
+    id: 'abraham_lincoln', name_zh: '林肯', name_en: 'Abraham Lincoln',
+    born: 1809, died: 1865, era: '近代美洲', region: '美國',
+    tags: ['政治家', '總統', '廢奴'],
+    bio_zh: '美國第16任總統，帶領美國走過南北戰爭，簽署《解放奴隸宣言》，是美國歷史上最偉大的總統之一，遇刺身亡。',
+  },
+  confucius: {
+    id: 'confucius', name_zh: '孔子', name_en: 'Confucius',
+    born: -551, died: -479, era: '春秋', region: '魯國',
+    tags: ['思想家', '教育家', '儒家'],
+    bio_zh: '春秋時期偉大的思想家、教育家，儒家學派創始人。提倡「仁、義、禮」，周游列國傳道，弟子三千，賢者七十二，是中華文明最重要的精神源頭。',
+  },
+  mahatma_gandhi: {
+    id: 'mahatma_gandhi', name_zh: '甘地', name_en: 'Mahatma Gandhi',
+    born: 1869, died: 1948, era: '近代南亞', region: '印度',
+    tags: ['政治家', '非暴力', '獨立運動'],
+    bio_zh: '印度獨立運動的精神領袖，以「非暴力不合作」策略對抗英國殖民統治，被尊稱為「聖雄」（Mahatma）。其思想影響了馬丁·路德·金等世界各地的民權運動。',
+  },
+  leonardo_da_vinci: {
+    id: 'leonardo_da_vinci', name_zh: '達文西', name_en: 'Leonardo da Vinci',
+    born: 1452, died: 1519, era: '文藝復興', region: '佛羅倫薩',
+    tags: ['藝術家', '科學家', '發明家'],
+    bio_zh: '文藝復興時代最偉大的通才，集畫家、雕塑家、建築師、音樂家、數學家、工程師、解剖學家於一身。代表作《蒙娜麗莎》《最後的晚餐》，其筆記本包含了超越時代數百年的設計草圖。',
+  },
+  george_frideric_handel: {
+    id: 'george_frideric_handel', name_zh: '韓德爾', name_en: 'George Frideric Handel',
+    born: 1685, died: 1759, era: '巴洛克', region: '英國',
+    tags: ['作曲家', '音樂家'],
+    bio_zh: '德裔英籍巴洛克時期作曲家，以神劇《彌賽亞》中的《哈利路亞》合唱曲名揚天下。與巴哈同年出生，被視為巴洛克音樂的雙璧。',
+  },
+  christopher_columbus: {
+    id: 'christopher_columbus', name_zh: '哥倫布', name_en: 'Christopher Columbus',
+    born: 1451, died: 1506, era: '大航海時代', region: '西班牙',
+    tags: ['航海家', '探險家'],
+    bio_zh: '義大利出生的探險家，受西班牙王室資助，1492年橫渡大西洋，「發現」美洲大陸，開啟了歐洲對美洲的殖民時代，徹底改變了人類歷史的走向。',
+  },
+  julius_caesar: {
+    id: 'julius_caesar', name_zh: '凱撒', name_en: 'Julius Caesar',
+    born: -100, died: -44, era: '古羅馬', region: '羅馬',
+    tags: ['政治家', '軍事家', '獨裁官'],
+    bio_zh: '羅馬共和末期最傑出的政治家與軍事統帥，橫掃高盧，跨越盧比孔河，成為終身獨裁官。「骰子已擲出（Alea iacta est）」等名言流傳千古，被刺身亡後引發的內戰最終終結了羅馬共和國。',
+  },
+  he_shen: {
+    id: 'he_shen', name_zh: '和珅', name_en: 'Heshen',
+    born: 1750, died: 1799, era: '清朝', region: '北京',
+    tags: ['官員', '貪腐'],
+    bio_zh: '清朝乾隆年間最有權勢的大臣，深得乾隆帝寵信，官至首席大學士、御前大臣。他同時也是中國歷史上最著名的貪官，被嘉慶帝抄家時查出天文數字的財富，民間流傳「和珅跌倒，嘉慶吃飽」。',
+  },
+
+  thutmose_iii: {
+    id: 'thutmose_iii', name_zh: '圖特摩斯三世', name_en: 'Thutmose III',
+    born: -1481, died: -1425, era: '古埃及', region: '底比斯',
+    tags: ['法老', '軍事家'],
+    bio_zh: '古埃及第十八王朝最偉大的法老之一，被稱為「古代的拿破崙」。他是哈謝普蘇的繼子兼姪子，在哈謝普蘇攝政期間長期受壓制，哈謝普蘇死後才親政，之後發動了17次軍事遠征，大幅擴張了埃及的版圖，並試圖抹除哈謝普蘇的歷史記憶。',
+  },
+  ramesses_ii: {
+    id: 'ramesses_ii', name_zh: '拉美西斯二世', name_en: 'Ramesses II',
+    born: -1303, died: -1213, era: '古埃及', region: '孟菲斯',
+    tags: ['法老', '軍事家', '建設者'],
+    bio_zh: '古埃及最著名的法老之一，在位近67年，是埃及歷史上統治最長的法老。他簽訂了世界上最早的和平條約（《卡迭石條約》），建造了眾多宏偉神廟，包括阿布辛貝神廟，塑像數量遠超其他任何法老。',
+  },
 };
