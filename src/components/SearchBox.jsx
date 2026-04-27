@@ -16,7 +16,7 @@ function highlight(text, query) {
   );
 }
 
-export default function SearchBox({ label, value, onChange, exclude }) {
+export default function SearchBox({ label, value, onChange, exclude, eraFilter }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -33,14 +33,18 @@ export default function SearchBox({ label, value, onChange, exclude }) {
     
     return ALL_FIGURES.filter(f => {
       if (f.id === exclude) return false;
+      if (eraFilter && f.era !== eraFilter) return false;
       const name_zh = f.name_zh || '';
       const name_en = f.name_en || '';
       const era = f.era || '';
-      return (
-        name_zh.includes(q) ||
-        name_en.toLowerCase().includes(q) ||
-        era.includes(q)
-      );
+      const aliases = f.aliases || [];
+      const searchable = [
+        name_zh,
+        name_en,
+        era,
+        ...aliases
+      ].join(' ').toLowerCase();
+      return searchable.includes(q);
     }).slice(0, 15);
   }, [query, open, exclude]);
 
@@ -52,7 +56,7 @@ export default function SearchBox({ label, value, onChange, exclude }) {
     }
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
-  }, []);
+  }, [ref]);
 
   function selectFigure(f) {
     onChange(f.id);

@@ -1,16 +1,104 @@
-# React + Vite
+# 🌉 History Bridge — 歷史人物六度分隔
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 蘇格拉底和孔子之間，只隔了幾個人？
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-61DAFB?logo=react" />
+  <img src="https://img.shields.io/badge/Vite-5.x-646CFF?logo=vite" />
+  <img src="https://img.shields.io/badge/Canvas_Confetti-1.9-FF6B6B" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<p align="center">
+  <b>輸入兩位歷史人物，AI 幫你找出他們之間的連結路徑</b><br/>
+  <b>從古希臘到現代中國，探索人類文明的隱藏網絡</b>
+</p>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 怎麼玩？
 
-## Expanding the ESLint configuration
+### 🔍 路徑探索模式
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+輸入：蘇格拉底 → 孔子
+
+🌉 找到路徑！
+
+蘇格拉底 ──師生──→ 柏拉圖 ──師生──→ 亞里斯多德
+    │                                              │
+    │                                              └──影響──→ 伊斯蘭哲學家
+    │                                                              │
+    └──同時代──→ 波斯帝國                                  └──東傳──→ 朱熹
+                                                                        │
+                                                                    └──師生──→ 孔子
+
+路徑長度：6 步
+```
+
+背後使用 **BFS（廣度優先搜尋）** 演算法，在歷史人物關係圖中找出最短路徑。
+
+### 🎮 遊戲模式
+
+**限時答題**：
+- 系統給出一個歷史事件/名言
+- 限時 15 秒選出正確的歷史人物
+- 連擊加分，答錯重來
+
+**猜猜我是誰**：
+- 系統描述一位歷史人物（不透露姓名）
+- 根據線索猜出是誰
+- 從易到難，考驗你的歷史知識
+
+---
+
+## 📚 資料庫涵蓋範圍
+
+| 時期 | 人物數 | 代表人物 |
+|------|--------|---------|
+| 古代 | 30+ | 蘇格拉底、柏拉圖、孔子、老子、佛陀 |
+| 中世紀 | 25+ | 查理曼、成吉思汗、馬可波羅、鄭和 |
+| 近代 | 30+ | 拿破崙、華盛頓、林肯、李鴻章、伊藤博文 |
+| 現代 | 20+ | 愛因斯坦、畢卡索、毛澤東、甘地 |
+
+關係類型：師生、敵對、同時代、影響、親屬、合作...
+
+---
+
+## 🛠️ 技術棧
+
+| 技術 | 用途 |
+|------|------|
+| React 18 + Vite | 前端框架 |
+| BFS 演算法 | 最短路徑計算 |
+| Canvas Confetti | 答對慶祝效果 |
+| CSS Animation | 時間軸動畫 |
+
+---
+
+## 🚀 快速開始
+
+```bash
+cd history-bridge
+npm install
+npm run dev
+```
+
+---
+
+## 🗺️ 產品路線圖
+
+- [x] **核心功能**
+  - [x] 歷史人物資料庫（古代→現代）
+  - [x] BFS 最短路徑演算法
+  - [x] 視覺化路徑展示
+
+- [ ] **增強體驗**
+  - [ ] AI 生成人物關係（自動擴充資料庫）
+  - [ ] 3D 知識圖譜視覺化
+  - [ ] 多人協作猜謎模式
+
+---
+
+## 📝 License
+
+MIT License © 2026

@@ -47,8 +47,8 @@ export default function GameMode({ onClose }) {
     setIsCorrect(correct);
 
     if (correct) {
-      setScore(score + 100 + combo * 10);
-      setCombo(combo + 1);
+      setScore(s => s + 100 + combo * 10);
+      setCombo(c => c + 1);
       confetti({
         particleCount: 100,
         spread: 70,

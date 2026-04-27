@@ -194,96 +194,6 @@ export const CONNECTIONS_ANCIENT = [
     source_zh: `《三國志》`, source_en: `Historical Records`
   },
   {
-    id: 'c_core_fix_0', from: 'kongzi', to: 'zixia',
-    year: -485, type: 'teacher_student',
-    desc_zh: `子夏是孔子晚年著名的門生，以文學見長，孔子死後他在西河講學。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_1', from: 'zixia', to: 'wu_qi',
-    year: -415, type: 'teacher_student',
-    desc_zh: `吳起曾向子夏學習儒家經典。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_2', from: 'wu_qi', to: 'liang_hui_wang',
-    year: -385, type: 'colleague',
-    desc_zh: `吳起效力於魏國。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_3', from: 'liang_hui_wang', to: 'mengzi',
-    year: -320, type: 'colleague',
-    desc_zh: `孟子覲見梁惠王。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_4', from: 'mengzi', to: 'xunzi',
-    year: -290, type: 'colleague',
-    desc_zh: `孟子與荀子同在稷下學宮。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_5', from: 'xunzi', to: 'lisi',
-    year: -250, type: 'teacher_student',
-    desc_zh: `李斯是荀子的學生。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_6', from: 'lisi', to: 'qin_shihuang',
-    year: -237, type: 'political',
-    desc_zh: `李斯輔佐秦始皇。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_7', from: 'qin_shihuang', to: 'liubang',
-    year: -210, type: 'political',
-    desc_zh: `劉邦建立漢朝。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_9', from: 'han_wudi', to: 'zhang_qian',
-    year: -138, type: 'diplomatic',
-    desc_zh: `漢武帝派張騫出使西域。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_10', from: 'zhang_qian', to: 'yuezhi_king',
-    year: -128, type: 'diplomatic',
-    desc_zh: `張騫抵達大月氏。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_11', from: 'yuezhi_king', to: 'antiochus_iii',
-    year: -130, type: 'diplomatic',
-    desc_zh: `連通希臘化國家。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_13', from: 'seleucus_i', to: 'alexander',
-    year: -326, type: 'military',
-    desc_zh: `亞歷山大大帝將領。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_14', from: 'alexander', to: 'aristotle',
-    year: -343, type: 'teacher_student',
-    desc_zh: `師生關係。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_15', from: 'aristotle', to: 'plato',
-    year: -367, type: 'teacher_student',
-    desc_zh: `師生關係。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
-    id: 'c_core_fix_16', from: 'plato', to: 'socrates',
-    year: -407, type: 'teacher_student',
-    desc_zh: `師生關係。`,
-    source_zh: `史實`, source_en: `History`
-  },
-  {
     id: 'c_bridge_wudi_huo', from: 'han_wudi', to: 'huo_guang',
     year: -87, type: 'political',
     desc_zh: `漢武帝臨終前，將幼子劉弗陵（漢昭帝）托付給霍光，任命他為大司馬大將軍，執掌朝政。這是中國歷史上最著名的顧命大臣任命之一，霍光此後輔政二十年，漢書《霍光傳》詳細記錄了漢武帝臨終召見的場景。`,
@@ -403,13 +313,7 @@ export const CONNECTIONS_ANCIENT = [
     desc_zh: `王莽是王政君的侄子，以姑母太皇太后的名義掌握朝政，最終篡漢建新。王政君在王莽稱帝後深感痛恨，憤而擲摔傳國玉璽。`,
     source_zh: `漢書·卷98`, source_en: `Book of Han, Vol.98`
   },
-  {
-    id: 'c_p1_07', from: 'wang_mang', to: 'ma_yuan',
-    year: 9, type: 'colleague',
-    desc_zh: `王莽執政時期，馬援曾接受王莽徵辟，擔任新城大尹等職，一度是新朝的臣子，後見天下大亂才轉而效力於光武帝。`,
-    source_zh: `後漢書·卷24`, source_en: `Book of Later Han, Vol.24`
-  },
-  {
+    {
     id: 'c_p1_08', from: 'ma_yuan', to: 'ma_yan',
     year: 45, type: 'family',
     desc_zh: `馬嚴是馬援的侄子，常隨叔父左右，馬援在世時（東漢初，d.49）與馬嚴同在光武帝麾下效命。`,
@@ -421,13 +325,7 @@ export const CONNECTIONS_ANCIENT = [
     desc_zh: `馬融是馬嚴之子，將作大匠馬嚴的兒子。以博覽廣學著稱，成為東漢一代通儒，門生常有千數。`,
     source_zh: `後漢書·卷60上`, source_en: `Book of Later Han, Vol.60`
   },
-  {
-    id: 'c_p1_10', from: 'ma_rong', to: 'zheng_xuan',
-    year: 168, type: 'mentor',
-    desc_zh: `鄭玄涿郡人，不遠千里前往投入馬融門下求學，學成之後成為漢代經學集大成者。馬融盛讚鄭玄，稱其門下弟子「涿郡盧植、北海鄭玄，皆其徒也」。`,
-    source_zh: `後漢書·卷60上`, source_en: `Book of Later Han, Vol.60`
-  },
-  {
+    {
     id: 'c_p1_11', from: 'zheng_xuan', to: 'zheng_xiaotong',
     year: 195, type: 'family',
     desc_zh: `鄭小同為鄭玄遺腹孫，鄭玄（d.200）晚年親見孫輩出生，以手紋相似而命名「小同」。`,
@@ -439,67 +337,19 @@ export const CONNECTIONS_ANCIENT = [
     desc_zh: `司馬遷任太史令，深受漢武帝重用，奉命著史。因替李陵辯護觸怒漢武帝而被處宮刑，忍辱負重完成《史記》一百三十篇，成為中國最重要的史學著作。`,
     source_zh: `史記·太史公自序`, source_en: `Records of the Grand Historian`
   },
-  {
-    id: 'c_misc_04', from: 'han_xuandi', to: 'huo_guang',
-    year: -74, type: 'colleague',
-    desc_zh: `霍光以大司馬大將軍身份擁立漢宣帝劉詢即位，對宣帝有擁立之功。宣帝即位初期，霍光把持朝政，宣帝「如芒在背」，霍光死後才得以親政，盡誅霍氏。`,
-    source_zh: `漢書·霍光傳`, source_en: `Book of Han, Huo Guang`
-  },
-  {
-    id: 'c_misc_05', from: 'han_wudi', to: 'huo_guang',
-    year: -91, type: 'colleague',
-    desc_zh: `霍光是漢武帝最信任的大臣，隨侍武帝左右二十餘年，武帝臨終前將霍光任命為輔政大臣，以「周公輔成王」之典托孤，霍光此後擁立昭帝、廢昌邑王，再立宣帝。`,
-    source_zh: `漢書·霍光傳`, source_en: `Book of Han, Huo Guang`
-  },
-  {
+    {
     id: 'c_misc_06', from: 'guangwu_emperor', to: 'wang_mang',
     year: 23, type: 'meet',
     desc_zh: `光武帝劉秀起兵推翻王莽新朝，昆陽之戰大破王莽軍隊，後統一天下，王莽在混亂中被殺，劉秀重建漢朝（東漢）。`,
     source_zh: `後漢書·光武帝本紀`, source_en: `Book of Later Han`
   },
-  {
-    id: 'c_misc_07', from: 'guangwu_emperor', to: 'ma_yuan',
-    year: 36, type: 'colleague',
-    desc_zh: `馬援初仕隗囂，後歸附光武帝，成為東漢最重要的開國將領之一。光武帝對馬援極為信任，馬援率軍平定隴西、交趾，以六十二歲高齡仍征戰不休，留下「馬革裹屍」的名言。`,
-    source_zh: `後漢書·馬援傳`, source_en: `Book of Later Han, Ma Yuan`
-  },
-  {
-    id: 'c_misc_08', from: 'ban_gu', to: 'guangwu_emperor',
-    year: 58, type: 'colleague',
-    desc_zh: `班固在東漢明帝時受詔繼承父親班彪的遺志，撰寫《漢書》，追記自高祖至王莽的西漢歷史。光武帝重開漢室，正是《漢書》所要記錄的歷史的終點與新起點。`,
-    source_zh: `後漢書·班固傳`, source_en: `Book of Later Han, Ban Gu`
-  },
-  {
-    id: 'c_misc_09', from: 'ban_zhao', to: 'ban_gu',
-    year: 92, type: 'family',
-    desc_zh: `班昭是班固的妹妹，班固去世後，她奉命繼承兄長未竟的《漢書》撰寫工作，補全了八表和天文志，是中國歷史上最著名的女史學家。`,
-    source_zh: `後漢書·班昭傳`, source_en: `Book of Later Han, Ban Zhao`
-  },
-  {
-    id: 'c_misc_10', from: 'ban_zhao', to: 'ma_rong',
-    year: 110, type: 'meet',
-    desc_zh: `馬融博覽典籍，治學時曾深研班昭所完成的《漢書》，並從班家學術傳統中汲取大量資源，班昭晚年曾在宮中為諸貴族女子講學，馬融家族與班家有學術上的淵源。`,
-    source_zh: `後漢書相關傳記`, source_en: `Book of Later Han`
-  },
-  {
+          {
     id: 'c_misc_11', from: 'zheng_xuan', to: 'lu_zhi',
     year: 180, type: 'colleague',
     desc_zh: `盧植與鄭玄同為馬融弟子，兩人均是東漢末年最重要的經學家。盧植後仕為侍中，是劉備的老師，鄭玄則深居著述，兩位同門因學問相近而相互敬重。`,
     source_zh: `後漢書·馬融傳`, source_en: `Book of Later Han, Ma Rong`
   },
-  {
-    id: 'c_misc_12', from: 'lu_zhi', to: 'liubei',
-    year: 175, type: 'mentor',
-    desc_zh: `盧植是劉備年少時的老師，劉備曾拜盧植為師學習儒學。盧植後來帶兵鎮壓黃巾起義，劉備也在此時以義軍身份參戰，師生在亂世中的際遇形塑了劉備的漢室情懷。`,
-    source_zh: `三國志·先主傳`, source_en: `Records of Three Kingdoms, Liu Bei`
-  },
-  {
-    id: 'c_misc_19', from: 'wang_mang', to: 'guangwu_emperor',
-    year: 23, type: 'meet',
-    desc_zh: `劉秀（光武帝）推翻王莽建立的新朝，是東漢的開國皇帝。昆陽之戰中，劉秀以少勝多擊敗王莽的百萬大軍，成為終結王莽新朝的關鍵人物。`,
-    source_zh: `後漢書·光武帝本紀`, source_en: `Book of Later Han`
-  },
-  {
+      {
     id: 'c_misc_31', from: 'guanyu', to: 'liubei',
     year: 184, type: 'colleague',
     desc_zh: `關羽與劉備結義於涿郡，兩人相交自黃巾之亂起至關羽殉職，歷三十七年，關係超越君臣。「桃園三結義」雖為後人附會，但兩人的深厚情誼在三國志中有明確記載。`,
@@ -625,19 +475,7 @@ export const CONNECTIONS_ANCIENT = [
     desc_zh: `韓信是劉邦麾下最重要的大將，以奇謀分定三秦，背水一戰破趙，為漢朝建立立下不世之功。劉邦稱其「連百萬之軍，戰必勝，攻必取，吾不如韓信」。`,
     source_zh: `史記·淮陰侯列傳`, source_en: `Shiji, Han Xin`
   },
-  {
-    id: 'c_r06', from: 'liu_xiang', to: 'han_xuandi',
-    year: -46, type: 'colleague',
-    desc_zh: `劉向在漢宣帝時期任散騎諫大夫等職，曾多次向宣帝上書言政，是宣帝朝廷中的重要學者型官員，參與了宮廷典籍的校理工作。`,
-    source_zh: `漢書·楚元王傳`, source_en: `Book of Han`
-  },
-  {
-    id: 'c_r07', from: 'liu_xin', to: 'liu_xiang',
-    year: -26, type: 'family',
-    desc_zh: `劉歆是劉向之子，父子共同從事典籍整理工作。劉向去世後，劉歆繼承父志，完成了《七略》的編撰，是中國目錄學的奠基之作。劉歆後改名劉秀，一度支持王莽。`,
-    source_zh: `漢書·楚元王傳`, source_en: `Book of Han`
-  },
-  {
+      {
     id: 'c_r76', from: 'darius_i', to: 'cyrus_the_great',
     year: -530, type: 'family',
     desc_zh: `大流士一世繼承了居魯士大帝的波斯帝國，兩人同屬阿契美尼德王朝，大流士通過鎮壓各省叛亂穩固了居魯士所建立的帝國，並將其版圖進一步擴張，波斯帝國在他手中達到最大疆域。`,
@@ -684,12 +522,6 @@ export const CONNECTIONS_ANCIENT = [
     year: -145, type: 'family',
     desc_zh: `赫利奧克利斯一世是歐克拉提德斯一世的兒子，繼承其父統治大夏希臘王國，是大夏希臘史上最後一位控制大夏本土的君主，此後大夏被月氏（大月氏）所滅。`,
     source_zh: `大夏希臘史料；努米斯馬蒂克史料`, source_en: `Greco-Bactrian History`
-  },
-  {
-    id: 'c_r130', from: 'buddha', to: 'ashoka',
-    year: -260, type: 'meet',
-    desc_zh: `佛陀（d.約前483年）與阿育王（b.約前304年）相差約180年，兩人未曾相遇。阿育王以佛陀的教義為治國核心，立石詔令廣播佛法。此為代理連接，待補真實橋接。`,
-    source_zh: `阿育王敕令；佛教史料`, source_en: `Ashokan Edicts; Buddhist History`
   },
   {
     id: 'c_gap_ramses_moses', from: 'ramses_ii', to: 'moses',
@@ -895,13 +727,7 @@ export const CONNECTIONS_ANCIENT = [
     desc_zh: `德米特里一世為厄特戴姆斯一世之子，巴克特里亞希臘王國的繼承人。在父親在位晚期（前206-200年）已在王廷參與政務，約前200年父親去世後繼位，隨即推進印度方向的征服，建立了橫跨興都庫什山脈的大夏希臘王國。`,
     source_zh: `斯特拉波《地理志》；賈斯廷《腓利史》`, source_en: `Strabo Geography; Justin Epitome of the Philippic History`
   },
-  {
-    id: 'c_bac_04', from: 'eucratides_i', to: 'heliocles_i',
-    year: -145, type: 'meet',
-    desc_zh: `赫利奧克勒斯一世（Heliocles I）為歐克拉提德斯一世之子。史料（賈斯廷）記載歐克拉提德斯在回程中被其子所弒，該子可能即為赫利奧克勒斯。兩人為父子關係，赫利奧克勒斯繼承了在月氏人入侵下日益萎縮的巴克特里亞王國。`,
-    source_zh: `賈斯廷《腓利史》卷四十一`, source_en: `Justin Epitome XLI`
-  },
-  {
+    {
     id: 'c_new_10', from: 'ashoka', to: 'antiochus_ii',
     year: -260, type: 'diplomatic',
     desc_zh: `阿育王的第十三號岩石詔令明確提及曾派遣達摩使節至安條克二世（Antiochus II Theos）的王國弘揚佛法。這是古代東西方文明之間有史料可查的最早正式外交接觸之一。`,

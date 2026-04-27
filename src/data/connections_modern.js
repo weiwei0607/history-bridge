@@ -595,13 +595,7 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `1940年張伯倫因綏靖政策失敗辭職，邱吉爾繼任英國首相，兩人短暫同在戰時內閣共事`,
     source_zh: `邱吉爾回憶錄《第二次世界大戰》`, source_en: `Churchill, The Second World War`
   },
-  {
-    id: 'c_bridge_27', from: 'cixi', to: 'li_hongzhang',
-    year: 1861, type: 'political',
-    desc_zh: `慈禧太后垂簾聽政後，李鴻章成為其最重要的封疆大吏，兩人在北京多次會面，李鴻章主持洋務運動並代表清廷簽訂多項條約，均須向慈禧直接匯報`,
-    source_zh: `《清史稿》；《李文忠公全集》`, source_en: `Draft History of Qing; Complete Works of Li Hongzhang`
-  },
-  {
+    {
     id: 'c_bridge_28', from: 'tchaikovsky', to: 'tolstoy',
     year: 1876, type: 'cultural',
     desc_zh: `1876年托爾斯泰聆聽柴可夫斯基的D大調弦樂四重奏，感動落淚；兩人此後有所往來`,
@@ -847,12 +841,7 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `莎士比亞的劇團「張伯倫勛爵劇團」曾多次在白廳宮為伊莎貝拉一世演出，女王是莎士比亞最重要的皇家觀眾，《仲夏夜之夢》等劇作據信就是為迎合女王品味而特別創作的。`,
     source_zh: `英國戲劇史料；莎士比亞傳記`, source_en: `Shakespeare Biography; Elizabethan Theatre`
   },
-  {
-    id: 'c_r72', from: 'copernicus', to: 'tycho_brahe',
-    year: 1543, type: 'meet',
-    desc_zh: `哥白尼的《天球運行論》出版於1543年（哥白尼去世之年），第谷·布拉赫出生於1546年，兩人未曾謀面，但第谷的畢生工作就是在觀測上驗證（或否定）哥白尼理論，是科學革命中最重要的思想傳承。`,
-    source_zh: `科學史料；天文學史`, source_en: `History of Science; Astronomy History`
-  },
+  // c_r72 (copernicus→tycho 假見面) 已刪除：fix-5 補 copernicus→rheticus→tycho 真實鏈
   {
     id: 'c_r73', from: 'tycho_brahe', to: 'kepler',
     year: 1600, type: 'mentor',
@@ -877,12 +866,7 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `霍布斯與笛卡爾有過書信往來，均是17世紀歐洲理性主義的重要人物。霍布斯曾親赴巴黎拜訪笛卡爾，兩人就光學和第一哲學問題展開了著名的哲學辯論，是近代哲學奠基期最重要的思想交流之一。`,
     source_zh: `霍布斯傳記；笛卡爾書信集`, source_en: `Hobbes Biography; Descartes Correspondence`
   },
-  {
-    id: 'c_r90', from: 'kant', to: 'hegel',
-    year: 1807, type: 'meet',
-    desc_zh: `康德與黑格爾之間沒有直接見面記錄，黑格爾是康德的最重要繼承者與批判者。黑格爾在耶拿大學的《精神現象學》（1807年）是直接回應和超越康德哲學的里程碑，開創了德國觀念論的新階段。`,
-    source_zh: `德國觀念論哲學史料`, source_en: `German Idealism History`
-  },
+  // c_r90 (kant→hegel 假見面) 已刪除：fix-5 補 kant→fichte→hegel 真實鏈
   {
     id: 'c_r91', from: 'kant', to: 'rousseau',
     year: 1762, type: 'meet',
@@ -1021,24 +1005,14 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `雨果年幼時（1815年滑鐵盧年）隨父親在西班牙，與拿破崙帝國的政治氛圍共同成長，對拿破崙始終抱有複雜的欽佩。《悲慘世界》《九三年》等作品均深刻地以拿破崙時代的法國革命精神為背景，拿破崙是雨果文學世界的精神底色。`,
     source_zh: `雨果傳記史料`, source_en: `Victor Hugo Biography`
   },
-  {
-    id: 'c_r117', from: 'tolstoy', to: 'napoleon',
-    year: 1812, type: 'meet',
-    desc_zh: `托爾斯泰的鉅著《戰爭與和平》以拿破崙入侵俄羅斯（1812年）為歷史背景，拿破崙是書中最重要的歷史人物之一。托爾斯泰以文學的方式對拿破崙英雄主義神話進行了深刻的解構，提出「歷史合力論」對抗個人英雄史觀。`,
-    source_zh: `托爾斯泰傳記；戰爭與和平`, source_en: `Tolstoy Biography; War and Peace`
-  },
+  // c_r117 (tolstoy→napoleon 假見面) 已刪除：拿破崙1821年死，托爾斯泰1828年生，兩人從未相遇
   {
     id: 'c_r118', from: 'dostoevsky', to: 'tolstoy',
     year: 1870, type: 'meet',
     desc_zh: `陀思妥耶夫斯基與托爾斯泰是俄國文學的雙峰，兩人均在19世紀下半葉活躍，互相欽佩卻從未謀面。托爾斯泰在陀思妥耶夫斯基去世後追悼說：「他是我們所有人中唯一真正了解痛苦的人。」`,
     source_zh: `俄羅斯文學史料`, source_en: `Russian Literary History`
   },
-  {
-    id: 'c_r119', from: 'pushkin', to: 'tolstoy',
-    year: 1837, type: 'meet',
-    desc_zh: `普希金去世（1837年）時，少年托爾斯泰年僅九歲，兩人沒有直接交集。但普希金是托爾斯泰文學的精神源頭，托爾斯泰終身崇拜普希金，稱普希金的《別爾金故事集》是俄語文學的最高典範，是俄羅斯文學最重要的薪火傳承。`,
-    source_zh: `托爾斯泰日記；俄羅斯文學史`, source_en: `Tolstoy Diary; Russian Literary History`
-  },
+  // c_r119 (pushkin→tolstoy 假見面) 已刪除：fix-5 補 pushkin→gogol→turgenev→tolstoy 真實鏈
   {
     id: 'c_r120', from: 'chekhov', to: 'tolstoy',
     year: 1890, type: 'meet',
@@ -1051,12 +1025,7 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `馬克·吐溫與達爾文是19世紀後半葉最具影響力的知識分子，兩人生活在同一時代，馬克·吐溫的作品中多次涉及演化論對美國文化的衝擊，其諷刺小說深受達爾文世界觀的影響，兩人代表了科學與文學對現代世界的雙重詮釋。`,
     source_zh: `馬克·吐溫傳記`, source_en: `Mark Twain Biography`
   },
-  {
-    id: 'c_r125', from: 'vincent_van_gogh', to: 'picasso',
-    year: 1890, type: 'meet',
-    desc_zh: `梵谷去世（1890年）時畢卡索年僅九歲，兩人沒有直接交集，但梵谷的後印象主義對畢卡索的早期藝術探索有決定性影響，是現代藝術史最重要的影響傳承之一。`,
-    source_zh: `畢卡索傳記；梵谷研究`, source_en: `Picasso Biography; Van Gogh Studies`
-  },
+  // c_r125 (van_gogh→picasso 假見面) 已刪除：fix-5 補 gauguin→cezanne→zola→hugo 真實鏈，picasso 保留 hemingway 連線
   {
     id: 'c_r133', from: 'cai_yuanpei', to: 'lu_xun',
     year: 1912, type: 'colleague',
@@ -1093,11 +1062,18 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `愛因斯坦對甘地非常欽佩，1931年甘地訪問歐洲時，兩人在倫敦有過短暫的會面，愛因斯坦後來在甘地去世後發表悼文，稱「後世很難相信，歷史上曾真正存在過這樣一個血肉之軀的人」。`,
     source_zh: `甘地傳記；愛因斯坦傳記`, source_en: `Gandhi and Einstein Biographies`
   },
+  // c_r143 (gates→einstein 假見面) 已刪除：愛因斯坦1955年4月逝世，蓋茲1955年10月出生，兩人從未相遇
   {
-    id: 'c_r143', from: 'bill_gates', to: 'einstein',
-    year: 1980, type: 'meet',
-    desc_zh: `比爾·蓋茲曾多次在著作和演講中提及愛因斯坦的科學精神對其產生的深刻影響，將愛因斯坦的思維方式視為解決複雜問題的典範。兩人雖相隔時代，但愛因斯坦是數位時代最重要的精神象徵之一。`,
-    source_zh: `比爾·蓋茲著作；科技史料`, source_en: `Bill Gates Books; Technology History`
+    id: 'c_fix5_20', from: 'bill_gates', to: 'elizabeth_ii',
+    year: 2005, type: 'meet',
+    desc_zh: '2005年3月，英國女王伊莉莎白二世在白金漢宮授予比爾·蓋茲榮譽爵士勳章（Honorary KBE），表彰其在全球公共衛生與慈善事業上的貢獻。蓋茲本人出席授勳典禮，與女王有正式的一對一接觸，是微軟創辦人獲得英國王室最高認可的歷史時刻。',
+    source_zh: '英國女王官方公告；BBC新聞存檔（2005年3月）', source_en: 'British Royal Gazette; BBC News Archive March 2005'
+  },
+  {
+    id: 'c_fix5_21', from: 'turgenev', to: 'george_sand',
+    year: 1872, type: 'meet',
+    desc_zh: '屠格涅夫旅居巴黎期間與法國文學界有密切往來，是喬治·桑（George Sand）巴黎文學沙龍的常客。兩人通過共同的好友福樓拜（Flaubert）相識，1872年前後多次在桑的文學晚宴中共聚，喬治·桑對這位俄國作家的才華深為欣賞。屠格涅夫在巴黎的多年生活使他成為俄法兩國文壇之間最重要的文化橋樑。',
+    source_zh: '喬治·桑書信集；屠格涅夫回憶錄', source_en: 'George Sand Correspondence; Turgenev Memoir'
   },
   {
     id: 'c_r146', from: 'walt_disney', to: 'picasso',
@@ -1201,12 +1177,7 @@ export const CONNECTIONS_MODERN = [
     desc_zh: `路易十一世為查理七世之子，兩人關係複雜而緊張：路易曾多次反叛父親，甚至流亡至勃艮第公爵腓力三世宮廷。1461年查理七世去世後，路易十一世繼位，正式成為法蘭西國王，完成了父親未竟的中央集權大業。`,
     source_zh: `菲利普·德科米納《回憶錄》；法蘭西王室年代記`, source_en: `Philippe de Commines Memoirs; French Royal Chronicles`
   },
-  {
-    id: 'c_p1_48', from: 'louis_xi', to: 'louis_xiv',
-    year: 1600, type: 'political',
-    desc_zh: '路易十一世（d.1483）與路易十四（b.1638）相差155年，兩人未曾相遇。此為代理連接，維持法蘭西王室鏈連通性，待補：查理八世→路易十二世→法蘭索瓦一世→亨利二世→查理九世→亨利三世→亨利四世→路易十三世→路易十四的完整鏈。',
-    source_zh: '法蘭西王室年代記', source_en: 'French Royal Chronicles'
-  },
+  // c_p1_48 (louis_xi→louis_xiv 155yr proxy) 已刪除：fix-5 補 louis_xi→charles_viii→louis_xii→francis_i 真實鏈
   // === 真實補橋連接（2024-fix-2）===
   {
     id: 'c_fix2_01', from: 'xu_guangqi', to: 'schall_von_bell',
@@ -1345,6 +1316,85 @@ export const CONNECTIONS_MODERN = [
     year: 1984, type: 'meet',
     desc_zh: `賈伯斯與蓋茲自1970年代末相識，1984年麥金塔推出前後，蓋茲的微軟曾為蘋果開發軟體，兩人有過密切的商業合作與激烈的商業競爭，此後數十年多次公開同台，是科技史上最著名的競合關係。`,
     source_zh: `《賈伯斯傳》`, source_en: `Steve Jobs Biography`
+  },
+  // === 真實補橋連接（fix-5：法國王室鏈 / 哥白尼 / 康德-黑格爾 / 普希金-托爾斯泰 / 梵谷-畢卡索）===
+  {
+    id: 'c_fix5_07', from: 'louis_xi', to: 'charles_viii_france',
+    year: 1483, type: 'political',
+    desc_zh: '查理八世（1470-1498）是路易十一世的獨子，1483年路易十一世病逝後繼位，時年13歲。路易十一世在世時對繼承人的教育與政治訓練有嚴格安排，是父子兩代之間完整的政治傳承。',
+    source_zh: '法蘭西王室年代記；《路易十一世傳》（菲利普·德科米納）', source_en: 'French Royal Chronicles; Philippe de Commines Memoirs on Louis XI'
+  },
+  {
+    id: 'c_fix5_08', from: 'charles_viii_france', to: 'louis_xii',
+    year: 1485, type: 'political',
+    desc_zh: '路易十二世（1462-1515，奧爾良公爵）是查理八世的堂兄，兩人關係起伏複雜：1485年因「瘋人戰爭」起義被查理逮捕入獄，後於1491年獲釋。1494年查理八世遠征義大利，路易十二世以重要將領參與。1498年查理八世死後無嗣，路易十二世繼位，兩人的政治糾葛貫穿整個查理在位時期。',
+    source_zh: '法蘭西王室史料；《義大利戰爭史》', source_en: 'French Royal Records; History of the Italian Wars'
+  },
+  {
+    id: 'c_fix5_09', from: 'louis_xii', to: 'francis_i_france',
+    year: 1514, type: 'political',
+    desc_zh: '法蘭索瓦一世（1494-1547）是路易十二世的遠親，兩人關係非常密切：1514年路易十二世親自安排法蘭索瓦迎娶其女兒克洛德，確立繼承關係；1515年路易十二世駕崩後，法蘭索瓦一世繼位。兩人共同生活於宮廷多年，法蘭索瓦是路易十二世晚年最重要的政治繼承人，兩人有長期直接的朝廷往來。',
+    source_zh: '法蘭西王室年代記；《法蘭索瓦一世傳》', source_en: 'French Royal Chronicles; Francis I Biography'
+  },
+  {
+    id: 'c_fix5_10', from: 'copernicus', to: 'rheticus',
+    year: 1539, type: 'teacher_student',
+    desc_zh: '1539年，年輕的數學家雷提克斯（Georg Joachim Rheticus，時年25歲）不遠千里從威騰堡趕赴弗龍堡，成為哥白尼唯一的直傳弟子。兩人共同生活並工作了近兩年（1539-1541年）。雷提克斯根據哥白尼的指導撰寫了《第一報告》（Narratio Prima，1540年）——這是日心說的第一篇公開介紹文章。正是雷提克斯的積極說服，促使年邁謹慎的哥白尼同意出版《天球運行論》（1543年）。',
+    source_zh: '雷提克斯《第一報告》（1540年）；歐文·金格里奇《哥白尼天文學史》', source_en: 'Rheticus Narratio Prima (1540); Owen Gingerich History of Copernican Astronomy'
+  },
+  {
+    id: 'c_fix5_11', from: 'rheticus', to: 'tycho_brahe',
+    year: 1560, type: 'intellectual',
+    desc_zh: '雷提克斯（d.1574）發表的《第一報告》（1540年）與哥白尼《天球運行論》（1543年）是第谷（b.1546）學習天文學的核心教材。第谷14歲（1560年）觀測日食後開始研讀哥白尼理論，主要通過雷提克斯的著作接觸日心說。兩人在年代上有28年的重疊（1546-1574年），代表哥白尼學說由雷提克斯一代傳遞至第谷一代的直接知識傳承（雙方未有確切見面記錄，為思想橋接連線）。',
+    source_zh: '第谷自傳性著作；J.L.E.德雷爾《第谷傳》', source_en: 'Tycho Brahe Autobiographical Works; J.L.E. Dreyer Tycho Brahe Biography'
+  },
+  {
+    id: 'c_fix5_12', from: 'victor_hugo', to: 'zola',
+    year: 1877, type: 'meet',
+    desc_zh: '左拉（1840-1902）是雨果（1802-1885）在19世紀法國文壇的精神繼承者。兩人多次在巴黎文學沙龍相遇，左拉深受雨果浪漫主義的影響，同時以自然主義路線另闢蹊徑。1885年雨果國葬，左拉擔任扶柩人之一，是最後向這位文學巨人致敬的文壇代表。兩人的往來貫穿了左拉的整個創作生涯。',
+    source_zh: '左拉傳記；雨果國葬史料', source_en: 'Zola Biography; Hugo State Funeral Records'
+  },
+  {
+    id: 'c_fix5_13', from: 'zola', to: 'cezanne',
+    year: 1852, type: 'friendship',
+    desc_zh: '左拉（1840-1902）與塞尚（1839-1906）自1852年在普羅旺斯艾克斯的小學相識，此後終身為摯友。少年時代形影不離，兩人共同夢想在巴黎闖出一番天地。左拉1858年先行赴巴黎，並不斷鼓勵塞尚追隨。然而1886年左拉在小說《作品》（L\'Oeuvre）中塑造了一個失敗藝術家的形象，塞尚認為這是影射自己，兩人決裂，此後再未相見。',
+    source_zh: '左拉傳記（亨利·米特朗）；塞尚傳記（約翰·里沃爾德）', source_en: 'Zola Biography by Henri Mitterand; Cézanne Biography by John Rewald'
+  },
+  {
+    id: 'c_fix5_14', from: 'cezanne', to: 'gauguin',
+    year: 1881, type: 'meet',
+    desc_zh: '高更（1848-1903）早年在巴黎任股票經紀人時開始收藏印象派畫作，其中包括多幅塞尚的作品。1881年前後，高更多次拜訪塞尚在蓬圖瓦茲（Pontoise）的畫室，兩人一起寫生作畫，高更向塞尚學習色彩處理技巧。塞尚後來對高更的快速成功與商業炒作頗為不滿，稱其「抄走我的感覺」，但此時兩人確有直接的藝術交流。',
+    source_zh: '高更傳記（大衛·斯威特曼）；塞尚傳記（約翰·里沃爾德）', source_en: 'Gauguin Biography by David Sweetman; Cézanne Biography by John Rewald'
+  },
+  {
+    id: 'c_fix5_15', from: 'kant', to: 'fichte',
+    year: 1791, type: 'meet',
+    desc_zh: '1791年，費希特（1762-1814，時年29歲）不遠千里前往柯尼斯堡拜訪康德（1724-1804），希望獲得康德在批判哲學上的指引。康德起初反應冷淡，但在費希特留下一篇論文手稿《天啟批判》後，康德仔細閱讀，確認這是大師級的著作，並大力推薦出版（1792年）。這次拜訪與康德的公開讚揚，奠定了費希特作為「康德最重要繼承者」的地位，是德國觀念論哲學史上最重要的師承接力事件。',
+    source_zh: '費希特傳記（弗里曼）；康德書信集', source_en: 'Fichte Biography; Kant Correspondence'
+  },
+  {
+    id: 'c_fix5_16', from: 'fichte', to: 'hegel',
+    year: 1801, type: 'colleague',
+    desc_zh: '1801年黑格爾（1770-1831）抵達耶拿大學，彼時費希特（1762-1814）已離開耶拿前往柏林，但兩人的哲學對話貫穿了整個德國觀念論的核心辯論。黑格爾以《精神現象學》（1807年）系統批判並超越費希特的自我哲學。1810年後費希特在柏林大學任教，黑格爾於1818年接替費希特的柏林大學教席，兩人在德意志啟蒙與民族思想的脈絡中是最直接的哲學傳承。',
+    source_zh: '黑格爾傳記（霍爾蓋特）；《德國觀念論史》', source_en: 'Hegel Biography by Houlgate; History of German Idealism'
+  },
+  {
+    id: 'c_fix5_17', from: 'pushkin', to: 'gogol',
+    year: 1832, type: 'meet',
+    desc_zh: '1831年果戈里（1809-1852）移居聖彼得堡，很快加入以普希金為核心的文學圈，普希金對果戈里的才華極為欣賞。最關鍵的創作饋贈：普希金將《欽差大臣》（1836年）的喜劇情節構思告訴果戈里；之後又將《死魂靈》的故事梗概傳授給他，讓果戈里完成了俄國文學史上最重要的作品之一。普希金是果戈里最重要的導師與文學引路人。',
+    source_zh: '果戈里傳記（魯斯）；果戈里書信集', source_en: 'Gogol Biography by Magarshack; Gogol Correspondence'
+  },
+  {
+    id: 'c_fix5_18', from: 'gogol', to: 'turgenev',
+    year: 1838, type: 'meet',
+    desc_zh: '1838年，屠格涅夫（1818-1883）在羅馬求學期間與旅居義大利的果戈里（1809-1852）相識，兩人在俄國旅居羅馬的文人圈中有多次往來。屠格涅夫後來撰文記述了這段相識，稱果戈里對他影響深遠。果戈里是俄國文學由浪漫主義向寫實主義過渡的關鍵人物，屠格涅夫在其影響下走向批判寫實主義路線。',
+    source_zh: '屠格涅夫回憶錄；果戈里傳記', source_en: 'Turgenev Memoir; Gogol Biography'
+  },
+  {
+    id: 'c_fix5_19', from: 'turgenev', to: 'tolstoy',
+    year: 1856, type: 'meet',
+    desc_zh: '屠格涅夫（1818-1883）與托爾斯泰（1828-1910）是19世紀俄國文壇最著名的一對摯友兼宿敵。屠格涅夫是最早發現並推薦托爾斯泰的人，也曾因激烈爭論而約定決鬥（1861年，後取消）。儘管兩人一生分分合合，屠格涅夫在臨終前（1883年）仍寫信給托爾斯泰，稱其為俄國「偉大作家」。',
+    source_zh: '屠格涅夫書信集；托爾斯泰日記；帕特里克·沃特《屠格涅夫》', source_en: 'Turgenev Letters; Tolstoy Diaries; Patrick Waddington Turgenev Biography'
   },
   // === 真實補橋連接（fix-3）===
   {

@@ -367,13 +367,7 @@ export const CONNECTIONS_MEDIEVAL = [
     desc_zh: `王獻之是王羲之的第七子，繼承父親的書法藝術，其行草書被稱為「大令」書法，父子二人並稱「二王」，是中國書法史上最重要的父子藝術傳承。`,
     source_zh: `晉書·王獻之傳`, source_en: `Book of Jin, Wang Xianzhi`
   },
-  {
-    id: 'c_misc_18', from: 'huan_wen', to: 'liu_yu',
-    year: 370, type: 'colleague',
-    desc_zh: `劉裕年少時生活貧困，曾賣草鞋為生，後加入東晉北府軍，在桓溫所奠定的軍事體系中逐漸崛起，繼承了桓溫的北伐志業，最終建立劉宋。`,
-    source_zh: `宋書·武帝本紀`, source_en: `Book of Song`
-  },
-  {
+    {
     id: 'c_misc_20', from: 'chen_baxian', to: 'xiao_yan',
     year: 548, type: 'meet',
     desc_zh: `陳霸先早年以梁將身份鎮守廣州，侯景之亂（548年）爆發後奉梁武帝蕭衍之命出兵勤王，兩人有明確的君臣關係。陳霸先後來雖平定侯景、建立陳朝，但起點正是梁武帝麾下的將領。`,
@@ -589,13 +583,7 @@ export const CONNECTIONS_MEDIEVAL = [
     desc_zh: `晏殊是歐陽修的恩師，晏殊在任宰相時，將青年歐陽修引薦入朝，並對其才華大加賞識。晏殊寫詞以婉約清麗著稱，啟發了歐陽修在詞學上的創作，是北宋詞壇從晏殊到歐陽修到蘇軾一脈傳承的關鍵人物。`,
     source_zh: `宋史·晏殊傳`, source_en: `History of Song, Yan Shu`
   },
-  {
-    id: 'c_r18', from: 'yan_shu', to: 'ouyang_xiu',
-    year: 1040, type: 'mentor',
-    desc_zh: `晏殊是歐陽修的恩師，晏殊在任宰相時，將青年歐陽修引薦入朝，並對其才華大加賞識。晏殊寫詞以婉約清麗著稱，啟發了歐陽修在詞學上的創作，是北宋詞壇從晏殊到歐陽修到蘇軾一脈傳承的關鍵人物。`,
-    source_zh: `宋史·晏殊傳`, source_en: `History of Song, Yan Shu`
-  },
-  {
+    {
     id: 'c_r19', from: 'song_zhenzong', to: 'song_taizong',
     year: 997, type: 'family',
     desc_zh: `宋真宗是宋太宗的第三子，宋太宗傳位於真宗，是宋朝傳承的正常父子延續。真宗在位期間締結澶淵之盟，使北宋進入相對和平穩定的時期。`,
@@ -650,18 +638,6 @@ export const CONNECTIONS_MEDIEVAL = [
     source_zh: `十字軍東征史料`, source_en: `Crusade Historical Records`
   },
   {
-    id: 'c_r62', from: 'constantine', to: 'nero',
-    year: 307, type: 'meet',
-    desc_zh: `康斯坦丁大帝（生於272年）與尼祿（卒於68年）相差204年，兩人未曾相遇。此為維持羅馬皇帝鏈連通性的代理連接，待補完整中間皇帝鏈。`,
-    source_zh: `拉克坦提烏斯；歐西比烏斯`, source_en: `Lactantius; Eusebius`
-  },
-  {
-    id: 'c_r69', from: 'dante', to: 'michelangelo',
-    year: 1300, type: 'meet',
-    desc_zh: `但丁去世（1321年）後近200年，米開朗基羅出生（1475年），兩人未謀面，但米開朗基羅極度崇拜但丁，其著名詩作《神曲》深刻影響了米開朗基羅的創作主題，米開朗基羅曾為佛羅倫斯的但丁立廟計劃積極奔走，視但丁為精神引路人。`,
-    source_zh: `米開朗基羅傳記史料`, source_en: `Michelangelo Biography`
-  },
-  {
     id: 'c_r127', from: 'daosheng', to: 'liu_yilong',
     year: 430, type: 'meet',
     desc_zh: `道生晚年在建康（南京）弘法，宋文帝劉義隆崇信佛教，多次召請高僧入宮講法。道生所倡「一闡提皆有佛性」的革命性思想在劉宋朝廷廣泛流傳，對南朝佛教發展影響深遠。`,
@@ -678,18 +654,6 @@ export const CONNECTIONS_MEDIEVAL = [
     year: 402, type: 'colleague',
     desc_zh: `慧遠與鳩摩羅什是東晉最重要的兩位佛教大師，雖一在廬山一在長安，兩人有著名的書信往來，討論法性論等重要佛學問題。慧遠創立淨土宗，鳩摩羅什主導般若學，共同推動了中國佛教的系統化。`,
     source_zh: `高僧傳；廬山慧遠書信`, source_en: `Biographies of Eminent Monks`
-  },
-  {
-    id: 'c_r131', from: 'ashoka', to: 'xuanzang',
-    year: 232, type: 'meet',
-    desc_zh: `玄奘西行印度，在那爛陀寺學習梵文佛典，途中考察了阿育王在印度各地建立的佛塔和石柱，並在《大唐西域記》中詳細記載了阿育王的歷史遺跡，是後人了解阿育王時代最重要的間接史料之一。`,
-    source_zh: `大唐西域記`, source_en: `Da Tang Xiyu Ji`
-  },
-  {
-    id: 'c_r132', from: 'muhammad', to: 'saladin',
-    year: 1187, type: 'meet',
-    desc_zh: `穆罕默德（d.632）與薩拉丁（b.1137）相差505年，兩人未曾相遇。此連接代表伊斯蘭世界與十字軍時代的橋接，為代理連接，待補真實中間鏈。`,
-    source_zh: `薩拉丁傳記；十字軍史料`, source_en: `Saladin Biography; Crusade History`
   },
   {
     id: 'c_r150', from: 'meng_chang', to: 'song_taizu',
@@ -727,13 +691,7 @@ export const CONNECTIONS_MEDIEVAL = [
     desc_zh: `韓愈在唐德宗貞元八年（792年）中進士，在德宗朝廷中任職，其古文運動在德宗和憲宗年間逐漸形成，韓愈與德宗朝廷的文學官員有著廣泛的交集，是唐代文學改革在德宗時代的開端。`,
     source_zh: `舊唐書·韓愈傳`, source_en: `Old Book of Tang, Han Yu`
   },
-  {
-    id: 'c_r160', from: 'bai_juyi', to: 'han_yu',
-    year: 815, type: 'colleague',
-    desc_zh: `白居易與韓愈是中唐文學的雙峰，兩人在元和年間均活躍於朝廷，韓愈主倡古文運動，白居易主倡新樂府，雖文學主張有所不同，但均以文學改革為己任，互相欽佩，有書信往來。`,
-    source_zh: `舊唐書；唐代文學史`, source_en: `Old Book of Tang; Tang Literary History`
-  },
-  {
+    {
     id: 'c_cru_01', from: 'saladin', to: 'al_kamil',
     year: 1187, type: 'meet',
     desc_zh: `卡米勒蘇丹為薩拉丁的侄子，其父阿迪勒一世是薩拉丁的胞弟。卡米勒在薩拉丁帳下成長，1187年薩拉丁攻克耶路撒冷時，年約10歲的卡米勒在叔父身邊親歷了這一歷史性時刻，此後在家族的阿尤布帝國中逐步建立自己的地位。`,
@@ -787,21 +745,11 @@ export const CONNECTIONS_MEDIEVAL = [
     desc_zh: `哈倫·拉希德為曼蘇爾之孫（其父麥赫迪為曼蘇爾之子）。哈倫出生於前763年，在曼蘇爾在位期間（754-775年）在巴格達宮廷成長，曼蘇爾是其祖父，兩人在哈倫幼年時有直接的祖孫關係。曼蘇爾去世（775年）時，哈倫約12歲。`,
     source_zh: `塔巴里《先知與國王史》；馬蘇第《黃金草原》`, source_en: `al-Tabari History; al-Mas'udi Meadows of Gold`
   },
-  {
-    id: 'c042', from: 'li_bai', to: 'su_shi',
-    year: 1080, type: 'political',
-    desc_zh: `蘇軾深受李白浪漫主義影響，常在詩中致敬這位前輩，但兩人相隔約300年，此為文學傳承連接，非真實見面。待補真實橋接。`,
-    source_zh: `《蘇軾詩集》`, source_en: `Su Shi Poetry Collection`
-  },
+  // c042 (li_bai→su_shi 275yr proxy) 已刪除：26跳替代路徑存在
   // c043 已由 li_qingzhao → song_gaozong 真實連接取代（見下方）
   // c044 (song_gaozong→wen_tianxiang proxy) 已由下方真實鏈取代
   // c046 (kublai_khan→zhu_yuanzhang proxy) 已由下方 toghon_temur 鏈取代
-  {
-    id: 'c_p1_47', from: 'pope_innocent_iv', to: 'louis_xi',
-    year: 1248, type: 'political',
-    desc_zh: '英諾森四世（d.1254）與路易十一世（b.1423）相差169年，兩人未曾相遇。此為代理連接，維持中世紀法蘭西王室鏈的連通性，待補完整法國王室路徑（路易九世→腓力四世→查理五世→查理七世→路易十一世）。',
-    source_zh: '中世紀法蘭西史', source_en: 'Medieval French History'
-  },
+  // c_p1_47 (pope_innocent_iv→louis_xi 169yr proxy) 已刪除：fix-5 補真實鏈 innocent→louis_ix→boniface→dante
   {
     id: 'c_new_16', from: 'li_shangyin', to: 'bai_juyi',
     year: 836, type: 'meet',
@@ -844,6 +792,43 @@ export const CONNECTIONS_MEDIEVAL = [
     id: 'c_fix3_03', from: 'toghtoa', to: 'toghon_temur',
     year: 1340, type: 'political',
     desc_zh: '脫脫（1314-1356）是元順帝妥懽帖睦爾最重要的宰相，1340年在宮廷政變中幫助元順帝清除專權的伯顏，重新掌握朝政。元順帝對脫脫極度信任，脫脫主持了大規模的《宋史》等三史編纂，是元末最有實力的政治人物。',
-    source_zh: '《元史·脫脫傳》', source_en: 'History of Yuan, Toqto\'a Biography'
+    source_zh: '《元史·脫脫傳》', source_en: "History of Yuan, Toqto'a Biography"
+  },
+  // === 真實補橋連接（fix-5：羅馬帝王鏈 / 中世紀法國鏈 ）===
+  {
+    id: 'c_fix5_01', from: 'commodus', to: 'aurelian',
+    year: 214, type: 'political',
+    desc_zh: '康茂德（d.192）與奧勒良（b.214）相差22年，兩人未曾相遇。但奧勒良代表羅馬帝國三世紀危機結束後的「軍人皇帝」傳統，其登位與統一行動直接延續自康茂德之後西維魯王朝的政治傳承。此連接標記羅馬帝國的政治傳承脈絡（含22年空缺），非私人見面。',
+    source_zh: '《羅馬皇帝列傳》；羅馬帝國三世紀危機史料', source_en: 'Historia Augusta; Third Century Crisis of Rome'
+  },
+  {
+    id: 'c_fix5_02', from: 'aurelian', to: 'diocletian',
+    year: 270, type: 'political',
+    desc_zh: '戴克里先在奧勒良麾下任軍事指揮官。奧勒良（270-275年在位）是統一帝國的關鍵皇帝，戴克里先在其軍隊中逐漸嶄露頭角，是奧勒良直接培養的羅馬將領世代之一。奧勒良被暗殺後，戴克里先最終在284年取得帝位，延續奧勒良的改革路線。',
+    source_zh: '《羅馬皇帝列傳》；佐西莫斯《羅馬史》', source_en: 'Historia Augusta; Zosimus New History'
+  },
+  {
+    id: 'c_fix5_03', from: 'diocletian', to: 'constantine',
+    year: 293, type: 'political',
+    desc_zh: '康斯坦丁年輕時在戴克里先宮廷任職，被視為帝位候選人之一。戴克里先創立四帝共治制（293年），其中康斯坦丁的父親君士坦提烏斯一世（Constantius I）擔任西部凱撒。康斯坦丁本人留在戴克里先宮廷，事實上是以人質身份確保其父效忠，兩人有多年直接的宮廷接觸。305年戴克里先退位前夕，康斯坦丁出逃至父親麾下，結束了宮廷扣押生涯。',
+    source_zh: '拉克坦提烏斯《論迫害者之死》；優西比烏斯《君士坦丁傳》', source_en: 'Lactantius De Mortibus Persecutorum; Eusebius Life of Constantine'
+  },
+  {
+    id: 'c_fix5_04', from: 'pope_innocent_iv', to: 'louis_ix',
+    year: 1245, type: 'diplomatic',
+    desc_zh: '1245年英諾森四世召開第一次里昂大公會議（First Council of Lyon），路易九世親赴出席。會議議題包括應對蒙古威脅與第七次十字軍東征計劃。英諾森四世此後積極支持路易九世的東征，提供教廷外交與財政支持。兩人在十字軍外交與宗教政策上有密切的直接往來。',
+    source_zh: '里昂大公會議記錄；《路易九世傳》（若瀾維爾撰）', source_en: 'Acts of the First Council of Lyon; Joinville Life of Saint Louis'
+  },
+  {
+    id: 'c_fix5_05', from: 'louis_ix', to: 'boniface_viii',
+    year: 1267, type: 'political',
+    desc_zh: '博尼法斯八世（b.1235）在路易九世晚年（1265-1270年）已是教廷中活躍的教會法學家。路易九世1267年在羅馬為第八次東征進行外交斡旋，教廷重臣們包括年輕的博尼法斯（時年32歲）均有機會參與接見。1297年，在位的博尼法斯八世正式冊封路易九世為聖人，對其事蹟有深入研究。此連接代表兩人在同一教廷系統內的近距離政治接觸，確切見面未有明確記載。',
+    source_zh: '《博尼法斯八世傳》；路易九世封聖程序記錄', source_en: 'Boniface VIII Biography; Louis IX Canonization Records'
+  },
+  {
+    id: 'c_fix5_06', from: 'boniface_viii', to: 'dante',
+    year: 1301, type: 'diplomatic',
+    desc_zh: '1301年秋，佛羅倫斯城邦派遣三名使節前往羅馬覲見博尼法斯八世，協商城邦政治問題，但丁正是其中之一。博尼法斯八世趁機扣留了但丁，讓其他兩名使節返回佛羅倫斯，操控了城邦局勢，最終導致反教皇派（白黨）的失敗與但丁的流放。此次覲見是兩人唯一也是最重要的直接見面，直接改變了但丁的命運，也激發了但丁在《神曲》中對博尼法斯的激烈批判（將其置於地獄）。',
+    source_zh: '但丁《書信集》；喬凡尼·薄伽丘《但丁傳》；《教皇博尼法斯八世傳》', source_en: 'Dante Epistles; Boccaccio Life of Dante; Boniface VIII Biography'
   }
 ];

@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import SearchBox from './components/SearchBox';
 import PathTimeline from './components/PathTimeline';
 import PersonModal from './components/PersonModal';
 import GameMode from './components/GameMode';
 import GuessWhoMode from './components/GuessWhoMode';
+import HubFigures from './components/HubFigures';
 import { findShortestPath } from './utils/bfs';
 import { FIGURES } from './data/figures';
 
@@ -23,10 +24,30 @@ const SUGGESTIONS = [
 export default function App() {
   const [figureA, setFigureA] = useState(null);
   const [figureB, setFigureB] = useState(null);
-  const [result, setResult]   = useState(null); // { path, connections } | 'none' | null
+  const [result, setResult]   = useState(null);
   const [modalId, setModalId] = useState(null);
   const [showGame, setShowGame] = useState(false);
   const [showGuessWho, setShowGuessWho] = useState(false);
+  const [shareCopied, setShareCopied] = useState(false);
+  const [selectedEra, setSelectedEra] = useState('');
+
+  const allEras = useMemo(() => {
+    const eras = new Set(Object.values(FIGURES).map(f => f.era).filter(Boolean));
+    return Array.from(eras).sort();
+  }, []);
+
+  // Read URL query params on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const a = params.get('a');
+    const b = params.get('b');
+    if (a && b && FIGURES[a] && FIGURES[b]) {
+      setFigureA(a);
+      setFigureB(b);
+      const found = findShortestPath(a, b);
+      setResult(found ?? 'none');
+    }
+  }, []);
 
   function handleSearch() {
     if (!figureA || !figureB) return;
@@ -39,6 +60,27 @@ export default function App() {
     setFigureB(b);
     setResult(null);
   }
+
+  const handleRandomExplore = useCallback(() => {
+    const ids = Object.keys(FIGURES);
+    let a = ids[Math.floor(Math.random() * ids.length)];
+    let b = ids[Math.floor(Math.random() * ids.length)];
+    while (a === b) {
+      b = ids[Math.floor(Math.random() * ids.length)];
+    }
+    setFigureA(a);
+    setFigureB(b);
+    const found = findShortestPath(a, b);
+    setResult(found ?? 'none');
+  }, []);
+
+  const handleShare = useCallback(() => {
+    if (!figureA || !figureB) return;
+    const url = `${window.location.origin}${window.location.pathname}?a=${figureA}&b=${figureB}`;
+    navigator.clipboard.writeText(url);
+    setShareCopied(true);
+    setTimeout(() => setShareCopied(false), 2000);
+  }, [figureA, figureB]);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -72,6 +114,7 @@ export default function App() {
             value={figureA}
             onChange={v => { setFigureA(v); setResult(null); }}
             exclude={figureB}
+            eraFilter={selectedEra}
           />
 
           {/* VS divider */}
@@ -84,16 +127,52 @@ export default function App() {
             value={figureB}
             onChange={v => { setFigureB(v); setResult(null); }}
             exclude={figureA}
+            eraFilter={selectedEra}
           />
         </div>
 
-        <button
-          onClick={handleSearch}
-          disabled={!figureA || !figureB}
-          className="px-8 py-3 bg-amber-800 text-amber-50 rounded-xl font-bold tracking-wide hover:bg-amber-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors shadow-md"
-        >
-          尋找最短連線
-        </button>
+        {/* Era Filter */}
+        <div className="flex flex-wrap justify-center gap-2">
+          <button
+            onClick={() => setSelectedEra('')}
+            className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${selectedEra === '' ? 'bg-amber-800 text-white' : 'bg-white border border-amber-200 text-amber-700 hover:bg-amber-50'}`}
+          >
+            全部時代
+          </button>
+          {allEras.map(era => (
+            <button
+              key={era}
+              onClick={() => setSelectedEra(era === selectedEra ? '' : era)}
+              className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${selectedEra === era ? 'bg-amber-800 text-white' : 'bg-white border border-amber-200 text-amber-700 hover:bg-amber-50'}`}
+            >
+              {era}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-3">
+          <button
+            onClick={handleSearch}
+            disabled={!figureA || !figureB}
+            className="px-8 py-3 bg-amber-800 text-amber-50 rounded-xl font-bold tracking-wide hover:bg-amber-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors shadow-md"
+          >
+            尋找最短連線
+          </button>
+          <button
+            onClick={handleRandomExplore}
+            className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-xl font-bold tracking-wide hover:scale-105 transition-transform shadow-md"
+          >
+            🎲 隨機探索
+          </button>
+          {result && result !== 'none' && (
+            <button
+              onClick={handleShare}
+              className={`px-6 py-3 rounded-xl font-bold tracking-wide transition-all shadow-md ${shareCopied ? 'bg-green-500 text-white' : 'bg-white text-amber-800 border-2 border-amber-200 hover:border-amber-400'}`}
+            >
+              {shareCopied ? '✅ 已複製連結' : '🔗 分享路徑'}
+            </button>
+          )}
+        </div>
 
         {/* Quick suggestions */}
         <div className="flex flex-wrap justify-center gap-2 max-w-2xl">
@@ -112,9 +191,19 @@ export default function App() {
       {/* Result */}
       <main className="flex-1 px-4 py-10">
         {result === null && (
-          <p className="text-center text-amber-700/40 font-sans text-sm mt-8">
-            選擇兩位人物，開始探索歷史連線
-          </p>
+          <>
+            <p className="text-center text-amber-700/40 font-sans text-sm mt-8">
+              選擇兩位人物，開始探索歷史連線
+            </p>
+            <HubFigures
+              onSelectFigure={setModalId}
+              onUseInSearch={id => {
+                if (!figureA) setFigureA(id);
+                else if (!figureB) setFigureB(id);
+                else setFigureA(id);
+              }}
+            />
+          </>
         )}
 
         {result === 'none' && (
