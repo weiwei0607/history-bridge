@@ -548,6 +548,12 @@ export const CONNECTIONS_MEDIEVAL = [
     source_zh: `舊唐書·郭子儀傳`, source_en: `Old Book of Tang, Guo Ziyi`
   },
   {
+    id: 'c_r160', from: 'tang_xuanzong', to: 'yan_zhenqing',
+    year: 726, type: 'colleague',
+    desc_zh: `顏真卿於唐玄宗開元十四年（726年）登進士第，此後入仕為官，歷任監察御史、殿中侍御史等職。安史之亂爆發前，顏真卿長期在玄宗治下的唐廷任職，兩人有直接的君臣關係。顏真卿以剛直著稱，曾因彈劾宰相楊國忠同黨而得罪權貴，被外調為平原太守，正是在此任上，他率先起兵抵抗安祿山叛軍。`,
+    source_zh: `舊唐書·卷128·顏真卿傳`, source_en: `Old Book of Tang, Vol.128, Yan Zhenqing`
+  },
+  {
     id: 'c_r10', from: 'tang_suzong', to: 'tang_xuanzong',
     year: 756, type: 'family',
     desc_zh: `唐肅宗是唐玄宗的第三子（李亨），安史之亂中玄宗出逃，肅宗在靈武自立為帝，遙尊玄宗為太上皇，父子共存的複雜局面持續至玄宗逝世。`,

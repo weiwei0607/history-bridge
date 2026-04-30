@@ -524,7 +524,7 @@ export const CONNECTIONS_ANCIENT = [
     source_zh: `大夏希臘史料；努米斯馬蒂克史料`, source_en: `Greco-Bactrian History`
   },
   {
-    id: 'c_gap_ramses_moses', from: 'ramses_ii', to: 'moses',
+    id: 'c_gap_ramses_moses', from: 'ramesses_ii', to: 'moses',
     year: -1250, type: 'political',
     desc_zh: `《出埃及記》記載，摩西奉神命要求法老（傳統認定為拉美西斯二世）釋放以色列人，歷經十災之後，拉美西斯二世放行，此後摩西率眾出埃及`,
     source_zh: `《出埃及記》；埃及梅爾恩普塔石碑（前1208年）`, source_en: `Exodus; Merneptah Stele (c. 1208 BC)`
@@ -738,5 +738,17 @@ export const CONNECTIONS_ANCIENT = [
     year: -415, type: 'meet',
     desc_zh: `墨子與子夏同為戰國初期的重要思想家，均在魏國有所活動。墨子曾師從儒家，後自立一派，與子夏所代表的儒家在學術上多有論辯往來，是「百家爭鳴」時代的重要學術交鋒。`,
     source_zh: `《墨子》；《史記》`, source_en: `Mozi; Historical Records`
+  },
+  {
+    id: 'c_bac_03', from: 'eucratides_i', to: 'demetrius_i',
+    year: -175, type: 'military',
+    desc_zh: `歐克拉提德一世（約前200-前145年）推翻了歐西德莫斯王朝——狄米特律斯一世所創立的王朝——自立為王，征服了大夏（巴克特里亞）大部分領土。他是希臘-巴克特里亞王國最強盛的君主之一，其奪權戰爭直接終結了歐西德莫斯系的統治，標誌著巴克特里亞希臘王國的政治轉折點。`,
+    source_zh: `賈斯廷《腓利史摘要》卷41；斯特拉波《地理志》卷11`, source_en: `Justin, Epitome of the Philippic History, Book 41; Strabo, Geography, Book 11`
+  },
+  {
+    id: 'c_bac_04', from: 'yuezhi_king', to: 'heliocles_i',
+    year: -130, type: 'military',
+    desc_zh: `約前130年，大月氏在被匈奴擊敗後繼續西遷，大舉入侵大夏（巴克特里亞），徹底摧毀了希臘-巴克特里亞王國。赫利奧克勒斯一世是該王國最後一位有史可查的國王，其王國在大月氏的攻勢下覆滅，是東方游牧民族與中亞希臘化文明之間最直接的軍事對決。此後大月氏在巴克特里亞建立了後來發展為貴霜帝國的政權，成為絲綢之路的重要中繼站。`,
+    source_zh: `斯特拉波《地理志》卷11；《漢書·西域傳》`, source_en: `Strabo, Geography, Book 11; Book of Han, Western Regions`
   }
 ];

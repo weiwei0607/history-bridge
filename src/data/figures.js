@@ -352,12 +352,6 @@ export const FIGURES = {
     tags: ['生物學家', '教育家'],
     bio_zh: '「達爾文的鬥犬」，演化論最猛烈的公開捍衛者。1860年牛津大辯論中，他面對主教韋伯福斯的嘲諷反擊說：「我寧可祖先是猿猴，也不願是一個利用上帝賜予的才智卻用來嘲笑科學的人。」他推動科學教育改革，主張用科學代替宗教作為道德基礎，創造了「不可知論」（agnosticism）一詞，指自己無法確知神是否存在。其孫阿道斯·赫胥黎是《美麗新世界》的作者。',
   },
-  lincoln: {
-    id: 'lincoln', name_zh: '林肯', name_en: 'Abraham Lincoln',
-    born: 1809, died: 1865, era: '美國南北戰爭', region: '伊利諾州 / 華盛頓',
-    tags: ['總統', '律師'],
-    bio_zh: '美國第十六任總統，領導北方贏得內戰並廢除奴隸制。他出身極為貧困，幾乎全靠自學成才，成為律師後進入政壇。他的《蓋茨堡演說》（「民有、民治、民享」）是美國史上最重要的演講之一。1865年4月14日在福特劇院遭刺客布斯槍擊，次日不治，成為第一位被暗殺的美國總統。他死後的評價遠高於在世時，今日民調中幾乎穩居美國最佳總統之首。',
-  },
   grant: {
     id: 'grant', name_zh: '尤利西斯·格蘭特', name_en: 'Ulysses S. Grant',
     born: 1822, died: 1885, era: '美國南北戰爭 / 重建期', region: '俄亥俄州 / 華盛頓',
@@ -962,12 +956,6 @@ export const FIGURES = {
     born: 1711, died: 1799, era: '清朝', region: '北京',
     tags: ['皇帝'],
     bio_zh: '清高宗，清朝最鼎盛時期的君主。自稱「十全老人」，主編《四庫全書》。',
-  },
-  heshen: {
-    id: 'heshen', name_zh: '和珅', name_en: 'Heshen',
-    born: 1750, died: 1799, era: '清朝', region: '北京',
-    tags: ['權臣'],
-    bio_zh: '乾隆朝權相，極度貪婪，富可敵國。乾隆死後隨即被嘉慶帝處死。',
   },
   jiaqing_emperor: {
     id: 'jiaqing_emperor', name_zh: '嘉慶帝', name_en: 'Jiaqing Emperor',
@@ -1936,12 +1924,6 @@ export const FIGURES = {
   },
 
   // ── 文化與藝術 ──────────────────────────────────────────
-  picasso: {
-    id: 'picasso', name_zh: '巴勃羅·畢卡索', name_en: 'Pablo Picasso',
-    born: 1881, died: 1973, era: '20世紀', region: '法國 / 西班牙',
-    tags: ['畫家'],
-    bio_zh: '立體主義創始人，20世紀最偉大的藝術家之一。其代表作《格爾尼卡》強烈控訴了戰爭殘酷。',
-  },
   hemingway: {
     id: 'hemingway', name_zh: '歐內斯特·海明威', name_en: 'Ernest Hemingway',
     born: 1899, died: 1961, era: '20世紀', region: '美國',
@@ -2235,12 +2217,6 @@ export const FIGURES = {
     tags: ['歌手'], bio_zh: '流行音樂之王。'
   },
 
-  ramses_ii: {
-    id: 'ramses_ii', name_zh: '拉美西斯二世', name_en: 'Ramesses II',
-    born: -1303, died: -1213, era: '古埃及', region: '埃及',
-    tags: ["法老"],
-    bio_zh: '埃及最強大的法老。',
-  },
   cyrus_the_great: {
     id: 'cyrus_the_great', name_zh: '居魯士大帝', name_en: 'Cyrus the Great',
     born: -600, died: -530, era: '古波斯', region: '波斯',
@@ -3186,41 +3162,11 @@ export const FIGURES = {
     tags: ['歷史名人'],
     bio_zh: '明治時代思想家、教育家，慶應義塾創立者。著《文明論之概略》、《勸學》，力倡西方文明與個人獨立，是近代日本啟蒙思想的代表，肖像印於一萬日圓紙幣。',
   },
-  leo_tolstoy: {
-    id: 'leo_tolstoy', name_zh: '托爾斯泰', name_en: 'leo tolstoy',
-    born: 1828, died: 1910, era: '19世紀歐洲', region: '俄國',
-    tags: ['歷史名人'],
-    bio_zh: '俄國文學家，世界文學巨擘。《戰爭與和平》與《安娜·卡列尼娜》是俄國文學的頂峰。晚年宣揚非暴力主義，影響了甘地等後世人物。',
-  },
-  joseph_stalin: {
-    id: 'joseph_stalin', name_zh: '史達林', name_en: 'joseph stalin',
-    born: 1878, died: 1953, era: '蘇聯', region: '喬治亞',
-    tags: ['歷史名人'],
-    bio_zh: '蘇聯最高領導人，1924至1953年執掌蘇聯。推行集體化與工業化，領導蘇聯贏得二戰，同時建立恐怖的政治清洗體制，數百萬人死於其統治之下。',
-  },
-  niccolo_machiavelli: {
-    id: 'niccolo_machiavelli', name_zh: '馬基維利', name_en: 'niccolo machiavelli',
-    born: 1469, died: 1527, era: '文藝復興', region: '佛羅倫斯',
-    tags: ['歷史名人'],
-    bio_zh: '文藝復興時期義大利政治思想家。《君主論》開創近代政治學，以現實主義分析權力運作，對後世政治思想影響深遠。',
-  },
-  karl_marx: {
-    id: 'karl_marx', name_zh: '馬克思', name_en: 'karl marx',
-    born: 1818, died: 1883, era: '19世紀歐洲', region: '德國 / 英國',
-    tags: ['歷史名人'],
-    bio_zh: '德國哲學家、經濟學家、革命家。與恩格斯共同創立馬克思主義，著《共產黨宣言》、《資本論》，深刻影響20世紀的政治與社會運動。',
-  },
   friedrich_engels: {
     id: 'friedrich_engels', name_zh: '恩格斯', name_en: 'friedrich engels',
     born: 1820, died: 1895, era: '19世紀歐洲', region: '德國 / 英國',
     tags: ['歷史名人'],
     bio_zh: '德國哲學家、革命家，馬克思的終身摯友與合作者。共同撰寫《共產黨宣言》，在馬克思死後整理出版《資本論》第二、三卷。',
-  },
-  johann_sebastian_bach: {
-    id: 'johann_sebastian_bach', name_zh: '巴哈', name_en: 'johann sebastian bach',
-    born: 1685, died: 1750, era: '巴洛克時期', region: '德國',
-    tags: ['歷史名人'],
-    bio_zh: '德國巴洛克時期作曲家，西方音樂史上最偉大的作曲家之一。《馬太受難曲》、《平均律鋼琴曲集》、《賦格的藝術》奠定了西方音樂的和聲與對位基礎。',
   },
   albert_einstein: {
     id: 'albert_einstein', name_zh: '愛因斯坦', name_en: 'albert einstein',
@@ -3228,35 +3174,11 @@ export const FIGURES = {
     tags: ['歷史名人'],
     bio_zh: '德裔猶太物理學家，20世紀最偉大的科學家。提出狹義與廣義相對論，革命性地改變了人類對時空的理解，1921年獲諾貝爾物理學獎。',
   },
-  max_planck: {
-    id: 'max_planck', name_zh: '普朗克', name_en: 'max planck',
-    born: 1858, died: 1947, era: '20世紀', region: '德國',
-    tags: ['歷史名人'],
-    bio_zh: '德國物理學家，量子論的奠基者。1900年提出量子假說，開創了現代物理學的新紀元，1918年獲諾貝爾物理學獎。',
-  },
-  werner_heisenberg: {
-    id: 'werner_heisenberg', name_zh: '海森堡', name_en: 'werner heisenberg',
-    born: 1901, died: 1976, era: '20世紀', region: '德國',
-    tags: ['歷史名人'],
-    bio_zh: '德國物理學家，量子力學的創立者之一。1927年提出「不確定性原理」，是量子力學最深刻的基本定律，1932年獲諾貝爾物理學獎。',
-  },
-  erwin_schrodinger: {
-    id: 'erwin_schrodinger', name_zh: '薛丁格', name_en: 'erwin schrodinger',
-    born: 1887, died: 1961, era: '20世紀', region: '奧地利',
-    tags: ['歷史名人'],
-    bio_zh: '奧地利物理學家，量子力學奠基人之一。建立波動力學方程式，以「薛丁格的貓」思想實驗聞名，1933年獲諾貝爾物理學獎。',
-  },
   j_robert_oppenheimer: {
     id: 'j_robert_oppenheimer', name_zh: '奧本海默', name_en: 'j robert oppenheimer',
     born: 1904, died: 1967, era: '20世紀', region: '美國',
     tags: ['歷史名人'],
     bio_zh: '美國物理學家，「原子彈之父」。主持曼哈頓計畫研製出世界首枚原子彈。戰後反對核武擴散，遭麥卡錫主義迫害，安全許可遭吊銷。',
-  },
-  george_washington: {
-    id: 'george_washington', name_zh: '華盛頓', name_en: 'george washington',
-    born: 1732, died: 1799, era: '美國建國時期', region: '維吉尼亞',
-    tags: ['歷史名人'],
-    bio_zh: '美國開國元勛，第一任總統。率領大陸軍贏得獨立戰爭，主持制憲大會，拒絕第三任期，樹立民主憲政的典範。',
   },
   alexander_hamilton: {
     id: 'alexander_hamilton', name_zh: '漢密爾頓', name_en: 'alexander hamilton',
@@ -3275,30 +3197,6 @@ export const FIGURES = {
     born: 1882, died: 1945, era: '二戰', region: '紐約',
     tags: ['歷史名人'],
     bio_zh: '美國第32任總統，任期最長的美國總統。推行新政應對大蕭條，領導美國參與二次世界大戰，是20世紀最具影響力的政治領袖之一。',
-  },
-  harry_s_truman: {
-    id: 'harry_s_truman', name_zh: '杜魯門', name_en: 'harry s truman',
-    born: 1884, died: 1972, era: '冷戰時期', region: '密蘇里',
-    tags: ['歷史名人'],
-    bio_zh: '美國第33任總統。繼任後下令對日投擲原子彈終結二戰，推動馬歇爾計畫重建歐洲，確立冷戰時期美國的圍堵政策。',
-  },
-  john_f_kennedy: {
-    id: 'john_f_kennedy', name_zh: '甘迺迪', name_en: 'john f kennedy',
-    born: 1917, died: 1963, era: '冷戰時期', region: '麻薩諸塞',
-    tags: ['歷史名人'],
-    bio_zh: '美國第35任總統，首位天主教徒總統。主導古巴飛彈危機談判避免核戰，推動太空競賽，1963年在達拉斯遭暗殺，留下永久的歷史謎團。',
-  },
-  richard_nixon: {
-    id: 'richard_nixon', name_zh: '尼克森', name_en: 'richard nixon',
-    born: 1913, died: 1994, era: '冷戰時期', region: '加利福尼亞',
-    tags: ['歷史名人'],
-    bio_zh: '美國第37任總統。1972年訪問中國，改變冷戰格局。因水門事件成為唯一辭職的美國總統，政治遺產充滿爭議。',
-  },
-  ronald_reagan: {
-    id: 'ronald_reagan', name_zh: '雷根', name_en: 'ronald reagan',
-    born: 1911, died: 2004, era: '冷戰時期', region: '加利福尼亞',
-    tags: ['歷史名人'],
-    bio_zh: '美國第40任總統，前好萊塢演員。推行「雷根經濟學」減稅政策，對蘇採強硬路線，加速蘇聯解體，是保守主義復興的象徵人物。',
   },
   bill_clinton: {
     id: 'bill_clinton', name_zh: '柯林頓', name_en: 'bill clinton',
@@ -3329,12 +3227,6 @@ export const FIGURES = {
     born: 1904, died: 1989, era: '20世紀', region: '西班牙',
     tags: ['歷史名人'],
     bio_zh: '西班牙超現實主義畫家。《記憶的永恆》（融化的時鐘）是20世紀最著名的畫作之一，以奇異的夢境意象與誇張的個人風格聞名。',
-  },
-  vincent_van_gogh_clone: {
-    id: 'vincent_van_gogh_clone', name_zh: '梵谷', name_en: 'vincent van gogh clone',
-    born: 1853, died: 1890, era: '19世紀', region: '荷蘭 / 法國',
-    tags: ['歷史名人'],
-    bio_zh: '荷蘭後印象派畫家。生前幾乎無人問津，死後成為史上最有價值的藝術家之一。《星夜》、《向日葵》是人類藝術史的巔峰之作，一生飽受精神疾病折磨。',
   },
   claude_monet: {
     id: 'claude_monet', name_zh: '莫內', name_en: 'claude monet',
@@ -3635,18 +3527,6 @@ export const FIGURES = {
     tags: ['政治家', '總統', '廢奴'],
     bio_zh: '美國第16任總統，帶領美國走過南北戰爭，簽署《解放奴隸宣言》，是美國歷史上最偉大的總統之一，遇刺身亡。',
   },
-  confucius: {
-    id: 'confucius', name_zh: '孔子', name_en: 'Confucius',
-    born: -551, died: -479, era: '春秋', region: '魯國',
-    tags: ['思想家', '教育家', '儒家'],
-    bio_zh: '春秋時期偉大的思想家、教育家，儒家學派創始人。提倡「仁、義、禮」，周游列國傳道，弟子三千，賢者七十二，是中華文明最重要的精神源頭。',
-  },
-  mahatma_gandhi: {
-    id: 'mahatma_gandhi', name_zh: '甘地', name_en: 'Mahatma Gandhi',
-    born: 1869, died: 1948, era: '近代南亞', region: '印度',
-    tags: ['政治家', '非暴力', '獨立運動'],
-    bio_zh: '印度獨立運動的精神領袖，以「非暴力不合作」策略對抗英國殖民統治，被尊稱為「聖雄」（Mahatma）。其思想影響了馬丁·路德·金等世界各地的民權運動。',
-  },
   leonardo_da_vinci: {
     id: 'leonardo_da_vinci', name_zh: '達文西', name_en: 'Leonardo da Vinci',
     born: 1452, died: 1519, era: '文藝復興', region: '佛羅倫薩',
@@ -3658,12 +3538,6 @@ export const FIGURES = {
     born: 1685, died: 1759, era: '巴洛克', region: '英國',
     tags: ['作曲家', '音樂家'],
     bio_zh: '德裔英籍巴洛克時期作曲家，以神劇《彌賽亞》中的《哈利路亞》合唱曲名揚天下。與巴哈同年出生，被視為巴洛克音樂的雙璧。',
-  },
-  christopher_columbus: {
-    id: 'christopher_columbus', name_zh: '哥倫布', name_en: 'Christopher Columbus',
-    born: 1451, died: 1506, era: '大航海時代', region: '西班牙',
-    tags: ['航海家', '探險家'],
-    bio_zh: '義大利出生的探險家，受西班牙王室資助，1492年橫渡大西洋，「發現」美洲大陸，開啟了歐洲對美洲的殖民時代，徹底改變了人類歷史的走向。',
   },
   he_shen: {
     id: 'he_shen', name_zh: '和珅', name_en: 'Heshen',

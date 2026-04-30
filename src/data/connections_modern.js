@@ -422,7 +422,7 @@ export const CONNECTIONS_MODERN = [
     source_zh: `美國獨立戰爭史料`, source_en: `American Independence War Records`
   },
   {
-    id: 'c_misc_75', from: 'lincoln', to: 'grant',
+    id: 'c_misc_75', from: 'abraham_lincoln', to: 'grant',
     year: 1863, type: 'colleague',
     desc_zh: `格蘭特在維克斯堡大捷後，林肯親自致信讚揚，並任命其為聯邦軍總司令。兩人多次在白宮會面商討戰略，林肯稱格蘭特是他第一個「打仗的將軍」，是南北戰爭期間最重要的總統與將軍搭檔。`,
     source_zh: `美國南北戰爭史料`, source_en: `American Civil War Records`
@@ -488,7 +488,7 @@ export const CONNECTIONS_MODERN = [
     source_zh: `清史稿·仁宗本紀`, source_en: `Draft History of Qing`
   },
   {
-    id: 'c_misc_112', from: 'heshen', to: 'qianlong_emperor',
+    id: 'c_misc_112', from: 'he_shen', to: 'qianlong_emperor',
     year: 1775, type: 'colleague',
     desc_zh: `和珅是乾隆帝最寵信的大臣，以容貌俊秀、才幹超群入乾隆之眼。兩人關係密切長達二十餘年，和珅藉此大肆貪腐，死後被抄家，查抄的財富相當於清朝十五年的財政收入，「和珅跌倒，嘉慶吃飽」成為歷史名言。`,
     source_zh: `清史稿·和珅傳`, source_en: `Draft History of Qing, Heshen`
@@ -1076,7 +1076,7 @@ export const CONNECTIONS_MODERN = [
     source_zh: '喬治·桑書信集；屠格涅夫回憶錄', source_en: 'George Sand Correspondence; Turgenev Memoir'
   },
   {
-    id: 'c_r146', from: 'walt_disney', to: 'picasso',
+    id: 'c_r146', from: 'walt_disney', to: 'pablo_picasso',
     year: 1940, type: 'meet',
     desc_zh: `迪士尼與畢卡索是20世紀前半葉最具影響力的視覺藝術創作者，兩人均於1940年代在洛杉磯地區有過接觸，同參與了美國藝術界的戰時文化活動。兩人代表了20世紀視覺文化的兩種極端：大眾娛樂與前衛藝術。`,
     source_zh: `迪士尼傳記；藝術史料`, source_en: `Disney Biography; Art History`
@@ -1228,7 +1228,7 @@ export const CONNECTIONS_MODERN = [
     source_zh: `拉法葉特美國之旅史料`, source_en: `Lafayette's American Tour Records`
   },
   {
-    id: 'c_new_06', from: 'hemingway', to: 'picasso',
+    id: 'c_new_06', from: 'hemingway', to: 'pablo_picasso',
     year: 1925, type: 'meet',
     desc_zh: `海明威1920年代旅居巴黎期間，與畢卡索同在「失落的一代」文藝圈。海明威在《流動的饗宴》中記載了他們在巴黎的交往，兩人常在史坦因的沙龍中碰面。`,
     source_zh: `《流動的饗宴》`, source_en: `A Moveable Feast`
