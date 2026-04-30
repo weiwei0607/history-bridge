@@ -38,7 +38,11 @@ export default function App() {
   const [showGame, setShowGame] = useState(false);
   const [showGuessWho, setShowGuessWho] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
-  const [selectedPeriod, setSelectedPeriod] = useState(null);
+  const [selectedPeriodLabel, setSelectedPeriodLabel] = useState(null);
+  const selectedPeriod = useMemo(
+    () => TIME_PERIODS.find(p => p.label === selectedPeriodLabel) ?? null,
+    [selectedPeriodLabel]
+  );
 
   // Read URL query params on mount
   useEffect(() => {
@@ -119,7 +123,7 @@ export default function App() {
             value={figureA}
             onChange={v => { setFigureA(v); setResult(null); }}
             exclude={figureB}
-            periodFilter={selectedPeriod}
+            periodFilter={selectedPeriod?.filter ?? null}
           />
 
           {/* VS divider */}
@@ -132,7 +136,7 @@ export default function App() {
             value={figureB}
             onChange={v => { setFigureB(v); setResult(null); }}
             exclude={figureA}
-            periodFilter={selectedPeriod}
+            periodFilter={selectedPeriod?.filter ?? null}
           />
         </div>
 
@@ -141,9 +145,9 @@ export default function App() {
           {TIME_PERIODS.map(p => (
             <button
               key={p.label}
-              onClick={() => setSelectedPeriod(selectedPeriod === p.filter ? null : p.filter)}
+              onClick={() => setSelectedPeriodLabel(l => l === p.label ? null : p.label)}
               className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${
-                selectedPeriod === p.filter
+                selectedPeriodLabel === p.label
                   ? 'bg-amber-800 text-white'
                   : 'bg-white border border-amber-200 text-amber-700 hover:bg-amber-50'
               }`}
