@@ -16,7 +16,7 @@ function highlight(text, query) {
   );
 }
 
-export default function SearchBox({ label, value, onChange, exclude, eraFilter }) {
+export default function SearchBox({ label, value, onChange, exclude, periodFilter }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
   const ref = useRef(null);
@@ -29,11 +29,11 @@ export default function SearchBox({ label, value, onChange, exclude, eraFilter }
   const filtered = useMemo(() => {
     if (!open) return [];
     const q = query.toLowerCase().trim();
-    if (!q) return ALL_FIGURES.filter(f => f.id !== exclude).slice(0, 15);
-    
+    if (!q) return ALL_FIGURES.filter(f => f.id !== exclude && (!periodFilter || periodFilter(f))).slice(0, 15);
+
     return ALL_FIGURES.filter(f => {
       if (f.id === exclude) return false;
-      if (eraFilter && f.era !== eraFilter) return false;
+      if (periodFilter && !periodFilter(f)) return false;
       const name_zh = f.name_zh || '';
       const name_en = f.name_en || '';
       const era = f.era || '';
@@ -46,7 +46,7 @@ export default function SearchBox({ label, value, onChange, exclude, eraFilter }
       ].join(' ').toLowerCase();
       return searchable.includes(q);
     }).slice(0, 15);
-  }, [query, open, exclude]);
+  }, [query, open, exclude, periodFilter]);
 
   useEffect(() => {
     function handleClick(e) {

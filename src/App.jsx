@@ -8,6 +8,15 @@ import HubFigures from './components/HubFigures';
 import { findShortestPath } from './utils/bfs';
 import { FIGURES } from './data/figures';
 
+const TIME_PERIODS = [
+  { label: '全部',  filter: null },
+  { label: '上古',  sub: '~西元500前', filter: f => f.born < -500 },
+  { label: '古代',  sub: '前500~500',  filter: f => f.born >= -500 && f.born < 500 },
+  { label: '中古',  sub: '500~1500',   filter: f => f.born >= 500  && f.born < 1500 },
+  { label: '近代',  sub: '1500~1900',  filter: f => f.born >= 1500 && f.born < 1900 },
+  { label: '現代',  sub: '1900~',      filter: f => f.born >= 1900 },
+];
+
 const SUGGESTIONS = [
   ['socrates', 'alexander'],
   ['zhugeliang', 'caocao'],
@@ -29,12 +38,7 @@ export default function App() {
   const [showGame, setShowGame] = useState(false);
   const [showGuessWho, setShowGuessWho] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
-  const [selectedEra, setSelectedEra] = useState('');
-
-  const allEras = useMemo(() => {
-    const eras = new Set(Object.values(FIGURES).map(f => f.era).filter(Boolean));
-    return Array.from(eras).sort();
-  }, []);
+  const [selectedPeriod, setSelectedPeriod] = useState(null);
 
   // Read URL query params on mount
   useEffect(() => {
@@ -58,7 +62,8 @@ export default function App() {
   function handleSuggestion([a, b]) {
     setFigureA(a);
     setFigureB(b);
-    setResult(null);
+    const found = findShortestPath(a, b);
+    setResult(found ?? 'none');
   }
 
   const handleRandomExplore = useCallback(() => {
@@ -114,7 +119,7 @@ export default function App() {
             value={figureA}
             onChange={v => { setFigureA(v); setResult(null); }}
             exclude={figureB}
-            eraFilter={selectedEra}
+            periodFilter={selectedPeriod}
           />
 
           {/* VS divider */}
@@ -127,25 +132,23 @@ export default function App() {
             value={figureB}
             onChange={v => { setFigureB(v); setResult(null); }}
             exclude={figureA}
-            eraFilter={selectedEra}
+            periodFilter={selectedPeriod}
           />
         </div>
 
-        {/* Era Filter */}
+        {/* Period Filter */}
         <div className="flex flex-wrap justify-center gap-2">
-          <button
-            onClick={() => setSelectedEra('')}
-            className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${selectedEra === '' ? 'bg-amber-800 text-white' : 'bg-white border border-amber-200 text-amber-700 hover:bg-amber-50'}`}
-          >
-            全部時代
-          </button>
-          {allEras.map(era => (
+          {TIME_PERIODS.map(p => (
             <button
-              key={era}
-              onClick={() => setSelectedEra(era === selectedEra ? '' : era)}
-              className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${selectedEra === era ? 'bg-amber-800 text-white' : 'bg-white border border-amber-200 text-amber-700 hover:bg-amber-50'}`}
+              key={p.label}
+              onClick={() => setSelectedPeriod(selectedPeriod === p.filter ? null : p.filter)}
+              className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${
+                selectedPeriod === p.filter
+                  ? 'bg-amber-800 text-white'
+                  : 'bg-white border border-amber-200 text-amber-700 hover:bg-amber-50'
+              }`}
             >
-              {era}
+              {p.label}{p.sub && <span className="ml-1 opacity-60 font-normal">{p.sub}</span>}
             </button>
           ))}
         </div>

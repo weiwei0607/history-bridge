@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { FIGURES } from '../data/figures';
 import { CONNECTIONS } from '../data/connections';
 
@@ -10,10 +10,10 @@ function yearStr(y) {
 export default function PersonModal({ figureId, onClose, onNavigate }) {
   const figure = figureId ? FIGURES[figureId] : null;
 
-  // Find all connections involving this figure
-  const relatedConns = figureId
-    ? CONNECTIONS.filter(c => c.from === figureId || c.to === figureId)
-    : [];
+  const relatedConns = useMemo(() =>
+    figureId ? CONNECTIONS.filter(c => c.from === figureId || c.to === figureId) : [],
+    [figureId]
+  );
 
   useEffect(() => {
     if (!figure) return;
