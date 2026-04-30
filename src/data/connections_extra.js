@@ -98,5 +98,17 @@ export const CONNECTIONS_EXTRA = [
   { id: 'fix_horemheb_seti', from: 'horemheb', to: 'seti_i', year: -1294, type: 'political', desc_zh: '塞提一世是霍倫海布指定的繼承人（或通過拉美西斯一世過渡），他在位期間恢復了埃及在西亞的軍事擴張，是第十九王朝盛世的奠基者。', source_zh: '《古埃及史》' },
   { id: 'fix_seti_ramesses', from: 'seti_i', to: 'ramesses_ii', year: -1279, type: 'family', desc_zh: '拉美西斯二世是塞提一世之子，從小接受軍事訓練，後來成為埃及歷史上統治最長、最著名的法老之一。', source_zh: '《古埃及史》' },
   { id: 'fix_marx_lincoln', from: 'marx', to: 'abraham_lincoln', year: 1865, type: 'correspondence', desc_zh: '馬克思代表第一國際工人協會致函祝賀林肯在1864年大選連任，並讚揚其廢奴決心。林肯正式回函給國際工人協會，是馬克思主義與美國民主制度最著名的「歷史交匯」時刻。', source_zh: '第一國際工人協會公文；US State Department Archives' },
-  { id: 'fix_stalin_marx', from: 'stalin', to: 'marx', year: 1924, type: 'political', desc_zh: '史達林是馬克思主義最有力的政治實踐者之一，他掌權後將馬克思和恩格斯的著作奉為蘇聯的官方意識形態，以「馬克思列寧主義」為名進行統治，兩人之間有明確的思想傳承與政治繼承關係。', source_zh: '史達林《論辯證唯物主義與歷史唯物主義》' }
+  { id: 'fix_stalin_marx', from: 'stalin', to: 'marx', year: 1924, type: 'political', desc_zh: '史達林是馬克思主義最有力的政治實踐者之一，他掌權後將馬克思和恩格斯的著作奉為蘇聯的官方意識形態，以「馬克思列寧主義」為名進行統治，兩人之間有明確的思想傳承與政治繼承關係。', source_zh: '史達林《論辯證唯物主義與歷史唯物主義》' },
+  {
+    id: 'bridge_shakespeare_james', from: 'shakespeare', to: 'james_i',
+    year: 1603, type: 'patron',
+    desc_zh: '1603年詹姆斯一世即位後，立即將莎士比亞所屬的劇團「張伯倫勛爵的僕人」升格為「國王的僕人」（King\'s Men），由國王親自擔任贊助人。此後莎士比亞多部重要作品（《奧塞羅》《麥克白》《李爾王》）均在宮廷演出，兩人有多次直接的宮廷接觸，詹姆斯一世是莎士比亞創作後期最重要的皇室贊助人。',
+    source_zh: '英國國家檔案館；《國王的僕人》劇團許可狀（1603年）', source_en: "National Archives UK; Letters Patent of King's Men (1603)"
+  },
+  {
+    id: 'bridge_mozart_haydn', from: 'mozart', to: 'joseph_haydn',
+    year: 1781, type: 'friendship',
+    desc_zh: '莫札特與海頓是維也納古典音樂時代最深厚的友誼之一。莫札特在1781年定居維也納後與海頓結識，兩人多次共同演奏四重奏。莫札特將六首弦樂四重奏題獻給海頓（「海頓四重奏」），海頓則稱莫札特為「我所認識最偉大的作曲家」。這段跨越代際的友誼是音樂史最感人的師友情誼之一。',
+    source_zh: '莫札特書信集；《海頓傳》(H.C. Robbins Landon著)', source_en: 'Mozart Letters; Haydn biography by H.C. Robbins Landon'
+  },
 ];

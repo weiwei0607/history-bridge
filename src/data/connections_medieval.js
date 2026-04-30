@@ -836,5 +836,45 @@ export const CONNECTIONS_MEDIEVAL = [
     year: 1301, type: 'diplomatic',
     desc_zh: '1301年秋，佛羅倫斯城邦派遣三名使節前往羅馬覲見博尼法斯八世，協商城邦政治問題，但丁正是其中之一。博尼法斯八世趁機扣留了但丁，讓其他兩名使節返回佛羅倫斯，操控了城邦局勢，最終導致反教皇派（白黨）的失敗與但丁的流放。此次覲見是兩人唯一也是最重要的直接見面，直接改變了但丁的命運，也激發了但丁在《神曲》中對博尼法斯的激烈批判（將其置於地獄）。',
     source_zh: '但丁《書信集》；喬凡尼·薄伽丘《但丁傳》；《教皇博尼法斯八世傳》', source_en: 'Dante Epistles; Boccaccio Life of Dante; Boniface VIII Biography'
+  },
+
+  // === 怛羅斯橋接：唐朝 ↔ 阿拔斯（接通伊斯蘭鏈條與東方主圖）===
+  {
+    id: 'c_talas_01', from: 'tang_xuanzong', to: 'gao_xianzhi',
+    year: 747, type: 'political',
+    desc_zh: '唐玄宗任命高仙芝為安西四鎮節度使（約747年），統帥唐朝在中亞的全部軍事力量。高仙芝多次直接上疏玄宗，奏報西域形勢並請示出兵策略，兩人有明確的君臣奏對關係。高仙芝征服小勃律後，玄宗大加賞賜，賜封爵位。',
+    source_zh: '《舊唐書·高仙芝傳》；《資治通鑑》卷二一五', source_en: 'Old Book of Tang Biography of Gao Xianzhi; Zizhi Tongjian Vol.215'
+  },
+  {
+    id: 'c_talas_02', from: 'gao_xianzhi', to: 'abu_muslim',
+    year: 751, type: 'military',
+    desc_zh: '怛羅斯之戰（751年），高仙芝親率三萬唐軍深入中亞，在怛羅斯河畔（今吉爾吉斯境內）與阿拔斯軍隊交戰。阿布·穆斯林身為呼羅珊總督，統帥阿拔斯東部全部軍事力量，此次東征正是由其下令並部署（實際戰場指揮為其部將齊亞德·本·薩里赫）。這是唐帝國與阿拔斯帝國之間唯一的直接軍事衝突，雙方最高軍事指揮官因此役在歷史上直接對立。',
+    source_zh: '《舊唐書·高仙芝傳》；伊本·阿西爾《歷史大全》（al-Kamil fi al-Tarikh）', source_en: 'Old Book of Tang; Ibn al-Athir al-Kamil fi al-Tarikh'
+  },
+  {
+    id: 'c_talas_03', from: 'abu_muslim', to: 'al_mansur',
+    year: 755, type: 'meet',
+    desc_zh: '754年曼蘇爾繼任哈里發後，忌憚阿布·穆斯林在呼羅珊的巨大威望與兵權。755年曼蘇爾以「議事」為名召阿布·穆斯林入朝覲見，當面列舉其罪狀，隨後命宮廷衛士當場將其斬殺。阿布·穆斯林入宮時已有預感，但仍赴約，成為中世紀最著名的君殺功臣案例，此後呼羅珊多次爆發為阿布·穆斯林復仇的民間起義。',
+    source_zh: '塔巴里《先知與國王史》卷二九；馬蘇第《黃金草原》', source_en: "al-Tabari History of Prophets and Kings Vol.29; al-Mas'udi Meadows of Gold"
+  },
+
+  // === 加洛林三角：查理曼 ↔ 教宗良三世 ↔ 阿爾昆 ===
+  {
+    id: 'c_carol_01', from: 'charlemagne', to: 'pope_leo_iii',
+    year: 800, type: 'meet',
+    desc_zh: '800年12月25日，教宗良三世在羅馬聖彼得大教堂為查理曼加冕，封其為「羅馬人的皇帝」（Imperator Romanorum）。此前799年，良三世遭羅馬貴族攻擊後出逃，查理曼親赴羅馬為其平反、恢復教宗地位；800年加冕典禮是兩人多年政教合作的頂點，奠定了中世紀歐洲政教二元格局的基礎。',
+    source_zh: '《法蘭克王國年代記》（Annales Regni Francorum）800年條；《教宗書》（Liber Pontificalis）良三世傳', source_en: 'Annales Regni Francorum 800; Liber Pontificalis Life of Leo III'
+  },
+  {
+    id: 'c_carol_02', from: 'charlemagne', to: 'alcuin_of_york',
+    year: 782, type: 'meet',
+    desc_zh: '782年查理曼邀請阿爾昆前往法蘭克宮廷，擔任宮廷學校（Schola Palatina）校長與首席學術顧問。阿爾昆在宮廷服務逾十年（782-796年），主導加洛林文藝復興，與查理曼書信往來極為密切，查理曼以「大衛」（David）為阿爾昆取號，阿爾昆稱查理曼為「我們的大衛王」。',
+    source_zh: '《阿爾昆書信集》（Alcuin Epistolae）；艾因哈德《查理曼傳》（Vita Karoli Magni）', source_en: 'Alcuin Epistolae; Einhard Vita Karoli Magni'
+  },
+  {
+    id: 'c_carol_03', from: 'alcuin_of_york', to: 'pope_leo_iii',
+    year: 799, type: 'meet',
+    desc_zh: '799年教宗良三世在羅馬遭貴族攻擊（企圖割去其舌頭與挖去眼睛）後逃往查理曼位於帕德博恩（Paderborn）的宮廷。阿爾昆時在查理曼宮廷，直接參與了如何回應教宗訴求的商議；其後在書信（第174-179號）中明確討論了此事件，並為查理曼加冕提供了神學論證，兩人在此關鍵時刻有直接接觸。',
+    source_zh: '《阿爾昆書信集》第174-179號；《法蘭克王國年代記》799年條', source_en: 'Alcuin Epistolae 174-179; Annales Regni Francorum 799'
   }
 ];

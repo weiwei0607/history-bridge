@@ -20,7 +20,7 @@ const TIME_PERIODS = [
 const SUGGESTIONS = [
   ['socrates', 'alexander'],
   ['zhugeliang', 'caocao'],
-  ['lincoln', 'bismarck'],
+  ['abraham_lincoln', 'bismarck'],
   ['li_hongzhang', 'ito_hirobumi'],
   ['kublai_khan', 'marco_polo'],
   ['napoleon', 'beethoven'],
