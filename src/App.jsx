@@ -6,6 +6,7 @@ import GameMode from './components/GameMode';
 import GuessWhoMode from './components/GuessWhoMode';
 import HubFigures from './components/HubFigures';
 import { findShortestPath } from './utils/bfs';
+import { getTopHubs } from './utils/centrality';
 import { FIGURES } from './data/figures';
 
 const TIME_PERIODS = [
@@ -17,18 +18,6 @@ const TIME_PERIODS = [
   { label: '現代',  sub: '1900~',      filter: f => f.born >= 1900 },
 ];
 
-const SUGGESTIONS = [
-  ['socrates', 'alexander'],
-  ['zhugeliang', 'caocao'],
-  ['abraham_lincoln', 'bismarck'],
-  ['li_hongzhang', 'ito_hirobumi'],
-  ['kublai_khan', 'marco_polo'],
-  ['napoleon', 'beethoven'],
-  ['li_bai', 'abe_no_nakamaro'],
-  ['socrates', 'kongzi'],
-  ['mozart', 'kongzi'],
-  ['washington', 'xi_jinping'],
-];
 
 export default function App() {
   const [figureA, setFigureA] = useState(null);
@@ -38,22 +27,42 @@ export default function App() {
   const [showGame, setShowGame] = useState(false);
   const [showGuessWho, setShowGuessWho] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
+  const [toast, setToast] = useState(null);
   const [selectedPeriodLabel, setSelectedPeriodLabel] = useState(null);
   const selectedPeriod = useMemo(
     () => TIME_PERIODS.find(p => p.label === selectedPeriodLabel) ?? null,
     [selectedPeriodLabel]
   );
 
+  const suggestions = useMemo(() => {
+    const hubs = getTopHubs(20);
+    const pairs = [];
+    for (let i = 0; i < hubs.length - 1 && pairs.length < 10; i++) {
+      const a = hubs[i].id;
+      const b = hubs[i + 2]?.id ?? hubs[i + 1].id;
+      if (a !== b && FIGURES[a] && FIGURES[b]) pairs.push([a, b]);
+    }
+    return pairs;
+  }, []);
+
+  function showToast(msg) {
+    setToast(msg);
+    setTimeout(() => setToast(null), 3000);
+  }
+
   // Read URL query params on mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const a = params.get('a');
     const b = params.get('b');
+    if (!a && !b) return;
     if (a && b && FIGURES[a] && FIGURES[b]) {
       setFigureA(a);
       setFigureB(b);
       const found = findShortestPath(a, b);
       setResult(found ?? 'none');
+    } else {
+      showToast('分享連結中的人物不存在，已載入預設頁面');
     }
   }, []);
 
@@ -77,6 +86,14 @@ export default function App() {
     while (a === b) {
       b = ids[Math.floor(Math.random() * ids.length)];
     }
+    setFigureA(a);
+    setFigureB(b);
+    const found = findShortestPath(a, b);
+    setResult(found ?? 'none');
+  }, []);
+
+  const handleFindPath = useCallback((a, b) => {
+    setModalId(null);
     setFigureA(a);
     setFigureB(b);
     const found = findShortestPath(a, b);
@@ -183,7 +200,7 @@ export default function App() {
 
         {/* Quick suggestions */}
         <div className="flex flex-wrap justify-center gap-2 max-w-2xl">
-          {SUGGESTIONS.map(([a, b]) => (
+          {suggestions.map(([a, b]) => (
             <button
               key={`${a}-${b}`}
               onClick={() => handleSuggestion([a, b])}
@@ -238,11 +255,19 @@ export default function App() {
         資料來源：史記、漢書、三國志、資治通鑑、馬可波羅遊記等史籍
       </footer>
 
+      {/* Toast */}
+      {toast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 bg-amber-900 text-amber-50 rounded-xl shadow-xl text-sm font-sans animate-fade-up">
+          {toast}
+        </div>
+      )}
+
       {/* Person detail modal */}
       <PersonModal
         figureId={modalId}
         onClose={() => setModalId(null)}
         onNavigate={id => setModalId(id)}
+        onFindPath={handleFindPath}
       />
 
       {/* Game Mode Overlay */}

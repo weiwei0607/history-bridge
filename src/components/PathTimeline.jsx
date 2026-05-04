@@ -1,9 +1,5 @@
 import { FIGURES } from '../data/figures';
-
-function yearLabel(year) {
-  if (year < 0) return `西元前 ${Math.abs(year)} 年`;
-  return `西元 ${year} 年`;
-}
+import { yearLabel } from '../utils/format';
 
 function regionEmoji(region) {
   if (!region) return '📜';

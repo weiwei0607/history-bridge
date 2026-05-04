@@ -1,13 +1,9 @@
 import { useEffect, useMemo } from 'react';
 import { FIGURES } from '../data/figures';
 import { CONNECTIONS } from '../data/connections';
+import { yearLabel, yearShort } from '../utils/format';
 
-function yearStr(y) {
-  if (y == null) return '?';
-  return y < 0 ? `西元前 ${Math.abs(y)}` : `西元 ${y}`;
-}
-
-export default function PersonModal({ figureId, onClose, onNavigate }) {
+export default function PersonModal({ figureId, onClose, onNavigate, onFindPath }) {
   const figure = figureId ? FIGURES[figureId] : null;
 
   const relatedConns = useMemo(() =>
@@ -54,7 +50,7 @@ export default function PersonModal({ figureId, onClose, onNavigate }) {
               {figure.era}
             </span>
             <span className="px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full text-xs font-sans border border-amber-200">
-              {yearStr(figure.born)} — {yearStr(figure.died)}
+              {yearLabel(figure.born)} — {yearLabel(figure.died)}
             </span>
             {figure.tags?.map(tag => (
               <span key={tag} className="px-2.5 py-0.5 bg-stone-100 text-stone-600 rounded-full text-xs font-sans border border-stone-200">
@@ -91,8 +87,16 @@ export default function PersonModal({ figureId, onClose, onNavigate }) {
                           {other?.name_zh ?? otherId}
                         </button>
                         <span className="text-xs text-amber-400 font-sans">
-                          {conn.year < 0 ? `前${Math.abs(conn.year)}年` : `${conn.year}年`}
+                          {yearShort(conn.year)}
                         </span>
+                        {onFindPath && (
+                          <button
+                            className="ml-auto text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 hover:bg-amber-200 border border-amber-200 transition-colors"
+                            onClick={() => onFindPath(figureId, otherId)}
+                          >
+                            找路徑 →
+                          </button>
+                        )}
                       </div>
                       <p className="text-xs text-amber-700/80 leading-relaxed">{conn.desc_zh}</p>
                       <p className="text-xs text-amber-500/70 mt-1 font-sans">📖 {conn.source_zh}</p>

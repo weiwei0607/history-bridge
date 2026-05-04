@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { getTopHubs } from '../utils/centrality';
+import { getSimpleGraph } from '../utils/graph';
 import { FIGURES } from '../data/figures';
 
 const ERA_COLOR = {
@@ -39,6 +40,7 @@ function scoreBar(score) {
 
 export default function HubFigures({ onSelectFigure, onUseInSearch }) {
   const hubs = useMemo(() => getTopHubs(15), []);
+  const graph = useMemo(() => getSimpleGraph(), []);
 
   return (
     <section className="w-full max-w-2xl mx-auto mt-12 px-2">
@@ -54,6 +56,7 @@ export default function HubFigures({ onSelectFigure, onUseInSearch }) {
           if (!fig) return null;
           const barWidth = scoreBar(score);
           const eraColor = getEraColor(fig.era);
+          const connCount = graph[id]?.length ?? 0;
 
           return (
             <button
@@ -78,6 +81,11 @@ export default function HubFigures({ onSelectFigure, onUseInSearch }) {
                 <p className="font-bold text-amber-900 text-sm truncate">{fig.name_zh}</p>
                 <p className="text-xs text-amber-600/70 font-sans truncate">{fig.name_en}</p>
               </div>
+
+              {/* Connection count */}
+              <span className="relative shrink-0 text-xs text-amber-500/70 font-sans">
+                連結 {connCount} 人
+              </span>
 
               {/* Era badge */}
               <span className={`relative shrink-0 text-xs px-2 py-0.5 rounded-full border font-sans ${eraColor}`}>
