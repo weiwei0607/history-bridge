@@ -25,3 +25,11 @@ dist-ssr
 .aider*
 .env
 .env.local
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Generated data / debug output files
+all_valid_ids.txt
+existing_ids.txt
+ANALYSIS_REPORT.md
