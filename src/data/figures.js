@@ -1116,7 +1116,7 @@ export const FIGURES = {
   },
   xi_jinping: {
     id: 'xi_jinping', name_zh: '習近平', name_en: 'Xi Jinping',
-    born: 1953, died: 0, era: '當代', region: '中國',
+    born: 1953, died: null, era: '當代', region: '中國',
     tags: ['政治家', '國家主席'],
     bio_zh: '現任中華人民共和國最高領導人。2015年，他對英國進行國事訪問，在白金漢宮會見了伊莉莎白二世女王，開啟了所謂的中英「黃金時代」。',
   },
@@ -1334,6 +1334,18 @@ export const FIGURES = {
     born: 161, died: 192, era: '羅馬帝國', region: '羅馬帝國',
     tags: ['皇帝'],
     bio_zh: '馬可·奧理略之子，他的統治標誌著羅馬帝國黃金時代的結束。他熱衷於角鬥士表演，最終被暗殺。',
+  },
+  septimius_severus: {
+    id: 'septimius_severus', name_zh: '塞提米烏斯·塞維魯斯', name_en: 'Septimius Severus',
+    born: 145, died: 211, era: '羅馬帝國', region: '羅馬帝國',
+    tags: ['皇帝', '將領'],
+    bio_zh: '羅馬帝國塞維魯斯王朝的創始人（193-211年在位）。出身北非的行省將領，在康茂德遇刺後的混亂中脫穎而出奪取帝位。以鐵腕鞏固統治，大力提升軍人待遇，留下「讓士兵富足，其餘一切不重要」的名言。率軍遠征波斯、不列顛，最終病逝於約克。',
+  },
+  alexander_severus: {
+    id: 'alexander_severus', name_zh: '亞歷山大·塞維魯斯', name_en: 'Alexander Severus',
+    born: 208, died: 235, era: '羅馬帝國', region: '羅馬帝國',
+    tags: ['皇帝'],
+    bio_zh: '塞維魯斯王朝末代皇帝（222-235年在位），13歲即位，為人溫和，尊重元老院，致力於法治。在位期間力抗薩珊波斯入侵，但最終在萊茵河前線抵禦日耳曼蠻族時被嘩變士兵所殺，年僅26歲。其死亡標誌著「三世紀危機」的正式開始，帝國陷入長達五十年的動盪。',
   },
   aurelian: {
     id: 'aurelian', name_zh: '奧勒良', name_en: 'Aurelian',
@@ -1886,7 +1898,7 @@ export const FIGURES = {
   },
   hu_jintao: {
     id: 'hu_jintao', name_zh: '胡錦濤', name_en: 'Hu Jintao',
-    born: 1942, died: 0, era: '當代', region: '北京',
+    born: 1942, died: null, era: '當代', region: '北京',
     tags: ['國家主席'],
     bio_zh: '中華人民共和國第四代領導核心。他在位期間提出了「科學發展觀」與「和諧社會」。',
   },
@@ -2104,7 +2116,7 @@ export const FIGURES = {
   },
   bill_gates: {
     id: 'bill_gates', name_zh: '比爾·蓋茲', name_en: 'Bill Gates',
-    born: 1955, died: 0, era: '當代', region: '西雅圖',
+    born: 1955, died: null, era: '當代', region: '西雅圖',
     tags: ['企業家', '慈善家'],
     bio_zh: '微軟公司創始人，長期占據世界首富，晚年致力於全球公共衛生慈善事業。',
   },
@@ -2165,7 +2177,7 @@ export const FIGURES = {
   },
   miyazaki_hayao: {
     id: 'miyazaki_hayao', name_zh: '宮崎駿', name_en: 'Hayao Miyazaki',
-    born: 1941, died: 0, era: '當代', region: '日本',
+    born: 1941, died: null, era: '當代', region: '日本',
     tags: ["導演"],
     bio_zh: '動畫大師。',
   },

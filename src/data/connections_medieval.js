@@ -802,10 +802,22 @@ export const CONNECTIONS_MEDIEVAL = [
   },
   // === 真實補橋連接（fix-5：羅馬帝王鏈 / 中世紀法國鏈 ）===
   {
-    id: 'c_fix5_01', from: 'commodus', to: 'aurelian',
-    year: 214, type: 'political',
-    desc_zh: '康茂德（d.192）與奧勒良（b.214）相差22年，兩人未曾相遇。但奧勒良代表羅馬帝國三世紀危機結束後的「軍人皇帝」傳統，其登位與統一行動直接延續自康茂德之後西維魯王朝的政治傳承。此連接標記羅馬帝國的政治傳承脈絡（含22年空缺），非私人見面。',
-    source_zh: '《羅馬皇帝列傳》；羅馬帝國三世紀危機史料', source_en: 'Historia Augusta; Third Century Crisis of Rome'
+    id: 'c_fix5_01a', from: 'commodus', to: 'septimius_severus',
+    year: 190, type: 'political',
+    desc_zh: '塞提米烏斯·塞維魯斯在康茂德統治期間（180-192年在位）擔任重要軍事指揮官，曾任上潘諾尼亞總督。康茂德遇刺後，塞維魯斯率軍迅速進軍羅馬，於193年成為皇帝，是與康茂德時代有直接人事重疊的將領。',
+    source_zh: '《羅馬皇帝列傳》(Historia Augusta)；卡西烏斯·狄奧《羅馬史》', source_en: 'Historia Augusta; Cassius Dio Roman History'
+  },
+  {
+    id: 'c_fix5_01b', from: 'septimius_severus', to: 'alexander_severus',
+    year: 208, type: 'family',
+    desc_zh: '亞歷山大·塞維魯斯是塞提米烏斯·塞維魯斯的孫姪，208年塞維魯斯帶他隨軍出征不列顛，使他接觸宮廷事務。塞維魯斯王朝的皇位最終傳至亞歷山大·塞維魯斯，兩人有直接的家族和軍事接觸。',
+    source_zh: '《羅馬皇帝列傳》；赫羅狄安《羅馬帝國史》', source_en: 'Historia Augusta; Herodian History of the Roman Empire'
+  },
+  {
+    id: 'c_fix5_01c', from: 'alexander_severus', to: 'aurelian',
+    year: 232, type: 'military',
+    desc_zh: '奧勒良在亞歷山大·塞維魯斯統治期間（222-235年在位）開始其軍旅生涯，參與了亞歷山大對抗薩珊波斯的東方戰役（232年）。亞歷山大是奧勒良晉升的時代背景，兩人的軍事生涯有直接的時代重疊。',
+    source_zh: '《羅馬皇帝列傳》；佐西莫斯《羅馬史》', source_en: 'Historia Augusta; Zosimus New History'
   },
   {
     id: 'c_fix5_02', from: 'aurelian', to: 'diocletian',
