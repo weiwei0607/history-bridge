@@ -2,6 +2,7 @@ import { useEffect, useMemo } from 'react';
 import { FIGURES } from '../data/figures';
 import { CONNECTIONS } from '../data/connections';
 import { yearLabel, yearShort } from '../utils/format';
+import { useScrollLock } from '../utils/useScrollLock';
 
 export default function PersonModal({ figureId, onClose, onNavigate, onFindPath }) {
   const figure = figureId ? FIGURES[figureId] : null;
@@ -10,6 +11,8 @@ export default function PersonModal({ figureId, onClose, onNavigate, onFindPath 
     figureId ? CONNECTIONS.filter(c => c.from === figureId || c.to === figureId) : [],
     [figureId]
   );
+
+  useScrollLock(!!figure);
 
   useEffect(() => {
     if (!figure) return;
@@ -24,6 +27,9 @@ export default function PersonModal({ figureId, onClose, onNavigate, onFindPath 
     <div
       className="fixed inset-0 z-50 flex items-center justify-center p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={figure.name_zh}
     >
       {/* Backdrop */}
       <div className="absolute inset-0 bg-amber-950/30 backdrop-blur-sm" />
@@ -37,7 +43,8 @@ export default function PersonModal({ figureId, onClose, onNavigate, onFindPath 
         <div className="sticky top-0 bg-[#fdf8f0]/95 backdrop-blur-sm border-b border-amber-100 px-6 pt-6 pb-4 z-10">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-100 text-amber-500 transition-colors text-lg"
+            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-amber-100 text-amber-500 transition-colors text-lg focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
+            aria-label="關閉"
           >
             ✕
           </button>

@@ -1,13 +1,14 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
 import SearchBox from './components/SearchBox';
 import PathTimeline from './components/PathTimeline';
 import PersonModal from './components/PersonModal';
-import GameMode from './components/GameMode';
-import GuessWhoMode from './components/GuessWhoMode';
 import HubFigures from './components/HubFigures';
 import { findShortestPath } from './utils/bfs';
 import { getTopHubs } from './utils/centrality';
 import { FIGURES } from './data/figures';
+
+const GameMode     = lazy(() => import('./components/GameMode'));
+const GuessWhoMode = lazy(() => import('./components/GuessWhoMode'));
 
 const TIME_PERIODS = [
   { label: '全部',  filter: null },
@@ -28,7 +29,9 @@ export default function App() {
   const [showGuessWho, setShowGuessWho] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [toast, setToast] = useState(null);
-  const [selectedPeriodLabel, setSelectedPeriodLabel] = useState(null);
+  const [selectedPeriodLabel, setSelectedPeriodLabel] = useState(
+    () => sessionStorage.getItem('hb_period') ?? null
+  );
   const selectedPeriod = useMemo(
     () => TIME_PERIODS.find(p => p.label === selectedPeriodLabel) ?? null,
     [selectedPeriodLabel]
@@ -36,18 +39,28 @@ export default function App() {
 
   const suggestions = useMemo(() => {
     const hubs = getTopHubs(20);
+    // Pair first half with second half reversed → cross-centrality, maximally diverse
     const pairs = [];
-    for (let i = 0; i < hubs.length - 1 && pairs.length < 10; i++) {
-      const a = hubs[i].id;
-      const b = hubs[i + 2]?.id ?? hubs[i + 1].id;
-      if (a !== b && FIGURES[a] && FIGURES[b]) pairs.push([a, b]);
+    for (let i = 0; i < 10; i++) {
+      const a = hubs[i]?.id;
+      const b = hubs[19 - i]?.id;
+      if (a && b && a !== b && FIGURES[a] && FIGURES[b]) pairs.push([a, b]);
     }
     return pairs;
   }, []);
 
   function showToast(msg) {
     setToast(msg);
-    setTimeout(() => setToast(null), 3000);
+    setTimeout(() => setToast(null), 4500);
+  }
+
+  function handlePeriodToggle(label) {
+    setSelectedPeriodLabel(prev => {
+      const next = prev === label ? null : label;
+      if (next) sessionStorage.setItem('hb_period', next);
+      else sessionStorage.removeItem('hb_period');
+      return next;
+    });
   }
 
   // Read URL query params on mount
@@ -103,33 +116,42 @@ export default function App() {
   const handleShare = useCallback(() => {
     if (!figureA || !figureB) return;
     const url = `${window.location.origin}${window.location.pathname}?a=${figureA}&b=${figureB}`;
-    navigator.clipboard.writeText(url);
+    const steps = result && result !== 'none' ? result.connections?.length : null;
+    const summary = steps != null
+      ? `我用 ${steps} 步連接了「${FIGURES[figureA]?.name_zh}」和「${FIGURES[figureB]?.name_zh}」！快來試試你能不能找到更短的路徑 👉 ${url}`
+      : url;
+    navigator.clipboard.writeText(summary);
     setShareCopied(true);
     setTimeout(() => setShareCopied(false), 2000);
-  }, [figureA, figureB]);
+  }, [figureA, figureB, result]);
 
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
-      <header className="text-center pt-12 pb-8 px-4 relative">
-        <div className="absolute top-4 right-4 flex flex-col gap-2 items-end">
-          <button
-            onClick={() => setShowGame(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform"
-          >
-            🕹️ 知識王挑戰
-          </button>
-          <button
-            onClick={() => setShowGuessWho(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform animate-pulse"
-          >
-            🕵️‍♂️ 猜猜我是誰
-          </button>
+      <header className="pt-10 pb-8 px-4">
+        <div className="relative">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-amber-900 tracking-tight">歷史橋梁</h1>
+            <p className="mt-2 text-amber-700/70 font-sans text-sm tracking-wide">
+              History Bridge — 找出兩位歷史人物之間，有史可查的最短連線
+            </p>
+          </div>
+          {/* Game buttons: flow below title on mobile, absolute top-right on desktop */}
+          <div className="flex flex-wrap justify-center gap-2 mt-4 sm:absolute sm:top-0 sm:right-0 sm:flex-col sm:items-end sm:mt-0 sm:gap-2">
+            <button
+              onClick={() => setShowGame(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform text-sm"
+            >
+              🕹️ 知識王挑戰
+            </button>
+            <button
+              onClick={() => setShowGuessWho(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white rounded-full font-bold shadow-lg hover:scale-105 transition-transform text-sm"
+            >
+              🕵️‍♂️ 猜猜我是誰
+            </button>
+          </div>
         </div>
-        <h1 className="text-4xl font-bold text-amber-900 tracking-tight">歷史橋梁</h1>
-        <p className="mt-2 text-amber-700/70 font-sans text-sm tracking-wide">
-          History Bridge — 找出兩位歷史人物之間，有史可查的最短連線
-        </p>
       </header>
 
       {/* Search panel */}
@@ -162,7 +184,7 @@ export default function App() {
           {TIME_PERIODS.map(p => (
             <button
               key={p.label}
-              onClick={() => setSelectedPeriodLabel(l => l === p.label ? null : p.label)}
+              onClick={() => handlePeriodToggle(p.label)}
               className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${
                 selectedPeriodLabel === p.label
                   ? 'bg-amber-800 text-white'
@@ -257,9 +279,12 @@ export default function App() {
 
       {/* Toast */}
       {toast && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 bg-amber-900 text-amber-50 rounded-xl shadow-xl text-sm font-sans animate-fade-up">
-          {toast}
-        </div>
+        <button
+          onClick={() => setToast(null)}
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-5 py-3 bg-amber-900 text-amber-50 rounded-xl shadow-xl text-sm font-sans animate-fade-up cursor-pointer hover:bg-amber-800 transition-colors"
+        >
+          {toast} <span className="ml-2 opacity-50 text-xs">點擊關閉</span>
+        </button>
       )}
 
       {/* Person detail modal */}
@@ -272,12 +297,16 @@ export default function App() {
 
       {/* Game Mode Overlay */}
       {showGame && (
-        <GameMode onClose={() => setShowGame(false)} />
+        <Suspense fallback={null}>
+          <GameMode onClose={() => setShowGame(false)} />
+        </Suspense>
       )}
 
       {/* Guess Who Mode Overlay */}
       {showGuessWho && (
-        <GuessWhoMode onClose={() => setShowGuessWho(false)} />
+        <Suspense fallback={null}>
+          <GuessWhoMode onClose={() => setShowGuessWho(false)} />
+        </Suspense>
       )}
     </div>
   );

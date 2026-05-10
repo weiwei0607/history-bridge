@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import confetti from 'canvas-confetti';
 import { FIGURES } from '../data/figures';
+import { safeConfetti } from '../utils/emoji';
+import { useScrollLock } from '../utils/useScrollLock';
 
 const DIFFICULTIES = [
   { label: '簡單', sub: '先給 2 條線索', startHints: 2, bonus: 50 },
@@ -27,10 +28,16 @@ function generateGuessQuestion() {
     options.add(ids[Math.floor(Math.random() * ids.length)]);
   }
 
+  const optArray = Array.from(options);
+  for (let i = optArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [optArray[i], optArray[j]] = [optArray[j], optArray[i]];
+  }
+
   return {
     answerId,
     hints: [hint1, hint2, hint3],
-    options: Array.from(options).sort(() => Math.random() - 0.5).map(id => ({
+    options: optArray.map(id => ({
       id,
       name: FIGURES[id].name_zh,
       title: FIGURES[id].tags[0] || '歷史人物'
@@ -39,6 +46,7 @@ function generateGuessQuestion() {
 }
 
 export default function GuessWhoMode({ onClose }) {
+  useScrollLock(true);
   const [difficulty, setDifficulty] = useState(null);
   const [question, setQuestion]     = useState(null);
   const [score, setScore]           = useState(0);
@@ -67,7 +75,7 @@ export default function GuessWhoMode({ onClose }) {
       const hintsUsed = hintLevel;
       const earned = difficulty.bonus + Math.max(0, (2 - hintsUsed) * 50);
       setScore(s => s + earned);
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+      safeConfetti();
     }
   }
 
@@ -78,7 +86,7 @@ export default function GuessWhoMode({ onClose }) {
   // ── 難度選擇畫面 ──────────────────────────────────────
   if (!difficulty) {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-indigo-950/95 backdrop-blur-md animate-fade-in p-4">
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-indigo-950/95 backdrop-blur-md animate-fade-in p-4" role="dialog" aria-modal="true" aria-label="猜猜我是誰">
         <div className="absolute top-4 right-4">
           <button onClick={onClose} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white shadow-md hover:bg-white/20 transition-colors font-bold text-xl">×</button>
         </div>
@@ -108,7 +116,7 @@ export default function GuessWhoMode({ onClose }) {
 
   // ── 遊戲畫面 ──────────────────────────────────────────
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-indigo-950/95 backdrop-blur-md animate-fade-in">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-indigo-950/95 backdrop-blur-md animate-fade-in" role="dialog" aria-modal="true" aria-label="猜猜我是誰">
       <div className="min-h-full flex items-center justify-center p-4 py-12">
         <div className="absolute top-4 right-4 z-10">
           <button onClick={onClose} className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 text-white shadow-md hover:bg-white/20 transition-colors font-bold text-xl">×</button>
@@ -142,16 +150,18 @@ export default function GuessWhoMode({ onClose }) {
                 )}
               </div>
 
-              {!selectedId && hintLevel < 3 && (
-                <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-8">
+                {!selectedId && hintLevel < 3 ? (
                   <button
                     onClick={showNextHint}
-                    className="px-6 py-2 rounded-full border border-indigo-400 text-indigo-300 hover:bg-indigo-500/20 transition-colors text-sm font-bold flex items-center gap-2"
+                    className="px-6 py-2 rounded-full border border-indigo-400 text-indigo-300 hover:bg-indigo-500/20 transition-colors text-sm font-bold flex items-center gap-2 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:outline-none"
                   >
-                    🔍 給我更多線索 (扣減獎勵分數)
+                    🔍 給我更多線索 <span className="opacity-60 font-normal">(扣減獎勵分數)</span>
                   </button>
-                </div>
-              )}
+                ) : !selectedId && hintLevel >= 3 ? (
+                  <p className="text-xs text-indigo-500/60 font-sans">已顯示所有線索，憑感覺猜吧！</p>
+                ) : null}
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                 {question.options.map((opt) => {

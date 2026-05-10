@@ -59,15 +59,13 @@ export default function HubFigures({ onSelectFigure, onUseInSearch }) {
           const connCount = graph[id]?.length ?? 0;
 
           return (
-            <button
+            <div
               key={id}
-              onClick={() => onUseInSearch(id)}
-              className="relative flex items-center gap-3 p-3 bg-white/70 border border-amber-200 rounded-xl hover:border-amber-400 hover:bg-amber-50/60 transition-all text-left group overflow-hidden"
-              title={`點擊帶入搜尋：${fig.name_zh}`}
+              className="relative flex items-center gap-3 p-3 bg-white/70 border border-amber-200 rounded-xl hover:border-amber-400 hover:bg-amber-50/60 transition-all group overflow-hidden"
             >
               {/* Score bar background */}
               <div
-                className="absolute inset-0 bg-amber-50/50 rounded-xl transition-all"
+                className="absolute inset-0 bg-amber-50/50 rounded-xl transition-all pointer-events-none"
                 style={{ width: `${barWidth}%` }}
               />
 
@@ -76,14 +74,18 @@ export default function HubFigures({ onSelectFigure, onUseInSearch }) {
                 {idx + 1}
               </span>
 
-              {/* Name & era */}
-              <div className="relative flex-1 min-w-0">
+              {/* Name & era — click to open details modal */}
+              <button
+                className="relative flex-1 min-w-0 text-left hover:opacity-75 transition-opacity focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none rounded"
+                onClick={() => onSelectFigure(id)}
+                title={`查看${fig.name_zh}詳情`}
+              >
                 <p className="font-bold text-amber-900 text-sm truncate">{fig.name_zh}</p>
                 <p className="text-xs text-amber-600/70 font-sans truncate">{fig.name_en}</p>
-              </div>
+              </button>
 
               {/* Connection count */}
-              <span className="relative shrink-0 text-xs text-amber-500/70 font-sans">
+              <span className="relative shrink-0 text-xs text-amber-500/70 font-sans hidden sm:inline">
                 連結 {connCount} 人
               </span>
 
@@ -91,7 +93,17 @@ export default function HubFigures({ onSelectFigure, onUseInSearch }) {
               <span className={`relative shrink-0 text-xs px-2 py-0.5 rounded-full border font-sans ${eraColor}`}>
                 {fig.era?.split('（')[0] ?? ''}
               </span>
-            </button>
+
+              {/* Add to search button */}
+              <button
+                className="relative shrink-0 w-7 h-7 flex items-center justify-center rounded-full bg-amber-100 text-amber-700 hover:bg-amber-200 border border-amber-300 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none"
+                onClick={() => onUseInSearch(id)}
+                title={`將${fig.name_zh}加入搜尋`}
+                aria-label={`將${fig.name_zh}加入搜尋`}
+              >
+                ＋
+              </button>
+            </div>
           );
         })}
       </div>

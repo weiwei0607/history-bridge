@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import confetti from 'canvas-confetti';
 import { generateQuestion } from '../utils/gameLogic';
 import { FIGURES } from '../data/figures';
+import { safeConfetti } from '../utils/emoji';
+import { useScrollLock } from '../utils/useScrollLock';
 
 const DIFFICULTIES = [
   { label: '簡單', sub: '20 秒作答', time: 20, color: 'bg-green-600 hover:bg-green-500' },
@@ -10,6 +11,7 @@ const DIFFICULTIES = [
 ];
 
 export default function GameMode({ onClose }) {
+  useScrollLock(true);
   const [difficulty, setDifficulty] = useState(null); // null = 難度選擇畫面
   const [question, setQuestion]     = useState(null);
   const [score, setScore]           = useState(0);
@@ -56,7 +58,7 @@ export default function GameMode({ onClose }) {
     if (correct) {
       setScore(s => s + 100 + combo * 10);
       setCombo(c => c + 1);
-      confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+      safeConfetti();
     } else {
       setCombo(0);
     }
@@ -65,20 +67,24 @@ export default function GameMode({ onClose }) {
   // ── 難度選擇畫面 ──────────────────────────────────────
   if (!difficulty) {
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-amber-50/95 backdrop-blur-sm animate-fade-in p-4">
+      <div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-amber-50/95 backdrop-blur-sm animate-fade-in p-4"
+        role="dialog" aria-modal="true" aria-label="知識王挑戰"
+      >
         <div className="absolute top-4 right-4">
-          <button onClick={onClose} className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-amber-900 shadow-md hover:bg-amber-100 transition-colors font-bold text-xl">×</button>
+          <button onClick={onClose} className="w-10 h-10 flex items-center justify-center rounded-full bg-white text-amber-900 shadow-md hover:bg-amber-100 transition-colors font-bold text-xl focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:outline-none" aria-label="關閉">×</button>
         </div>
         <div className="w-full max-w-sm text-center">
           <p className="text-4xl mb-4">🕹️</p>
           <h2 className="text-2xl font-black text-amber-900 mb-2">知識王挑戰</h2>
-          <p className="text-amber-700/70 text-sm mb-8 font-sans">選擇難度，找出同時見過兩位人物的歷史橋梁</p>
+          <p className="text-amber-700/70 text-sm mb-2 font-sans">選擇難度，找出同時見過兩位人物的歷史橋梁</p>
+          <p className="text-amber-500/70 text-xs mb-8 font-sans">答對得 100 分 + 連擊加成，時間越短連擊越值錢</p>
           <div className="flex flex-col gap-3">
             {DIFFICULTIES.map(d => (
               <button
                 key={d.label}
                 onClick={() => setDifficulty(d)}
-                className={`w-full py-4 rounded-xl font-bold text-white shadow-md transition-colors ${d.color}`}
+                className={`w-full py-4 rounded-xl font-bold text-white shadow-md transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none ${d.color}`}
               >
                 {d.label}
                 <span className="ml-2 text-sm font-normal opacity-80">{d.sub}</span>
@@ -94,7 +100,7 @@ export default function GameMode({ onClose }) {
 
   // ── 遊戲畫面 ──────────────────────────────────────────
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-amber-50/95 backdrop-blur-sm animate-fade-in">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-amber-50/95 backdrop-blur-sm animate-fade-in" role="dialog" aria-modal="true" aria-label="知識王挑戰">
       <div className="min-h-full flex items-center justify-center p-4 py-12">
         <div className="absolute top-4 right-4 z-10">
           <button
@@ -113,7 +119,11 @@ export default function GameMode({ onClose }) {
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-xs text-amber-400 font-sans">{difficulty.label}</span>
-                <div className={`text-xl font-bold ${timeLeft <= 3 ? 'text-red-400 animate-pulse' : ''}`}>
+                <div
+                  className={`text-xl font-bold ${timeLeft <= 3 ? 'text-red-400 animate-pulse' : ''}`}
+                  aria-label={`剩餘時間 ${timeLeft} 秒`}
+                  aria-live="polite"
+                >
                   ⏱ {timeLeft}s
                 </div>
               </div>
@@ -129,9 +139,9 @@ export default function GameMode({ onClose }) {
                   <span className="text-xl font-bold text-amber-900">{FIGURES[question.fromId].name_zh}</span>
                 </div>
                 <div className="text-amber-400 font-bold text-2xl">↔</div>
-                <div className="flex flex-col items-center p-4 bg-amber-900 text-white rounded-xl shadow-inner w-32 border-2 border-dashed border-amber-700 min-h-24 justify-center">
-                  <span className="text-sm opacity-70 mb-1">關鍵人物</span>
-                  <span className="text-xl font-bold">？？？</span>
+                <div className="flex flex-col items-center p-3 bg-amber-900 text-white rounded-xl shadow-inner w-20 sm:w-32 border-2 border-dashed border-amber-700 min-h-24 justify-center">
+                  <span className="text-xs sm:text-sm opacity-70 mb-1">關鍵人物</span>
+                  <span className="text-lg sm:text-xl font-bold">？？？</span>
                 </div>
                 <div className="text-amber-400 font-bold text-2xl">↔</div>
                 <div className="flex flex-col items-center p-4 bg-amber-50 rounded-xl border border-amber-200 flex-1 min-h-24 justify-center text-center">

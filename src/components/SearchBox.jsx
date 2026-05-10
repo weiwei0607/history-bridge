@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect, useMemo } from 'react';
+import { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { FIGURES } from '../data/figures';
+import { figureEmoji } from '../utils/emoji';
 
 const ALL_FIGURES = Object.values(FIGURES);
 
@@ -19,11 +20,11 @@ function highlight(text, query) {
 export default function SearchBox({ label, value, onChange, exclude, periodFilter }) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
+  const [focusedIdx, setFocusedIdx] = useState(-1);
   const ref = useRef(null);
+  const listRef = useRef(null);
 
   const selected = value ? FIGURES[value] : null;
-
-  // Derive the display value rather than syncing it with an effect
   const displayValue = open ? query : (selected ? selected.name_zh : '');
 
   const filtered = useMemo(() => {
@@ -34,34 +35,56 @@ export default function SearchBox({ label, value, onChange, exclude, periodFilte
     return ALL_FIGURES.filter(f => {
       if (f.id === exclude) return false;
       if (periodFilter && !periodFilter(f)) return false;
-      const name_zh = f.name_zh || '';
-      const name_en = f.name_en || '';
-      const era = f.era || '';
-      const aliases = f.aliases || [];
       const searchable = [
-        name_zh,
-        name_en,
-        era,
-        ...aliases
+        f.name_zh ?? '',
+        f.name_en ?? '',
+        f.era ?? '',
+        ...(f.aliases ?? []),
+        ...(f.tags ?? []),
       ].join(' ').toLowerCase();
       return searchable.includes(q);
     }).slice(0, 15);
   }, [query, open, exclude, periodFilter]);
 
+  // Reset focus when list changes
+  useEffect(() => { setFocusedIdx(-1); }, [filtered]);
+
   useEffect(() => {
     function handleClick(e) {
-      if (ref.current && !ref.current.contains(e.target)) {
-        setOpen(false);
-      }
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false);
     }
     document.addEventListener('mousedown', handleClick);
     return () => document.removeEventListener('mousedown', handleClick);
-  }, [ref]);
+  }, []);
 
-  function selectFigure(f) {
+  // Scroll focused item into view
+  useEffect(() => {
+    if (focusedIdx < 0 || !listRef.current) return;
+    const item = listRef.current.children[focusedIdx];
+    item?.scrollIntoView({ block: 'nearest' });
+  }, [focusedIdx]);
+
+  const selectFigure = useCallback((f) => {
     onChange(f.id);
     setOpen(false);
-    setQuery(''); // Clear query for next time
+    setQuery('');
+    setFocusedIdx(-1);
+  }, [onChange]);
+
+  function handleKeyDown(e) {
+    if (!open) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setFocusedIdx(i => Math.min(i + 1, filtered.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setFocusedIdx(i => Math.max(i - 1, 0));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (focusedIdx >= 0 && filtered[focusedIdx]) selectFigure(filtered[focusedIdx]);
+    } else if (e.key === 'Escape') {
+      setOpen(false);
+    }
   }
 
   return (
@@ -72,24 +95,27 @@ export default function SearchBox({ label, value, onChange, exclude, periodFilte
         <input
           className={`w-full px-4 py-3.5 bg-white border-2 rounded-xl outline-none transition-all duration-200 text-base shadow-sm
             ${selected && !open
-              ? 'border-amber-600/50 bg-amber-50/30 text-amber-950 font-bold' 
+              ? 'border-amber-600/50 bg-amber-50/30 text-amber-950 font-bold'
               : 'border-amber-700/20 focus:border-amber-600 focus:ring-4 focus:ring-amber-100 placeholder-amber-800/30'
             }`}
           placeholder="搜尋人物..."
           value={displayValue}
-          onFocus={() => { setOpen(true); }}
+          onFocus={() => setOpen(true)}
           onChange={e => { setQuery(e.target.value); setOpen(true); }}
+          onKeyDown={handleKeyDown}
+          aria-autocomplete="list"
+          aria-expanded={open}
         />
-        
+
         {selected && !open && (
           <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 pointer-events-none">
             <span className="text-[10px] text-amber-700/40 bg-amber-100 px-1.5 py-0.5 rounded border border-amber-200/50">
               {selected.era}
             </span>
-            <button 
-              onClick={(e) => { 
-                e.stopPropagation(); 
-                onChange(null); 
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                onChange(null);
                 setQuery('');
                 setOpen(true);
               }}
@@ -102,18 +128,30 @@ export default function SearchBox({ label, value, onChange, exclude, periodFilte
       </div>
 
       {open && (
-        <ul className="absolute z-50 mt-2 w-full max-h-80 overflow-y-auto bg-white rounded-2xl shadow-2xl border border-amber-100 py-2 animate-fade-in no-scrollbar">
+        <ul
+          ref={listRef}
+          className="absolute z-50 mt-2 w-full max-h-80 overflow-y-auto bg-white rounded-2xl shadow-2xl border border-amber-100 py-2 animate-fade-in no-scrollbar"
+          role="listbox"
+        >
           {filtered.length === 0 ? (
-            <li className="px-6 py-8 text-center text-amber-800/40 font-sans">找不到符合的人物</li>
+            <li className="px-6 py-8 text-center text-amber-800/40 font-sans">
+              <p>找不到符合的人物</p>
+              {periodFilter && query && (
+                <p className="text-xs mt-1 text-amber-600/60">試試清除時代篩選器？</p>
+              )}
+            </li>
           ) : (
-            filtered.map(f => (
-              <li key={f.id}>
+            filtered.map((f, idx) => (
+              <li key={f.id} role="option" aria-selected={idx === focusedIdx}>
                 <button
-                  className="w-full flex items-center gap-4 px-5 py-3 hover:bg-amber-50 text-left transition-colors border-b border-amber-50/50 last:border-0"
+                  className={`w-full flex items-center gap-4 px-5 py-3 text-left transition-colors border-b border-amber-50/50 last:border-0 ${
+                    idx === focusedIdx ? 'bg-amber-100' : 'hover:bg-amber-50'
+                  }`}
                   onMouseDown={(e) => { e.preventDefault(); selectFigure(f); }}
+                  onMouseEnter={() => setFocusedIdx(idx)}
                 >
                   <div className="w-10 h-10 flex items-center justify-center bg-amber-100 rounded-full text-xl shadow-inner shrink-0">
-                    {(f.tags && (f.tags.includes('皇帝') || f.tags.includes('國王'))) ? '👑' : '👤'}
+                    {figureEmoji(f)}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">

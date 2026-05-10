@@ -1,5 +1,5 @@
 import { FIGURES } from '../data/figures';
-import { yearLabel } from '../utils/format';
+import { yearLabel, yearShort } from '../utils/format';
 
 function regionEmoji(region) {
   if (!region) return '📜';
@@ -57,8 +57,7 @@ export default function PathTimeline({ path, connections, onSelectFigure }) {
                     {figure?.era}
                     {figure?.born && (
                       <span className="ml-1 text-amber-500/60">
-                        ({figure.born < 0 ? `前${Math.abs(figure.born)}` : figure.born}
-                        {figure.died ? `–${figure.died < 0 ? `前${Math.abs(figure.died)}` : figure.died}` : ''})
+                        ({yearShort(figure.born)}{figure.died ? `–${yearShort(figure.died)}` : ''})
                       </span>
                     )}
                   </p>
