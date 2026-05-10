@@ -6,11 +6,11 @@ export function findShortestPath(fromId, toId) {
   const graph = getRichGraph();
   const visited = new Set([fromId]);
   const queue = [fromId];
-  // parent map: id → { parentId, connection }
+  let head = 0;
   const parent = new Map();
 
-  while (queue.length > 0) {
-    const id = queue.shift();
+  while (head < queue.length) {
+    const id = queue[head++];
     for (const { neighbor, connection } of (graph[id] || [])) {
       if (!visited.has(neighbor)) {
         visited.add(neighbor);

@@ -34,21 +34,28 @@ export default function App() {
     [selectedPeriodLabel]
   );
 
-  const suggestions = useMemo(() => {
-    const hubs = getTopHubs(20);
-    const pairs = [];
-    for (let i = 0; i < hubs.length - 1 && pairs.length < 10; i++) {
-      const a = hubs[i].id;
-      const b = hubs[i + 2]?.id ?? hubs[i + 1].id;
-      if (a !== b && FIGURES[a] && FIGURES[b]) pairs.push([a, b]);
-    }
-    return pairs;
-  }, []);
+  const [suggestions, setSuggestions] = useState([]);
 
-  function showToast(msg) {
+  const showToast = useCallback((msg) => {
     setToast(msg);
     setTimeout(() => setToast(null), 3000);
-  }
+  }, []);
+
+  // Load suggestions asynchronously after first paint (centrality is O(VE))
+  useEffect(() => {
+    let cancelled = false;
+    getTopHubs(20).then(hubs => {
+      if (cancelled) return;
+      const pairs = [];
+      for (let i = 0; i < hubs.length - 1 && pairs.length < 10; i++) {
+        const a = hubs[i].id;
+        const b = hubs[i + 2]?.id ?? hubs[i + 1].id;
+        if (a !== b && FIGURES[a] && FIGURES[b]) pairs.push([a, b]);
+      }
+      setSuggestions(pairs);
+    });
+    return () => { cancelled = true; };
+  }, []);
 
   // Read URL query params on mount
   useEffect(() => {
@@ -64,20 +71,20 @@ export default function App() {
     } else {
       showToast('分享連結中的人物不存在，已載入預設頁面');
     }
-  }, []);
+  }, [showToast]);
 
-  function handleSearch() {
+  const handleSearch = useCallback(() => {
     if (!figureA || !figureB) return;
     const found = findShortestPath(figureA, figureB);
     setResult(found ?? 'none');
-  }
+  }, [figureA, figureB]);
 
-  function handleSuggestion([a, b]) {
+  const handleSuggestion = useCallback(([a, b]) => {
     setFigureA(a);
     setFigureB(b);
     const found = findShortestPath(a, b);
     setResult(found ?? 'none');
-  }
+  }, []);
 
   const handleRandomExplore = useCallback(() => {
     const ids = Object.keys(FIGURES);

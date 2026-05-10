@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import confetti from 'canvas-confetti';
 import { generateQuestion } from '../utils/gameLogic';
 import { FIGURES } from '../data/figures';
@@ -19,9 +19,24 @@ export default function GameMode({ onClose }) {
   const [timeLeft, setTimeLeft]     = useState(15);
   const [isGameOver, setIsGameOver] = useState(false);
 
+  const handleTimeout = useCallback(() => {
+    setIsCorrect(false);
+    setSelectedId('timeout');
+    setCombo(0);
+  }, []);
+
+  const startNewRound = useCallback(() => {
+    const q = generateQuestion();
+    if (!q) { onClose(); return; }
+    setQuestion(q);
+    setSelectedId(null);
+    setIsCorrect(null);
+    setTimeLeft(difficulty.time);
+  }, [difficulty, onClose]);
+
   useEffect(() => {
     if (difficulty) startNewRound();
-  }, [difficulty]);
+  }, [difficulty, startNewRound]);
 
   useEffect(() => {
     if (!difficulty) return;
@@ -31,22 +46,7 @@ export default function GameMode({ onClose }) {
     } else if (timeLeft === 0 && !selectedId && !isGameOver) {
       handleTimeout();
     }
-  }, [timeLeft, selectedId, isGameOver, difficulty]);
-
-  function startNewRound() {
-    const q = generateQuestion();
-    if (!q) { onClose(); return; }
-    setQuestion(q);
-    setSelectedId(null);
-    setIsCorrect(null);
-    setTimeLeft(difficulty.time);
-  }
-
-  function handleTimeout() {
-    setIsCorrect(false);
-    setSelectedId('timeout');
-    setCombo(0);
-  }
+  }, [timeLeft, selectedId, isGameOver, difficulty, handleTimeout]);
 
   function handleSelect(id) {
     if (selectedId) return;

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { getTopHubs } from '../utils/centrality';
 import { getSimpleGraph } from '../utils/graph';
 import { FIGURES } from '../data/figures';
@@ -39,8 +39,14 @@ function scoreBar(score) {
 }
 
 export default function HubFigures({ onSelectFigure, onUseInSearch }) {
-  const hubs = useMemo(() => getTopHubs(15), []);
+  const [hubs, setHubs] = useState([]);
   const graph = useMemo(() => getSimpleGraph(), []);
+
+  useEffect(() => {
+    let cancelled = false;
+    getTopHubs(15).then(result => { if (!cancelled) setHubs(result); });
+    return () => { cancelled = true; };
+  }, []);
 
   return (
     <section className="w-full max-w-2xl mx-auto mt-12 px-2">

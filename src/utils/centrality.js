@@ -2,18 +2,12 @@ import { CONNECTIONS } from '../data/connections';
 import { FIGURES } from '../data/figures';
 
 let _cached = null;
+let _computePromise = null;
 
-/**
- * Brandes algorithm — unweighted betweenness centrality.
- * Returns a Map<figureId, score> normalized to [0, 1].
- */
-export function getBetweennessCentrality() {
-  if (_cached) return _cached;
-
+function compute() {
   const nodes = Object.keys(FIGURES);
   const n = nodes.length;
 
-  // Build adjacency list (undirected)
   const adj = {};
   for (const id of nodes) adj[id] = [];
   for (const c of CONNECTIONS) {
@@ -43,9 +37,10 @@ export function getBetweennessCentrality() {
     sigma[s] = 1;
     dist[s] = 0;
     const queue = [s];
+    let head = 0;
 
-    while (queue.length) {
-      const v = queue.shift();
+    while (head < queue.length) {
+      const v = queue[head++];
       stack.push(v);
       for (const w of adj[v]) {
         if (dist[w] < 0) {
@@ -68,22 +63,38 @@ export function getBetweennessCentrality() {
     }
   }
 
-  // Normalize: max possible pairs = (n-1)*(n-2)
-  const maxPairs = (n - 1) * (n - 2);
+  // Undirected graph: max pairs = (n-1)*(n-2)/2
+  const maxPairs = (n - 1) * (n - 2) / 2;
   const map = new Map();
   for (const id of nodes) {
     map.set(id, maxPairs > 0 ? cb[id] / maxPairs : 0);
   }
-
-  _cached = map;
   return map;
 }
 
 /**
- * Returns top-N figures sorted by betweenness centrality (descending).
+ * Brandes algorithm — unweighted betweenness centrality (undirected).
+ * Returns a Promise<Map<figureId, score>> normalized to [0, 1].
+ * Result is cached after first call.
  */
-export function getTopHubs(n = 20) {
-  const scores = getBetweennessCentrality();
+export function getBetweennessCentrality() {
+  if (_cached) return Promise.resolve(_cached);
+  if (_computePromise) return _computePromise;
+  _computePromise = new Promise(resolve => {
+    setTimeout(() => {
+      _cached = compute();
+      resolve(_cached);
+    }, 0);
+  });
+  return _computePromise;
+}
+
+/**
+ * Returns top-N figures sorted by betweenness centrality (descending).
+ * Returns a Promise.
+ */
+export async function getTopHubs(n = 20) {
+  const scores = await getBetweennessCentrality();
   return [...scores.entries()]
     .sort((a, b) => b[1] - a[1])
     .slice(0, n)

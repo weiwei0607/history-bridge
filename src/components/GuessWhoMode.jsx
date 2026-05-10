@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import confetti from 'canvas-confetti';
 import { FIGURES } from '../data/figures';
 
@@ -27,15 +27,17 @@ function generateGuessQuestion() {
     options.add(ids[Math.floor(Math.random() * ids.length)]);
   }
 
-  return {
-    answerId,
-    hints: [hint1, hint2, hint3],
-    options: Array.from(options).sort(() => Math.random() - 0.5).map(id => ({
-      id,
-      name: FIGURES[id].name_zh,
-      title: FIGURES[id].tags[0] || '歷史人物'
-    }))
-  };
+  const optionArr = Array.from(options).map(id => ({
+    id,
+    name: FIGURES[id].name_zh,
+    title: FIGURES[id].tags[0] || '歷史人物'
+  }));
+  for (let i = optionArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [optionArr[i], optionArr[j]] = [optionArr[j], optionArr[i]];
+  }
+
+  return { answerId, hints: [hint1, hint2, hint3], options: optionArr };
 }
 
 export default function GuessWhoMode({ onClose }) {
@@ -47,16 +49,16 @@ export default function GuessWhoMode({ onClose }) {
   const [isCorrect, setIsCorrect]   = useState(null);
   const [isGameOver, setIsGameOver] = useState(false);
 
-  useEffect(() => {
-    if (difficulty) startNewRound();
-  }, [difficulty]);
-
-  function startNewRound() {
+  const startNewRound = useCallback(() => {
     setQuestion(generateGuessQuestion());
     setSelectedId(null);
     setIsCorrect(null);
     setHintLevel(difficulty.startHints);
-  }
+  }, [difficulty]);
+
+  useEffect(() => {
+    if (difficulty) startNewRound();
+  }, [difficulty, startNewRound]);
 
   function handleSelect(id) {
     if (selectedId) return;
