@@ -23,6 +23,7 @@ export function getRichGraph() {
   if (_richGraph) return _richGraph;
   _richGraph = {};
   CONNECTIONS.forEach(conn => {
+    if (!FIGURES[conn.from] || !FIGURES[conn.to]) return;
     if (!_richGraph[conn.from]) _richGraph[conn.from] = [];
     if (!_richGraph[conn.to])   _richGraph[conn.to]   = [];
     _richGraph[conn.from].push({ neighbor: conn.to,   connection: conn });

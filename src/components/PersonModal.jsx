@@ -1,13 +1,13 @@
 import { useEffect, useMemo } from 'react';
 import { FIGURES } from '../data/figures';
-import { CONNECTIONS } from '../data/connections';
+import { CONNECTIONS_BY_ID } from '../data/connections';
 import { yearLabel, yearShort } from '../utils/format';
 
 export default function PersonModal({ figureId, onClose, onNavigate, onFindPath }) {
   const figure = figureId ? FIGURES[figureId] : null;
 
   const relatedConns = useMemo(() =>
-    figureId ? CONNECTIONS.filter(c => c.from === figureId || c.to === figureId) : [],
+    figureId ? (CONNECTIONS_BY_ID.get(figureId) ?? []) : [],
     [figureId]
   );
 
@@ -50,7 +50,7 @@ export default function PersonModal({ figureId, onClose, onNavigate, onFindPath 
               {figure.era}
             </span>
             <span className="px-2.5 py-0.5 bg-amber-100 text-amber-800 rounded-full text-xs font-sans border border-amber-200">
-              {yearLabel(figure.born)} — {yearLabel(figure.died)}
+              {yearLabel(figure.born)} — {figure.died != null ? yearLabel(figure.died) : '至今'}
             </span>
             {figure.tags?.map(tag => (
               <span key={tag} className="px-2.5 py-0.5 bg-stone-100 text-stone-600 rounded-full text-xs font-sans border border-stone-200">

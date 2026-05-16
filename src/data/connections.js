@@ -17,3 +17,15 @@ export const CONNECTIONS = [
   ...CONNECTIONS_MODERN,
   ...CONNECTIONS_EXTRA,
 ];
+
+// Pre-index connections by figure ID for O(1) lookups (avoids O(n) filter on every modal open)
+export const CONNECTIONS_BY_ID = (() => {
+  const map = new Map();
+  for (const conn of CONNECTIONS) {
+    if (!map.has(conn.from)) map.set(conn.from, []);
+    if (!map.has(conn.to))   map.set(conn.to,   []);
+    map.get(conn.from).push(conn);
+    map.get(conn.to).push(conn);
+  }
+  return map;
+})();
