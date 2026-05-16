@@ -23,5 +23,11 @@ dist-ssr
 *.sln
 *.sw?
 .aider*
+
+# Environment variables
 .env
-.env.local
+.env.*
+!.env.example
+
+# Generated data files
+*.txt
